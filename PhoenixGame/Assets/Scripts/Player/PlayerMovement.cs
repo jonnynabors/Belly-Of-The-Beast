@@ -3,6 +3,7 @@
 public class PlayerMovement : MonoBehaviour
 {
 	public float speed = 6f;            // The speed that the player will move at.
+	public float turningSpeed = 1f;
 	
 	Vector3 movement;                   // The vector to store the direction of the player's movement.
 	Animator anim;                      // Reference to the animator component.
@@ -47,6 +48,26 @@ public class PlayerMovement : MonoBehaviour
 		
 		// Move the player to it's current position plus the movement.
 		playerRigidbody.MovePosition (transform.position + movement);
+
+
+		if(h != 0f || v != 0f)
+		{
+			// ... set the players rotation and set the speed parameter to 5.5f.
+			Rotation(h, v);
+		}
+
+	}
+
+	void Rotation (float h, float v)
+	{
+		Vector3 targetDirection = new Vector3(h, 0f, v);
+		
+		// Create a rotation based on this new vector assuming that up is the global y axis.
+		Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+		
+		// Create a rotation that is an increment closer to the target rotation from the player's rotation.
+		Quaternion newRotation = Quaternion.Lerp(rigidbody.rotation, targetRotation, turningSpeed * Time.deltaTime);
+		playerRigidbody.MoveRotation (newRotation);
 	}
 	
 	void Turning ()
@@ -78,8 +99,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		// Create a boolean that is true if either of the input axes is non-zero.
 		bool walking = h != 0f || v != 0f;
-		
-		// Tell the animator whether or not the player is walking.
-		anim.SetBool ("IsWalking", walking);
+
 	}
 }
