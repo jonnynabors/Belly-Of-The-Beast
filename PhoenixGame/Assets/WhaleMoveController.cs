@@ -2,17 +2,17 @@
 using System.Collections;
 
 public class WhaleMoveController : MonoBehaviour {
+
+	public float swimSpeed = 2f;
 	public Transform[] targetWaypoints;
 
 	private NavMeshAgent navagent;
-	public float swimSpeed = 2f;
-	public float moveWaitTime = 1f;
-
-	private int waypointDestination = 0;
-	private float moveTimer = 0f;
+	private Transform whale;
+	private int waypointDestination;
 	// Use this for initialization
 	void Awake () {
 		navagent = GetComponent<NavMeshAgent>();
+		whale = GameObject.FindGameObjectWithTag(Tags.whale).transform;
 	}
 	
 	// Update is called once per frame
@@ -29,11 +29,7 @@ public class WhaleMoveController : MonoBehaviour {
 				waypointDestination = 0;
 			else
 				waypointDestination++;
-
 		}
-		for(int i = 1; i < 3; i++)
-		{
 			navagent.destination = targetWaypoints[waypointDestination].position;
-		}
 	}
 }
