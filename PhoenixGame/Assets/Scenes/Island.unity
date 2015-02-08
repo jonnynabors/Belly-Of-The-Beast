@@ -1158,11 +1158,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11481740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
       propertyPath: obstacleLayers.m_Bits
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 11481740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
       propertyPath: groundLayers.m_Bits
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2081740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
       propertyPath: near clip plane
@@ -1171,6 +1171,10 @@ Prefab:
     - target: {fileID: 13681740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
+      propertyPath: distanceUpdateSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
@@ -4001,14 +4005,14 @@ MonoBehaviour:
   camera: {fileID: 1511272866}
   obstacleLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   groundLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   groundedCheckOffset: .0829999968
   rotationUpdateSpeed: 60
   lookUpSpeed: 30
-  distanceUpdateSpeed: 1
+  distanceUpdateSpeed: 3
   followUpdateSpeed: 8
   maxForwardAngle: 80
   minDistance: .00999999978
