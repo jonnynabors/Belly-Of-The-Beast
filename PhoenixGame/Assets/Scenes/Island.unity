@@ -1144,6 +1144,30 @@ Prefab:
       propertyPath: groundedCheckOffset
       value: .0829999968
       objectReference: {fileID: 0}
+    - target: {fileID: 11481740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
+      propertyPath: groundedCheckOffset
+      value: .0829999968
+      objectReference: {fileID: 0}
+    - target: {fileID: 13781740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
+      propertyPath: minDistance
+      value: .00999999978
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
+      propertyPath: obstacleLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
+      propertyPath: groundLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081740, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
+      propertyPath: near clip plane
+      value: .00999999978
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
   m_RootGameObject: {fileID: 1330777729}
@@ -3758,6 +3782,7 @@ GameObject:
   - 114: {fileID: 1330777733}
   - 114: {fileID: 1330777732}
   - 95: {fileID: 1330777731}
+  - 114: {fileID: 1330777736}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -3811,17 +3836,17 @@ MonoBehaviour:
   camera: {fileID: 1511272866}
   obstacleLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   groundLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
-  groundedCheckOffset: -.370000005
+    m_Bits: 0
+  groundedCheckOffset: .0829999968
   rotationUpdateSpeed: 60
   lookUpSpeed: 30
   distanceUpdateSpeed: 1
   followUpdateSpeed: 8
   maxForwardAngle: 80
-  minDistance: .200000003
+  minDistance: .00999999978
   maxDistance: 2
   zoomSpeed: 60
   showGizmos: 1
@@ -3882,6 +3907,22 @@ CapsuleCollider:
   m_Height: .167475089
   m_Direction: 1
   m_Center: {x: 0, y: -.0489999987, z: 0}
+--- !u!114 &1330777736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1330777729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75895f6b960e2cf4d94f92a4dfb594f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1511272866}
+  cameraTarget: {fileID: 1330777730}
+  renderer: {fileID: 400486962}
+  fadeDistance: 2
+  hideDistance: .100000001
 --- !u!1 &1343928366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,7 +4238,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: .300000012
+  near clip plane: .00999999978
   far clip plane: 100
   field of view: 60
   orthographic: 0
