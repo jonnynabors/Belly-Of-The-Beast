@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class playerController : MonoBehaviour {
+public class myPlayerController : MonoBehaviour {
 	
 	[SerializeField]
 	private Animator animator;
 	[SerializeField]
-	private float directionDampTime = .25f;
+	private float directionDampTime = .25f; //making turning smoother
 	
-	public float speed = 0.0f;
+	private float speed = 0.0f;
 	private float h = 0.0f;
 	private float v = 0.0f;
 	
@@ -16,6 +16,7 @@ public class playerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
+		//if animator exists
 		if (animator.layerCount >= 2) {
 			animator.SetLayerWeight(1,1);		
 		}
@@ -27,7 +28,7 @@ public class playerController : MonoBehaviour {
 			
 			h = Input.GetAxis("Horizontal");
 			v = Input.GetAxis("Vertical");
-			
+			 
 			speed = new Vector2(h,v).sqrMagnitude;
 			
 			animator.SetFloat("Speed", speed);
