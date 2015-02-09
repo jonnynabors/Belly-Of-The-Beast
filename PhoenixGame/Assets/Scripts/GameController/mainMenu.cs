@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class menuController : MonoBehaviour {
+public class mainMenu : MonoBehaviour {
 
 	public Canvas quitMenu;
 	public Button startText;
@@ -38,7 +38,7 @@ public class menuController : MonoBehaviour {
 	public void StartLevel()
 	{
 		//loads first level
-		Application.LoadLevel (1);
+		Application.LoadLevel ("IslandLevel01");
 	}
 
 	public void ExitGame()
