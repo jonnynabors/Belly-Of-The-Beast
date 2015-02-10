@@ -60,7 +60,7 @@ public class InGameMenu : MonoBehaviour {
 
 	public void MainPress()
 	{
-		Application.LoadLevel ("IslandMenu");
+		Application.LoadLevel (0);
 	}
 
 	public void ContinuePress()
