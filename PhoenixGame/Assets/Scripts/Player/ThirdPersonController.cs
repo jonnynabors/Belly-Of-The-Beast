@@ -27,7 +27,7 @@ public class ThirdPersonController : MonoBehaviour
 	
 	private const float inputThreshold = 0.01f,
 		groundDrag = 5.0f,
-		directionalJumpFactor = 0.7f;
+		directionalJumpFactor = 0.2f;
 		// Tweak these to adjust behaviour relative to speed
 	private const float groundedDistance = 0.05f;
 		// Tweak if character lands too soon or gets stuck "in air" often

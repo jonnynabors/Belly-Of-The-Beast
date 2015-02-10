@@ -324,6 +324,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 481782}
+  - 54: {fileID: 5442824}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -626,9 +627,10 @@ GameObject:
   - 4: {fileID: 481822}
   - 136: {fileID: 13681740}
   - 54: {fileID: 5481740}
+  - 95: {fileID: 9581740}
   - 114: {fileID: 11481742}
   - 114: {fileID: 11481740}
-  - 95: {fileID: 9581740}
+  - 114: {fileID: 11442824}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1520,7 +1522,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181828}
-  m_LocalRotation: {x: .173648193, y: 0, z: 0, w: .984807789}
+  m_LocalRotation: {x: .253516704, y: 0, z: 0, w: .967331052}
   m_LocalPosition: {x: 0, y: .335999995, z: -.597000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1763,7 +1765,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: .300000012
+  near clip plane: .00999999978
   far clip plane: 100
   field of view: 60
   orthographic: 0
@@ -1806,6 +1808,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181858}
   m_Mesh: {fileID: 4300000, guid: a1b8cd9eb9ca65d4299e0ac302c6936d, type: 3}
+--- !u!54 &5442824
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181782}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &5481740
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -1813,9 +1830,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181822}
   serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1847,9 +1864,25 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f46cf98eb0f3dfa438a3e0e828ead082, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11442824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75895f6b960e2cf4d94f92a4dfb594f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 2081740}
+  cameraTarget: {fileID: 481822}
+  renderer: {fileID: 13781740}
+  fadeDistance: 2
+  hideDistance: .100000001
 --- !u!114 &11481740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1869,13 +1902,13 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  groundedCheckOffset: -.370000005
+  groundedCheckOffset: .0829999968
   rotationUpdateSpeed: 60
   lookUpSpeed: 30
-  distanceUpdateSpeed: 1
+  distanceUpdateSpeed: 3
   followUpdateSpeed: 8
   maxForwardAngle: 80
-  minDistance: .200000003
+  minDistance: .00999999978
   maxDistance: 2
   zoomSpeed: 60
   showGizmos: 1
@@ -1893,15 +1926,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 5481740}
-  speed: .699999988
+  speed: .200000003
   walkSpeedDownscale: 2
   turnSpeed: 200
   mouseTurnSpeed: 50
-  jumpSpeed: 1
+  jumpSpeed: 1.20000005
   groundLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  groundedCheckOffset: -.370000005
+  groundedCheckOffset: .0829999968
   showGizmos: 1
   requireLock: 1
   controlLock: 0
