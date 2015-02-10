@@ -2281,7 +2281,7 @@ Transform:
   - {fileID: 1570588629}
   - {fileID: 400486961}
   m_Father: {fileID: 1330777730}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!54 &670672546
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2463,6 +2463,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 362508042}
   m_RootOrder: 6
+--- !u!1 &739249548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 739249549}
+  - 108: {fileID: 739249550}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &739249549
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739249548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1330777730}
+  m_RootOrder: 1
+--- !u!108 &739249550
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739249548}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 1
+  m_Color: {r: .578557551, g: .702157438, b: .904411793, a: 1}
+  m_Intensity: .289999992
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1 &764014679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,6 +3431,10 @@ Prefab:
     - target: {fileID: 181822, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
       propertyPath: m_Name
       value: Icarus
+      objectReference: {fileID: 0}
+    - target: {fileID: 481782, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb3afa155c8977946ac8b10cca8d3179, type: 2}
@@ -4757,6 +4824,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1511272867}
+  - {fileID: 739249549}
   - {fileID: 670672544}
   m_Father: {fileID: 0}
   m_RootOrder: 9
