@@ -39,12 +39,14 @@ public class InGameMenu : MonoBehaviour {
 				isInMenu = false;
 				startMenu.enabled = false;
 				cameraScript.enabled = true;
+				Time.timeScale = 1;
 			}
 			else
 			{
 				isInMenu = true;
 				startMenu.enabled = true;
 				cameraScript.enabled = false;
+				Time.timeScale = 0;
 			}
 		}
 	}
