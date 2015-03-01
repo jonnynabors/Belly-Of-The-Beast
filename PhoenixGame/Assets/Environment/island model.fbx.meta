@@ -1,0 +1,107 @@
+fileFormatVersion: 2
+guid: a1500f75ad7a3b74babc5ce67e2d332b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Ball
+    100002: BaseIsland
+    100004: CliffFaceAndStones
+    100006: Cloud
+    100008: Door
+    100010: DoorFrame
+    100012: //RootNode
+    100014: Ladder
+    100016: Trees
+    100018: Waterline
+    400000: Ball
+    400002: BaseIsland
+    400004: CliffFaceAndStones
+    400006: Cloud
+    400008: Door
+    400010: DoorFrame
+    400012: //RootNode
+    400014: Ladder
+    400016: Trees
+    400018: Waterline
+    2300000: Ball
+    2300002: BaseIsland
+    2300004: CliffFaceAndStones
+    2300006: Cloud
+    2300008: Door
+    2300010: DoorFrame
+    2300012: Ladder
+    2300014: Trees
+    2300016: Waterline
+    3300000: Ball
+    3300002: BaseIsland
+    3300004: CliffFaceAndStones
+    3300006: Cloud
+    3300008: Door
+    3300010: DoorFrame
+    3300012: Ladder
+    3300014: Trees
+    3300016: Waterline
+    4300000: Trees
+    4300002: Door
+    4300004: DoorFrame
+    4300006: Ball
+    4300008: Waterline
+    4300010: Cloud
+    4300012: Ladder
+    4300014: BaseIsland
+    4300016: CliffFaceAndStones
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
