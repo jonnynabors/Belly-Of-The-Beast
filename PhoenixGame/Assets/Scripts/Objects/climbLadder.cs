@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 public class climbLadder : MonoBehaviour {
@@ -41,3 +41,4 @@ public class climbLadder : MonoBehaviour {
 		}
 	}
 }
+*/
