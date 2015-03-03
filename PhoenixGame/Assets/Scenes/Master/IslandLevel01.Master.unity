@@ -2293,7 +2293,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11490956, guid: 97930fc6b148d074c8bcc388325a3a49, type: 2}
       propertyPath: speed
-      value: .230000004
+      value: .209999993
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97930fc6b148d074c8bcc388325a3a49, type: 2}
@@ -3873,7 +3873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 994675807}
-  speed: .230000004
+  speed: .209999993
   walkSpeedDownscale: 2
   turnSpeed: 200
   mouseTurnSpeed: 50

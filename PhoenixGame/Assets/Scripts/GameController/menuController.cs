@@ -17,6 +17,7 @@ public class menuController : MonoBehaviour {
 
 		//Makes quit menu NOT visible
 		quitMenu.enabled = false;
+		Time.timeScale = 1;
 	}
 
 	public void ExitPress()

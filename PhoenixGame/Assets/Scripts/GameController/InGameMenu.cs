@@ -70,6 +70,7 @@ public class InGameMenu : MonoBehaviour {
 		startMenu.enabled = false;
 		cameraScript.enabled = true;
 		isInMenu = false;
+		Time.timeScale = 1;
 	}
 
 	public void NoPress()
