@@ -16,6 +16,7 @@ public class chatBubble : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		chat = GetComponent<Canvas> ();
+		Player = GameObject.FindGameObjectWithTag(Tags.player);
 	}
 	
 	// Update is called once per frame
