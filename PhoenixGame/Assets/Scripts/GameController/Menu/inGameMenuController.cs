@@ -47,6 +47,7 @@ public class inGameMenuController : MonoBehaviour {
 			{
 				isInMenu = false;
 				mainMenu.enabled = false;
+				subMenu.enabled = false;
 				cameraScript.enabled = true;
 				Time.timeScale = 1;
 			}
