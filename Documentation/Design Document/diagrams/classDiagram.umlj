@@ -1929,8 +1929,8 @@
 											"fillColor": "#ffffff",
 											"font": "Arial;13;0",
 											"parentStyle": true,
-											"left": -1296,
-											"top": -132,
+											"left": -1308,
+											"top": -84,
 											"height": 13
 										},
 										{
@@ -1942,8 +1942,8 @@
 											"fillColor": "#ffffff",
 											"font": "Arial;13;1",
 											"parentStyle": true,
-											"left": 201,
-											"top": 395,
+											"left": 197,
+											"top": 411,
 											"width": 79,
 											"height": 13,
 											"text": "playerClimb"
@@ -1958,8 +1958,8 @@
 											"fillColor": "#ffffff",
 											"font": "Arial;13;0",
 											"parentStyle": true,
-											"left": -1296,
-											"top": -132,
+											"left": -1308,
+											"top": -84,
 											"width": 72,
 											"height": 13,
 											"text": "(from Model)"
@@ -1974,8 +1974,8 @@
 											"fillColor": "#ffffff",
 											"font": "Arial;13;0",
 											"parentStyle": true,
-											"left": -1296,
-											"top": -132,
+											"left": -1308,
+											"top": -84,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
@@ -1983,8 +1983,8 @@
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
 									"parentStyle": true,
-									"left": 196,
-									"top": 388,
+									"left": 192,
+									"top": 404,
 									"width": 89,
 									"height": 25,
 									"stereotypeLabel": {
@@ -2022,8 +2022,8 @@
 											"fillColor": "#ffffff",
 											"font": "Arial;13;0",
 											"parentStyle": true,
-											"left": 201,
-											"top": 418,
+											"left": 197,
+											"top": 434,
 											"width": 79,
 											"height": 13,
 											"text": "+speed",
@@ -2041,8 +2041,8 @@
 											"fillColor": "#ffffff",
 											"font": "Arial;13;0",
 											"parentStyle": true,
-											"left": 201,
-											"top": 433,
+											"left": 197,
+											"top": 449,
 											"width": 79,
 											"height": 13,
 											"text": "+animation",
@@ -2060,8 +2060,8 @@
 											"fillColor": "#ffffff",
 											"font": "Arial;13;0",
 											"parentStyle": true,
-											"left": 201,
-											"top": 448,
+											"left": 197,
+											"top": 464,
 											"width": 79,
 											"height": 13,
 											"text": "+isClimbing",
@@ -2071,8 +2071,8 @@
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
 									"parentStyle": true,
-									"left": 196,
-									"top": 413,
+									"left": 192,
+									"top": 429,
 									"width": 89,
 									"height": 53
 								},
@@ -2098,8 +2098,8 @@
 											"fillColor": "#ffffff",
 											"font": "Arial;13;0",
 											"parentStyle": true,
-											"left": 201,
-											"top": 471,
+											"left": 197,
+											"top": 487,
 											"width": 79,
 											"height": 13,
 											"text": "-climb()",
@@ -2117,8 +2117,8 @@
 											"fillColor": "#ffffff",
 											"font": "Arial;13;0",
 											"parentStyle": true,
-											"left": 201,
-											"top": 486,
+											"left": 197,
+											"top": 502,
 											"width": 79,
 											"height": 13,
 											"text": "-animate()",
@@ -2128,8 +2128,8 @@
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
 									"parentStyle": true,
-									"left": 196,
-									"top": 466,
+									"left": 192,
+									"top": 482,
 									"width": 89,
 									"height": 38
 								},
@@ -2146,16 +2146,16 @@
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
 									"parentStyle": true,
-									"left": -864,
-									"top": -88,
+									"left": -872,
+									"top": -56,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"fillColor": "#ffffff",
 							"font": "Arial;13;0",
-							"left": 196,
-							"top": 388,
+							"left": 192,
+							"top": 404,
 							"width": 89,
 							"height": 116,
 							"nameCompartment": {
@@ -7711,8 +7711,8 @@
 									"visible": false,
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
-									"left": 178,
-									"top": 411,
+									"left": 182,
+									"top": 412,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -7733,8 +7733,8 @@
 									"visible": null,
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
-									"left": 181,
-									"top": 396,
+									"left": 189,
+									"top": 398,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -7755,8 +7755,8 @@
 									"visible": false,
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
-									"left": 173,
-									"top": 440,
+									"left": 169,
+									"top": 439,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -7843,8 +7843,8 @@
 									"visible": false,
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
-									"left": 172,
-									"top": 409.859375,
+									"left": 174,
+									"top": 408.25,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -7864,8 +7864,8 @@
 									"visible": false,
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
-									"left": 172,
-									"top": 395.859375,
+									"left": 177,
+									"top": 395.25,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -7885,8 +7885,8 @@
 									"visible": false,
 									"fillColor": "#ffffff",
 									"font": "Arial;13;0",
-									"left": 171,
-									"top": 436.859375,
+									"left": 166,
+									"top": 434.25,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -7935,7 +7935,7 @@
 							"tail": {
 								"$ref": "AAAAAAFL/B/Zm7nybFQ="
 							},
-							"points": "147.04132231404958:213;176:432;195:435.859375",
+							"points": "147.04132231404958:213;176:432;191:439.25",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFL/FTyfMRmiVM="
@@ -14242,7 +14242,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7J9LZ1pVI="
 							},
-							"name": "attackDamage"
+							"name": "attackDamage",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14250,7 +14251,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7J9LZ1pVI="
 							},
-							"name": "attackSpeed"
+							"name": "attackSpeed",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14258,7 +14260,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7J9LZ1pVI="
 							},
-							"name": "timer"
+							"name": "timer",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14266,7 +14269,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7J9LZ1pVI="
 							},
-							"name": "swordParticles"
+							"name": "swordParticles",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14274,7 +14278,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7J9LZ1pVI="
 							},
-							"name": "swingParticles"
+							"name": "swingParticles",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14282,7 +14287,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7J9LZ1pVI="
 							},
-							"name": "swordAudio"
+							"name": "swordAudio",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14290,7 +14296,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7J9LZ1pVI="
 							},
-							"name": "swingAudio"
+							"name": "swingAudio",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -14335,7 +14342,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7cqLbAHS8="
 							},
-							"name": "bockAmount"
+							"name": "bockAmount",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14343,7 +14351,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7cqLbAHS8="
 							},
-							"name": "timer"
+							"name": "timer",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14351,7 +14360,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7cqLbAHS8="
 							},
-							"name": "shieldAudio"
+							"name": "shieldAudio",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14359,7 +14369,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7cqLbAHS8="
 							},
-							"name": "blockParticles"
+							"name": "blockParticles",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14367,7 +14378,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7cqLbAHS8="
 							},
-							"name": "blockAudio"
+							"name": "blockAudio",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -14467,7 +14479,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7pM7cLrzw="
 							},
-							"name": "startingHealth"
+							"name": "startingHealth",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14475,7 +14488,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7pM7cLrzw="
 							},
-							"name": "currentHealth"
+							"name": "currentHealth",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14483,7 +14497,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7pM7cLrzw="
 							},
-							"name": "deathAnimation"
+							"name": "deathAnimation",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14492,7 +14507,8 @@
 								"$ref": "AAAAAAFL/B7pM7cLrzw="
 							},
 							"name": "anim",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14501,7 +14517,8 @@
 								"$ref": "AAAAAAFL/B7pM7cLrzw="
 							},
 							"name": "playerAudio",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14510,7 +14527,8 @@
 								"$ref": "AAAAAAFL/B7pM7cLrzw="
 							},
 							"name": "playerMovement",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14519,7 +14537,8 @@
 								"$ref": "AAAAAAFL/B7pM7cLrzw="
 							},
 							"name": "playerAttack",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14528,7 +14547,8 @@
 								"$ref": "AAAAAAFL/B7pM7cLrzw="
 							},
 							"name": "isDead",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14537,7 +14557,8 @@
 								"$ref": "AAAAAAFL/B7pM7cLrzw="
 							},
 							"name": "damaged",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -14555,7 +14576,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFL/DGj3bu7qeM="
 									},
-									"name": "amount"
+									"name": "amount",
+									"type": ""
 								}
 							]
 						},
@@ -14601,7 +14623,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7547dWZck="
 							},
-							"name": "keyTurnSpeed"
+							"name": "keyTurnSpeed",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14609,7 +14632,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B7547dWZck="
 							},
-							"name": "mouseTurnSpeed"
+							"name": "mouseTurnSpeed",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14618,7 +14642,8 @@
 								"$ref": "AAAAAAFL/B7547dWZck="
 							},
 							"name": "anim",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -14837,7 +14862,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
-							"name": "startingStamina"
+							"name": "startingStamina",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14845,7 +14871,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
-							"name": "currentStamina"
+							"name": "currentStamina",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14853,7 +14880,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
-							"name": "regenAmount"
+							"name": "regenAmount",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14861,7 +14889,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
-							"name": "staminaExhaustion"
+							"name": "staminaExhaustion",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14870,7 +14899,8 @@
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
 							"name": "anim",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14879,7 +14909,8 @@
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
 							"name": "staminaAudio",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14888,7 +14919,8 @@
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
 							"name": "playerMovement",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14897,7 +14929,8 @@
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
 							"name": "playerAttack",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14906,7 +14939,8 @@
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
 							"name": "isExhuasted",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -14915,7 +14949,8 @@
 								"$ref": "AAAAAAFL/B89qrhcos8="
 							},
 							"name": "staminaLoss",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -15526,7 +15561,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B/xRLoXJDU="
 							},
-							"name": "spawnPoint"
+							"name": "spawnPoint",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15543,7 +15579,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B/xRLoXJDU="
 							},
-							"name": "enemyType"
+							"name": "enemyType",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15551,7 +15588,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/B/xRLoXJDU="
 							},
-							"name": "spawnAmount"
+							"name": "spawnAmount",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -15750,7 +15788,8 @@
 								"$ref": "AAAAAAFL/EUboL0yRwo="
 							},
 							"name": "playerInRange",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15759,7 +15798,8 @@
 								"$ref": "AAAAAAFL/EUboL0yRwo="
 							},
 							"name": "enemyHealth",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15768,7 +15808,8 @@
 								"$ref": "AAAAAAFL/EUboL0yRwo="
 							},
 							"name": "playerHealth",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15777,7 +15818,8 @@
 								"$ref": "AAAAAAFL/EUboL0yRwo="
 							},
 							"name": "playerObject",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -15836,7 +15878,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/EX6g72DEM4="
 							},
-							"name": "startingHealth"
+							"name": "startingHealth",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15853,7 +15896,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/EX6g72DEM4="
 							},
-							"name": "currentHealth"
+							"name": "currentHealth",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15861,7 +15905,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/EX6g72DEM4="
 							},
-							"name": "deathSpeed"
+							"name": "deathSpeed",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15869,7 +15914,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFL/EX6g72DEM4="
 							},
-							"name": "essenceValue"
+							"name": "essenceValue",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15878,7 +15924,8 @@
 								"$ref": "AAAAAAFL/EX6g72DEM4="
 							},
 							"name": "anim",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15887,7 +15934,8 @@
 								"$ref": "AAAAAAFL/EX6g72DEM4="
 							},
 							"name": "enemyAudio",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15896,7 +15944,8 @@
 								"$ref": "AAAAAAFL/EX6g72DEM4="
 							},
 							"name": "hitParticles",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15905,7 +15954,8 @@
 								"$ref": "AAAAAAFL/EX6g72DEM4="
 							},
 							"name": "capsuleCollider",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15914,7 +15964,8 @@
 								"$ref": "AAAAAAFL/EX6g72DEM4="
 							},
 							"name": "isDead",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16042,7 +16093,8 @@
 								"$ref": "AAAAAAFL/EcFAr3QUdE="
 							},
 							"name": "nav",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16051,7 +16103,8 @@
 								"$ref": "AAAAAAFL/EcFAr3QUdE="
 							},
 							"name": "enemyHealth",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16060,7 +16113,8 @@
 								"$ref": "AAAAAAFL/EcFAr3QUdE="
 							},
 							"name": "playerHealth",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16069,7 +16123,8 @@
 								"$ref": "AAAAAAFL/EcFAr3QUdE="
 							},
 							"name": "playerTransform",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -16972,7 +17027,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFMD7xsk//5D7A="
 							},
-							"name": "score"
+							"name": "score",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16981,7 +17037,8 @@
 								"$ref": "AAAAAAFMD7xsk//5D7A="
 							},
 							"name": "text",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				}
