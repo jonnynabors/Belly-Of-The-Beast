@@ -10791,6 +10791,7 @@ MonoBehaviour:
   - {fileID: 1325815506}
   - {fileID: 70092555}
   - {fileID: 1270701839}
+  currentEnemy: {fileID: 1375552444}
 --- !u!195 &1375552446
 NavMeshAgent:
   m_ObjectHideFlags: 0
