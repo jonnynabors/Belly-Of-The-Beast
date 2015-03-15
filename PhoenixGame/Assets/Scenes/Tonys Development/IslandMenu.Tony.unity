@@ -4054,7 +4054,6 @@ GameObject:
   - 224: {fileID: 1375132484}
   - 223: {fileID: 1375132483}
   - 114: {fileID: 1375132482}
-  - 114: {fileID: 1375132481}
   - 222: {fileID: 1375132480}
   - 114: {fileID: 1375132479}
   m_Layer: 5
@@ -4091,22 +4090,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1375132478}
---- !u!114 &1375132481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1375132478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &1375132482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5621,8 +5604,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -624, y: -60}
-  m_SizeDelta: {x: 201, y: 61}
+  m_AnchoredPosition: {x: -622.099976, y: -60}
+  m_SizeDelta: {x: 204.699997, y: 61}
   m_Pivot: {x: .5, y: .5}
 --- !u!222 &1750301733
 CanvasRenderer:
@@ -6130,7 +6113,6 @@ MonoBehaviour:
   quality6: {fileID: 988519862}
   brightness: {fileID: 1334738917}
   brightnessCanvas: {fileID: 1375132479}
-  fullToggle: {fileID: 533571903}
 --- !u!1 &1927922773
 GameObject:
   m_ObjectHideFlags: 0
