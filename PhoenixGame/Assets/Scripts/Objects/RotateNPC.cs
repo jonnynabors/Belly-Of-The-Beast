@@ -1,31 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class chatBubble : MonoBehaviour {
+public class RotateNPC : MonoBehaviour {
 	public float range;
 	public bool closeEnough;
 	public GameObject NPC;
 	public Vector3 vec;
 	public GameObject Player;
-
-	public GameObject bubble;
 	public Transform target;
 	public float speed;
-	public Canvas chat;
-
 	// Use this for initialization
-	void Awake () {
-		chat = GetComponent<Canvas> ();
-		Player = GameObject.FindGameObjectWithTag(Tags.player);
+	void Start () {
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		chat.enabled = true;
-		rotate ();
-		//if player is not in range, deactivate chat bubble
-		if (!detectRange())
-			chat.enabled = false;
+		if (detectRange ())
+			rotate ();
+	}
+
+	// Use this for initialization
+	void Awake () {
+		Player = GameObject.FindGameObjectWithTag(Tags.player);
 	}
 
 	bool detectRange(){
@@ -36,7 +33,7 @@ public class chatBubble : MonoBehaviour {
 		//if player is within range
 		if (Vector3.Distance(vec, Player.transform.position) <= range)
 			closeEnough = true;
-
+		
 		return closeEnough;
 	}
 

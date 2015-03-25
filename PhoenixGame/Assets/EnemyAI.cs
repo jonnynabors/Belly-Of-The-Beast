@@ -18,6 +18,41 @@ public class EnemyAI : MonoBehaviour {
 	private float distanceToPlayer = 0;						// Hold distance from the player.
 	Animator anim;											//The game character's animation
 
+	//Tom's code
+	public float timeBetweenAttacks = 1.0f;
+	public int attackDamage = 10;
+	GameObject playerCharacter;
+	PlayerHealth playerHealth;
+	public bool playerInRange;
+	public float timer;
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject == playerCharacter)
+						playerInRange = true;
+	}
+
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject == playerCharacter)
+						playerInRange = false;
+	}
+
+
+	void Awake(){
+		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
+		playerHealth = playerCharacter.GetComponent<PlayerHealth>();
+	}
+
+	void Attack()
+	{
+		timer = 0f;
+		if (playerHealth.currentHealth > 0)
+			playerHealth.TakeDamage (attackDamage);
+	}
+	//End of Tom's Code
+
+
 	// Use this for initialization
 	void Start () {
 		nav = GetComponent<NavMeshAgent>();
@@ -37,6 +72,11 @@ public class EnemyAI : MonoBehaviour {
 		distanceToPlayer = GetDistanceToPlayer();
 		if(distanceToPlayer < 0.6)
 			Chasing();
+
+		//Tom's Code
+		timer += Time.deltaTime;
+		if (timer >= timeBetweenAttacks && playerInRange)
+						Attack ();
 	}
 
 	void Patrolling ()
