@@ -5214,7 +5214,7 @@ GameObject:
   - 54: {fileID: 660811395}
   - 114: {fileID: 660811396}
   m_Layer: 0
-  m_Name: npc_placeholder
+  m_Name: FriendlyNPC
   m_TagString: FriendlyNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8113,7 +8113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 200
   currentHealth: 0
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 2101676747}
 --- !u!1 &998536393
 GameObject:
   m_ObjectHideFlags: 0
