@@ -11,6 +11,14 @@ TagManager:
   - Dusk
   - Night
   - 
+  - FriendlyNPC
+  - Tile2
+  - Puzzle
+  - Tile1
+  - Tile3
+  - PotionCounter
+  - Enemy
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast

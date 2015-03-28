@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour {
 	private int wayPointIndex = 0;                              // A counter for the way point array.
 	private float distanceToPlayer = 0;						// Hold distance from the player.
 	Animator anim;											//The game character's animation
+	private RaycastHit hit;									//Calculate if enemy is hitting character
 
 	//Tom's code
 	public float timeBetweenAttacks = 1.0f;
@@ -86,7 +87,8 @@ public class EnemyAI : MonoBehaviour {
 			return;
 		// Set an appropriate speed for the NavMeshAgent.
 		nav.speed = patrolSpeed;
-		anim.SetBool ("IsWalking", true);
+		anim.SetBool ("EnemyRunning", false);
+		anim.SetBool ("EnemyWalking", true);
 		//Tell NavAgent to go to next destination
 		nav.destination = patrolWayPoints[wayPointIndex].position;
 		//Increment waypoint array index
@@ -102,6 +104,8 @@ public class EnemyAI : MonoBehaviour {
 	//Chase after the game player
 	void Chasing()
 	{
+		//anim.SetBool ("EnemyWalking", false);
+		anim.SetBool ("EnemyRunning", true);
 		nav.SetDestination(player.position);
 	}
 }

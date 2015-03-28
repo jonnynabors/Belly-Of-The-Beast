@@ -1,0 +1,750 @@
+fileFormatVersion: 2
+guid: 926566ac006985e4f8755526feed950f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: armAimL
+    100002: armAimR
+    100004: control_antennaL
+    100006: control_antennaR
+    100008: control_clawL
+    100010: control_clawR
+    100012: control_head
+    100014: control_IKlegL
+    100016: control_IKlegR
+    100018: control_master
+    100020: control_neck
+    100022: control_waist
+    100024: control_wingL
+    100026: control_wingR
+    100028: controljnt_elbowL
+    100030: controljnt_elbowR
+    100032: controljnt_shoulderL
+    100034: controljnt_shoulderR
+    100036: controljnt_wristL
+    100038: controljnt_wristR
+    100040: conttrol_hips
+    100042: curve1
+    100044: curve2
+    100046: IK_ClawL
+    100048: IK_ClawR
+    100050: IK_handles
+    100052: ikHandle_antennaL
+    100054: ikHandle_antennaR
+    100056: ikHandle_armL
+    100058: ikHandle_armR
+    100060: ikHandle_clawL
+    100062: ikHandle_clawR
+    100064: ikHandle_legL
+    100066: ikHandle_legR
+    100068: jnt_antloL
+    100070: jnt_antloR
+    100072: jnt_antmidL
+    100074: jnt_antmidR
+    100076: jnt_antupL
+    100078: jnt_antupR
+    100080: jnt_chest
+    100082: jnt_clawtipL
+    100084: jnt_clawtipR
+    100086: jnt_elbowL
+    100088: jnt_elbowR
+    100090: jnt_head
+    100092: jnt_hipL
+    100094: jnt_hipR
+    100096: jnt_kneeL
+    100098: jnt_kneeR
+    100100: jnt_legtipL
+    100102: jnt_legtipR
+    100104: jnt_neck
+    100106: jnt_pelvis
+    100108: jnt_root
+    100110: jnt_shoulderL
+    100112: jnt_shoulderR
+    100114: jnt_waist
+    100116: jnt_wingbaseL
+    100118: jnt_wingbaseR
+    100120: jnt_wristL
+    100122: jnt_wristR
+    100124: joint1
+    100126: joint2
+    100128: locator4
+    100130: locator6
+    100132: //RootNode
+    100134: mantis_mesh:Body
+    100136: mantis_mesh:EyeL
+    100138: mantis_mesh:EyeR
+    100140: mantis_mesh:meshes
+    100142: midcon1
+    100144: midcon_antennaL
+    100146: midcon_antennaR
+    100148: wristpinL
+    100150: wristpinR
+    400000: armAimL
+    400002: armAimR
+    400004: control_antennaL
+    400006: control_antennaR
+    400008: control_clawL
+    400010: control_clawR
+    400012: control_head
+    400014: control_IKlegL
+    400016: control_IKlegR
+    400018: control_master
+    400020: control_neck
+    400022: control_waist
+    400024: control_wingL
+    400026: control_wingR
+    400028: controljnt_elbowL
+    400030: controljnt_elbowR
+    400032: controljnt_shoulderL
+    400034: controljnt_shoulderR
+    400036: controljnt_wristL
+    400038: controljnt_wristR
+    400040: conttrol_hips
+    400042: curve1
+    400044: curve2
+    400046: IK_ClawL
+    400048: IK_ClawR
+    400050: IK_handles
+    400052: ikHandle_antennaL
+    400054: ikHandle_antennaR
+    400056: ikHandle_armL
+    400058: ikHandle_armR
+    400060: ikHandle_clawL
+    400062: ikHandle_clawR
+    400064: ikHandle_legL
+    400066: ikHandle_legR
+    400068: jnt_antloL
+    400070: jnt_antloR
+    400072: jnt_antmidL
+    400074: jnt_antmidR
+    400076: jnt_antupL
+    400078: jnt_antupR
+    400080: jnt_chest
+    400082: jnt_clawtipL
+    400084: jnt_clawtipR
+    400086: jnt_elbowL
+    400088: jnt_elbowR
+    400090: jnt_head
+    400092: jnt_hipL
+    400094: jnt_hipR
+    400096: jnt_kneeL
+    400098: jnt_kneeR
+    400100: jnt_legtipL
+    400102: jnt_legtipR
+    400104: jnt_neck
+    400106: jnt_pelvis
+    400108: jnt_root
+    400110: jnt_shoulderL
+    400112: jnt_shoulderR
+    400114: jnt_waist
+    400116: jnt_wingbaseL
+    400118: jnt_wingbaseR
+    400120: jnt_wristL
+    400122: jnt_wristR
+    400124: joint1
+    400126: joint2
+    400128: locator4
+    400130: locator6
+    400132: //RootNode
+    400134: mantis_mesh:Body
+    400136: mantis_mesh:EyeL
+    400138: mantis_mesh:EyeR
+    400140: mantis_mesh:meshes
+    400142: midcon1
+    400144: midcon_antennaL
+    400146: midcon_antennaR
+    400148: wristpinL
+    400150: wristpinR
+    4300000: mantis_mesh:EyeL
+    4300002: mantis_mesh:EyeR
+    4300004: mantis_mesh:Body
+    9500000: //RootNode
+    13700000: mantis_mesh:Body
+    13700002: mantis_mesh:EyeL
+    13700004: mantis_mesh:EyeR
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: jnt_root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_hipL
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_hipR
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_kneeL
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_kneeR
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_legtipL
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_legtipR
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_waist
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_shoulderL
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_shoulderR
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_elbowL
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_elbowR
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_wristL
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_wristR
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_antloL
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jnt_antloR
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: mantis(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: armAimL
+      position: {x: -.0411962159, y: .210889831, z: .0589509718}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 2, y: 2, z: 2}
+      transformModified: 1
+    - name: armAimR
+      position: {x: .0411999971, y: .210889831, z: .0589509718}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 2, y: 2, z: 2}
+      transformModified: 1
+    - name: control_master
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: control_antennaL
+      position: {x: -.0160501003, y: .204103082, z: .0115287825}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: control_antennaR
+      position: {x: .0160501301, y: .202634543, z: .0162710585}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: control_head
+      position: {x: -0, y: .170544848, z: .159999996}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: control_IKlegL
+      position: {x: -.00457999995, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ikHandle_clawL
+      position: {x: 7.68075333e-05, y: 2.13017147e-12, z: .00280131306}
+      rotation: {x: .999622762, y: .000877138518, z: .00124891638, w: .0274241399}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: control_IKlegR
+      position: {x: .00457501411, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ikHandle_clawR
+      position: {x: -.000102272032, y: 2.36272026e-11, z: .00280131144}
+      rotation: {x: -.0274243485, y: .00125047262, z: -.000877195736, w: .999622703}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: controljnt_shoulderL
+      position: {x: -.0110028991, y: .143467993, z: .00329921977}
+      rotation: {x: .260775894, y: -.657263994, z: .663104475, w: -.245545268}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: controljnt_elbowL
+      position: {x: .0199991446, y: .0115713738, z: -.00294577563}
+      rotation: {x: .697376549, y: .00302969362, z: .71669054, w: -.00338764396}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: controljnt_wristL
+      position: {x: -.0537287183, y: .0254382454, z: .00820716657}
+      rotation: {x: -.0278578158, y: -.000194908804, z: .999587417, w: -.00699367048}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: controljnt_shoulderR
+      position: {x: .0114126392, y: .143467754, z: .00329922466}
+      rotation: {x: .245545268, y: .663104475, z: .657263994, w: .260775894}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: controljnt_elbowR
+      position: {x: -.0200708508, y: -.011506957, z: .0026966196}
+      rotation: {x: -.00302965054, y: .69737488, z: .00338766072, w: .71669215}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: controljnt_wristR
+      position: {x: -.0540551282, y: .0250319447, z: -.00726027414}
+      rotation: {x: -.000194925145, y: .027860079, z: .00699368818, w: .999587357}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: conttrol_hips
+      position: {x: -1.43800131e-20, y: .111463815, z: -.00565366913}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: control_waist
+      position: {x: .000226048433, y: .00965585746, z: .00483627105}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: control_neck
+      position: {x: -.000299051142, y: .0301550925, z: .00138642383}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: control_wingL
+      position: {x: -.00396014843, y: .0335503295, z: -.0169952027}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: control_wingR
+      position: {x: .00391782029, y: .0335501768, z: -.0169951748}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: IK_ClawL
+      position: {x: -.127031863, y: .155993804, z: .00504282815}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: IK_ClawR
+      position: {x: .126739517, y: .157345921, z: .0041435496}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: IK_handles
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ikHandle_antennaL
+      position: {x: -.0160836056, y: .204142496, z: .0115470076}
+      rotation: {x: .253836185, y: .662826419, z: -.558030427, w: -.429919034}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ikHandle_antennaR
+      position: {x: .0156994406, y: .202417046, z: .0154561661}
+      rotation: {x: -.480004281, y: .511302769, z: .692295849, w: -.169976041}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ikHandle_legL
+      position: {x: -.00450953469, y: .014861471, z: .00280131027}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ikHandle_legR
+      position: {x: .00450953795, y: .014861512, z: .00280131563}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ikHandle_armL
+      position: {x: -.127031863, y: .155993804, z: .00504282815}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ikHandle_armR
+      position: {x: .126739517, y: .157345921, z: .0041435496}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: mantis_mesh:meshes
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: mantis_mesh:Body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: mantis_mesh:EyeL
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: mantis_mesh:EyeR
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: midcon1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: midcon_antennaL
+      position: {x: -.00537801953, y: .18222402, z: .00515333889}
+      rotation: {x: 3.05033776e-14, y: -3.88578059e-16, z: 2.77555756e-17, w: 1}
+      scale: {x: .100000001, y: .100000001, z: .100000001}
+      transformModified: 1
+    - name: locator6
+      position: {x: -.0329760909, y: .120830975, z: .0229541827}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: midcon_antennaR
+      position: {x: .00537802279, y: .182223544, z: .00515333423}
+      rotation: {x: 3.05033776e-14, y: -3.88578059e-16, z: 2.77555756e-17, w: 1}
+      scale: {x: .200000003, y: .200000003, z: .200000003}
+      transformModified: 1
+    - name: locator4
+      position: {x: .0164876841, y: .0604167022, z: .0114768296}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: .5, y: .5, z: .5}
+      transformModified: 1
+    - name: wristpinL
+      position: {x: -.0703994557, y: .170681432, z: .00385115365}
+      rotation: {x: 8.32667335e-17, y: -2.35922419e-16, z: -.707106829, w: .707106829}
+      scale: {x: .25, y: .25, z: .25}
+      transformModified: 1
+    - name: control_clawL
+      position: {x: 4.44089183e-17, y: -5.76629589e-09, z: 1.35016895e-08}
+      rotation: {x: 0, y: 0, z: .258819044, w: .965925813}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: wristpinR
+      position: {x: .0705704987, y: .166314185, z: .0173893943}
+      rotation: {x: .268030405, y: -.209354326, z: .666944683, w: .662959576}
+      scale: {x: .25, y: .25, z: .25}
+      transformModified: 1
+    - name: control_clawR
+      position: {x: -5.41788849e-16, y: 7.1054272e-17, z: 2.220446e-18}
+      rotation: {x: 0, y: -0, z: -.258819044, w: .965925813}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_root
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: .707005739, y: -.0119542731, z: .0119542731, w: .707005739}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_pelvis
+      position: {x: -.000191133353, y: -.00565043744, z: -.111463815}
+      rotation: {x: .152759746, y: -.698832273, z: -.172218889, w: .67722863}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_waist
+      position: {x: -.0108016748, y: -2.6645352e-17, z: -1.6653345e-18}
+      rotation: {x: -.00384622999, y: .0115200002, z: .141504586, w: .989863098}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_chest
+      position: {x: -.0243176688, y: 3.02902373e-18, z: 8.67361686e-20}
+      rotation: {x: .000562877744, y: .0124181211, z: .223617032, w: .974597812}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_neck
+      position: {x: -.00680453936, y: -.00119615719, z: .000117374104}
+      rotation: {x: .000484746386, y: -.0157553628, z: -.297006816, w: .954745233}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_head
+      position: {x: -.0117665036, y: -.000301160937, z: -8.14716532e-06}
+      rotation: {x: -.571041286, y: .417087942, z: .573384285, w: .413739175}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: curve1
+      position: {x: 4.48460535e-16, y: -.162542611, z: -.00128681154}
+      rotation: {x: -.00872653536, y: -7.39191161e-17, z: -2.58104588e-17, w: .999961913}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: curve2
+      position: {x: 4.48460535e-16, y: -.162542611, z: -.00128681154}
+      rotation: {x: -.00872653536, y: -7.39191161e-17, z: -2.58104588e-17, w: .999961913}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_antloR
+      position: {x: .00537802279, y: .0197431222, z: .000685498235}
+      rotation: {x: -.486950517, y: .511604428, z: .569071531, w: -.421067387}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_antmidR
+      position: {x: -.00644876529, y: 1.37812261e-18, z: 1.04083406e-19}
+      rotation: {x: .0591847301, y: -.191354379, z: -.183397397, w: .962416828}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_antupR
+      position: {x: -.0191472247, y: 3.330669e-18, z: -1.30575307e-17}
+      rotation: {x: .0658782646, y: -.101577178, z: -.290935725, w: .94905144}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_antloL
+      position: {x: -.00537801953, y: .0197436027, z: .000685494684}
+      rotation: {x: .421067208, y: .56907171, z: -.511604428, w: -.486950397}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_antmidL
+      position: {x: .00644844631, y: -4.01786728e-08, z: 5.26127799e-08}
+      rotation: {x: .0388955809, y: -.182611868, z: -.074720338, w: .979569793}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_antupL
+      position: {x: .0191471297, y: -5.8620742e-08, z: 2.95905291e-08}
+      rotation: {x: .0658782646, y: -.101577178, z: -.290935725, w: .94905144}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_shoulderR
+      position: {x: .0017307268, y: -.000732574088, z: -.0111634769}
+      rotation: {x: .327648938, y: .653683245, z: .312640518, w: -.606300533}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_elbowR
+      position: {x: -.0232920777, y: -4.16333609e-18, z: -4.83919063e-18}
+      rotation: {x: -.00638442161, y: .0308726057, z: -.00206908653, w: .999500811}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_wristR
+      position: {x: -.0600105561, y: -3.99680272e-17, z: -2.13162816e-16}
+      rotation: {x: .0610283688, y: .0843279213, z: .246884346, w: .963437915}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_clawtipR
+      position: {x: -.0486454666, y: -3.37542416e-09, z: -.0323181041}
+      rotation: {x: .243775472, y: .663757145, z: .663757145, w: -.243775472}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_wingbaseR
+      position: {x: -.0148879671, y: -.0180287194, z: -.00418550288}
+      rotation: {x: .133699194, y: .981258392, z: .0187344383, w: -.137497663}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_shoulderL
+      position: {x: .001174459, y: -.000578125415, z: .0112446267}
+      rotation: {x: .633238196, y: -.337389916, z: .621362746, w: .314779133}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_elbowL
+      position: {x: .0232924912, y: 2.6223772e-09, z: 4.46787737e-07}
+      rotation: {x: .00257656001, y: .0314783752, z: -.00220772019, w: .999498665}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_wristL
+      position: {x: .0600103065, y: 2.21663043e-09, z: -2.71950739e-07}
+      rotation: {x: .0605324581, y: .0806413516, z: .244901091, w: .964290559}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_clawtipL
+      position: {x: .0489605591, y: -2.66198162e-14, z: .0320505761}
+      rotation: {x: -.243775472, y: .663757145, z: -.663757145, w: -.243775472}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_wingbaseL
+      position: {x: -.0150835402, y: -.0179744475, z: .00368985045}
+      rotation: {x: .977393389, y: -.133172557, z: .162713736, w: .0221701991}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_hipR
+      position: {x: .00626006909, y: .00264566834, z: -.00815247651}
+      rotation: {x: -.309045643, y: .951046765, z: -.000881417713, w: -.000236028864}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_kneeR
+      position: {x: -.0412296578, y: -4.57479103e-18, z: 2.28754586e-18}
+      rotation: {x: .000549893943, y: -.014906182, z: .06008441, w: .998081863}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_legtipR
+      position: {x: -.0490807779, y: 1.86975128e-17, z: 6.24500435e-18}
+      rotation: {x: -.112656176, y: -.0407512225, z: -.687173128, w: .716547966}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: joint1
+      position: {x: -9.71347163e-06, y: -.0148392031, z: -.000814892061}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_hipL
+      position: {x: .00659433752, y: .0028130475, z: .00782617554}
+      rotation: {x: .950800419, y: .308945119, z: -.0229047351, w: .00261867791}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_kneeL
+      position: {x: .0412298851, y: 2.64848712e-08, z: -1.15980843e-08}
+      rotation: {x: .000549896969, y: -.0149062946, z: .0600847118, w: .998081863}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jnt_legtipL
+      position: {x: .0490808189, y: -3.9726813e-09, z: 1.88127403e-09}
+      rotation: {x: -.113041952, y: -.0411602743, z: -.687131643, w: .71650362}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: joint2
+      position: {x: -2.07368776e-05, y: .0148391109, z: .000814799045}
+      rotation: {x: .999995351, y: .0016849105, z: .00254160911, w: 2.69450339e-07}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 
