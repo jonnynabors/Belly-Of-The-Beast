@@ -18,6 +18,8 @@ TagManager:
   - Tile3
   - PotionCounter
   - Enemy
+  - Essence
+  - EssenceCounter
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -17,9 +17,7 @@ public class myCamera : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		follow = GameObject.Find ("Player").GetComponent<Transform> ();
-		
-		
+		follow = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();		
 	}
 	
 	// Update is called once per frame

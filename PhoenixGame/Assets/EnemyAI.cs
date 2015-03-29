@@ -71,7 +71,7 @@ public class EnemyAI : MonoBehaviour {
 		//Calculate distance to player
 		//If within range, execute chase function
 		distanceToPlayer = GetDistanceToPlayer();
-		if(distanceToPlayer < 0.6)
+		if(distanceToPlayer < 0.4)
 			Chasing();
 
 		//Tom's Code
@@ -96,7 +96,7 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	//Calculate the distance between the player and the enemy
-	float GetDistanceToPlayer()
+	public float GetDistanceToPlayer()
 	{
 		return Vector3.Distance(player.position, currentEnemy.position);
 	}
