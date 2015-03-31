@@ -13,6 +13,11 @@ public class PlayerHealth : MonoBehaviour {
 	public GameObject playerCharacter;
 	Rigidbody rb;
 
+	void Start()
+	{
+		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
+	}
+
 	void Awake()
 	{
 		//assign script and currentHealth upon game start
@@ -35,18 +40,6 @@ public class PlayerHealth : MonoBehaviour {
 	void Death()
 	{
 		isDead = true;
-		//Destroy(playerCharacter);
+		Destroy(playerCharacter);
 	}
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-
 }

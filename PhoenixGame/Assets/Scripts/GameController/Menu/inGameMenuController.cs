@@ -15,7 +15,7 @@ public class inGameMenuController : MonoBehaviour {
 	public Button optionsButton;
 	public Button controlsButton;
 	public Button exitButton;
-	private ThirdPersonCamera cameraScript;
+	public myCamera cameraScript;
 	private bool isInMenu;
 
 	
@@ -31,7 +31,6 @@ public class inGameMenuController : MonoBehaviour {
 		optionsButton = optionsButton.GetComponent<Button> ();
 		controlsButton = controlsButton.GetComponent<Button> ();
 		exitButton = exitButton.GetComponent<Button> ();
-		cameraScript = GetComponent<ThirdPersonCamera> ();
 
 		//Makes quit menu NOT visible
 		isInMenu = false;

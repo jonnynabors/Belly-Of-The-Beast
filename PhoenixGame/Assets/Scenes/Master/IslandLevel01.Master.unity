@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 19400000, guid: d8426b2b420c0c34c9986c4dd1787d00, type: 2}
 --- !u!1 &4192789
 GameObject:
@@ -1040,7 +1041,7 @@ GameObject:
   - 54: {fileID: 155588704}
   - 64: {fileID: 155588703}
   m_Layer: 0
-  m_Name: test_enviros_2
+  m_Name: env_Island_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5493,7 +5494,7 @@ GameObject:
   - 54: {fileID: 362508044}
   - 64: {fileID: 362508043}
   m_Layer: 0
-  m_Name: test_enviros_1
+  m_Name: env_Island_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6010,7 +6011,7 @@ GameObject:
   - 4: {fileID: 471255189}
   - 108: {fileID: 471255188}
   m_Layer: 0
-  m_Name: island_2_light
+  m_Name: light_Island_2_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7065,8 +7066,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7320,8 +7321,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -8593,8 +8594,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -9996,6 +9997,18 @@ Prefab:
     - target: {fileID: 11406564, guid: f0e88b1e8f50d944fa78734dc42b499f, type: 2}
       propertyPath: cameraScript
       value: 
+      objectReference: {fileID: 1719226109}
+    - target: {fileID: 22406630, guid: f0e88b1e8f50d944fa78734dc42b499f, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: .899999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406630, guid: f0e88b1e8f50d944fa78734dc42b499f, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406630, guid: f0e88b1e8f50d944fa78734dc42b499f, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0e88b1e8f50d944fa78734dc42b499f, type: 2}
@@ -10275,6 +10288,7 @@ MonoBehaviour:
   optionsButton: {fileID: 2135304898}
   controlsButton: {fileID: 1122150333}
   exitButton: {fileID: 741709979}
+  cameraScript: {fileID: 1719226109}
 --- !u!114 &899462687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10287,8 +10301,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -10557,8 +10571,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -11022,8 +11036,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -13382,7 +13396,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100026, guid: 6bb041380e56f164b970ec2192fcc0e8, type: 3}
       propertyPath: m_Name
-      value: test_enviros_2
+      value: env_Island_3
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 6bb041380e56f164b970ec2192fcc0e8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15617,7 +15631,7 @@ GameObject:
   - 4: {fileID: 1360983722}
   - 108: {fileID: 1360983721}
   m_Layer: 0
-  m_Name: island_3_light
+  m_Name: light_Island_3_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18709,7 +18723,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100026, guid: 6bb041380e56f164b970ec2192fcc0e8, type: 3}
       propertyPath: m_Name
-      value: test_enviros_1
+      value: env_Island_2
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 6bb041380e56f164b970ec2192fcc0e8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22499,6 +22513,22 @@ Prefab:
     - target: {fileID: 416406, guid: c751963474220f6468ffec31f698c609, type: 2}
       propertyPath: m_RootOrder
       value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416402, guid: c751963474220f6468ffec31f698c609, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416402, guid: c751963474220f6468ffec31f698c609, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416406, guid: c751963474220f6468ffec31f698c609, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416406, guid: c751963474220f6468ffec31f698c609, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c751963474220f6468ffec31f698c609, type: 2}
