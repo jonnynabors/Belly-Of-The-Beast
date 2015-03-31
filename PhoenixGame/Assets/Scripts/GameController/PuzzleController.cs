@@ -9,7 +9,7 @@ public class PuzzleController : MonoBehaviour {
 
 	//references to each tile's script
 	private TileController tileScript1;
-	public TileController tileScript2;
+	private TileController tileScript2;
 	private TileController tileScript3;
 
 	//permissions will allow tiles to "stick" to the ground if pressed in proper order
