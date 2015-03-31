@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Death()
 	{
 		isDead = true;
-		Destroy(playerCharacter);
+		//Destroy(playerCharacter);
 	}
 
 	// Use this for initialization
