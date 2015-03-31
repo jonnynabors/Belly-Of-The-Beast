@@ -6,34 +6,36 @@ public class PlayerHealth : MonoBehaviour {
 	public int startingHealth = 200;
 	public int currentHealth;
 	public Slider healthSlider;
-	bool isDead;
+	public bool isDead;
 	//bool damaged;
 	//reference to player control script
-	ThirdPersonController playerController;
-	ThirdPersonCamera playerCamera;
+	myControllerAnim playerController;
+	public GameObject playerCharacter;
+	Rigidbody rb;
 
 	void Awake()
 	{
 		//assign script and currentHealth upon game start
-		playerController = GetComponent<ThirdPersonController> ();
-		playerCamera = GetComponent<ThirdPersonCamera> ();
+		playerController = GetComponent<myControllerAnim> ();
 		currentHealth = startingHealth;
 	}
 
 	public void TakeDamage(int amount)
 	{
-		currentHealth -= amount;
-		healthSlider.value = currentHealth;
-
-		if (currentHealth <= 0 && !isDead)
+		//checks so health is never negative
+		if ((currentHealth -= amount) <= 0)
+		{
+			currentHealth = 0;
 			Death ();
+		}
+		//set health bar slider value
+		healthSlider.value = currentHealth;
 	}
 
 	void Death()
 	{
 		isDead = true;
-		playerController.enabled = false;
-		playerCamera.enabled = false;
+		Destroy(playerCharacter);
 	}
 
 	// Use this for initialization

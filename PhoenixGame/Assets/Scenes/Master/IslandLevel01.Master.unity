@@ -15683,6 +15683,7 @@ GameObject:
   - 95: {fileID: 1375552448}
   - 195: {fileID: 1375552446}
   - 114: {fileID: 1375552445}
+  - 135: {fileID: 1375552447}
   m_Layer: 0
   m_Name: enemy_Enemy1
   m_TagString: Enemy
@@ -15725,7 +15726,7 @@ MonoBehaviour:
   - {fileID: 70092555}
   currentEnemy: {fileID: 1375552444}
   timeBetweenAttacks: 1
-  attackDamage: 10
+  attackDamage: 40
   playerInRange: 0
   timer: 0
 --- !u!195 &1375552446
@@ -15748,6 +15749,18 @@ NavMeshAgent:
   m_BaseOffset: .100000001
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!135 &1375552447
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375552443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .100000001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &1375552448
 Animator:
   serializedVersion: 3
@@ -23958,6 +23971,7 @@ GameObject:
   - 114: {fileID: 2055338035}
   - 136: {fileID: 2055338034}
   - 54: {fileID: 2055338033}
+  - 114: {fileID: 2055338037}
   m_Layer: 0
   m_Name: jomz
   m_TagString: Player
@@ -24049,6 +24063,22 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2055338037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2055338031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c10a88b05b1d2441968d66434e75f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 200
+  currentHealth: 0
+  healthSlider: {fileID: 1184089533}
+  isDead: 0
+  playerCharacter: {fileID: 2055338031}
 --- !u!1 &2075995611
 GameObject:
   m_ObjectHideFlags: 0
