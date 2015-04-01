@@ -45,6 +45,7 @@ public class inGameMenuController : MonoBehaviour {
 			if (isInMenu)
 			{
 				isInMenu = false;
+				Screen.lockCursor = true;
 				mainMenu.enabled = false;
 				subMenu.enabled = false;
 				cameraScript.enabled = true;
@@ -55,6 +56,7 @@ public class inGameMenuController : MonoBehaviour {
 				isInMenu = true;
 				mainMenu.enabled = true;
 				cameraScript.enabled = false;
+				Screen.lockCursor = false;
 				Time.timeScale = 0;
 			}
 		}

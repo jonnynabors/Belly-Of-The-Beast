@@ -40,6 +40,6 @@ public class PlayerHealth : MonoBehaviour {
 	void Death()
 	{
 		isDead = true;
-		Destroy(playerCharacter);
+		//Destroy(playerCharacter);
 	}
 }
