@@ -138,7 +138,7 @@ public class myControllerAnim: MonoBehaviour
 			speed = new Vector2(leftX,leftY).sqrMagnitude;
 			
 			animator.SetFloat("Speed", speed);
-			animator.SetFloat("Direction", leftX, directionDampTime, Time.deltaTime);
+			animator.SetFloat("Direction", direction, directionDampTime, Time.deltaTime);
 			
 			StickToWorldspace(this.transform, gamecam.transform, ref direction, ref speed);
 		}
