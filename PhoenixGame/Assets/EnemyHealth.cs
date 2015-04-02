@@ -35,8 +35,8 @@ public class EnemyHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Check if player is in range, if so then take damage
-		if (playerInRange)
-			EnemyTakeDamage (1);
+//		if (playerInRange)
+//			EnemyTakeDamage (1);
 	}
 
 	void OnTriggerEnter(Collider other)
