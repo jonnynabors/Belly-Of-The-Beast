@@ -2226,8 +2226,8 @@ MonoBehaviour:
   playerCharacter: {fileID: 0}
   timer: 0
   playerInRange: 0
-  timeBetweenAttacks: 1
   enemyAIScript: {fileID: 0}
+  essencePrefab: {fileID: 464792, guid: 4b2db1e0576300e4f95dd202f29761cb, type: 2}
 --- !u!114 &11478008
 MonoBehaviour:
   m_ObjectHideFlags: 1

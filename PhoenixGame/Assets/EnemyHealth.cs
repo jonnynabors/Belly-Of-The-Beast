@@ -9,21 +9,22 @@ using System.Collections;
  * animation(s)
  */
 public class EnemyHealth : MonoBehaviour {
-	public int startingHealth = 150;
-	public GameObject playerCharacter;
-	public float timer;
-	public bool playerInRange;
-	public float timeBetweenAttacks = 1.0f;
-	public EnemyAI enemyAIScript;
+	public int startingHealth = 150;						//Starting health for Enemy prefab
+	public GameObject playerCharacter;						//Reference to Player GameObject
+	public bool playerInRange;								//Check if player is touching enemy
+	public EnemyAI enemyAIScript;							//Reference to EnemyAI Script
+	public Transform essencePrefab;							//Reference to Essence Prefab
+	public int essencesToDrop = 10;							//Amount of Essences to drop
 	private NavMeshAgent nav;                               // Reference to the nav mesh agent.
 
-	Animator anim;
+	Animator anim;											//Enemy's Animator Controller
+	int currentHealth;										//Value of enemy's current health
+	Vector3 dropLocation;									//Location to drop Essences at
 
-	bool isDead= false;
-	int currentHealth;
 
 	// Use this for initialization
 	void Start () {
+		//Initialize variables
 		currentHealth = startingHealth;
 		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
 		anim = GetComponent<Animator>();
@@ -32,9 +33,9 @@ public class EnemyHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		timer += Time.deltaTime;
-		if (timer >= timeBetweenAttacks && playerInRange)
-			EnemyTakeDamage (50);
+		//Check if player is in range, if so then take damage
+		if (playerInRange)
+			EnemyTakeDamage (1);
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -49,38 +50,40 @@ public class EnemyHealth : MonoBehaviour {
 			playerInRange = false;
 	}
 
+	//Assign damage to the enemy
 	public void EnemyTakeDamage(int damageTaken)
 	{
-		timeBetweenAttacks = 0;
 		if ((currentHealth -= damageTaken) <= 0) {
 			currentHealth = 0;
 			EnemyDeath();
 		}
-
-		//currentHealth -= damageTaken;
 		Debug.Log (currentHealth);
 	}
 
 	public void EnemyDeath()
 	{
-		isDead = true;
 		Debug.Log ("Dead");
 		anim.SetBool ("IsDead", true);
-		rigidbody.angularVelocity = Vector3.zero;
-		rigidbody.isKinematic = true;
 		nav.enabled = false;
 		enemyAIScript.enabled = false;
+		rigidbody.detectCollisions = false;
 		StartCoroutine (ClearGameObject ());
-		//ClearGameObject ();
 	}
 
+	//Give the animation time to resolve
 	IEnumerator ClearGameObject()
 	{
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(3);
 		DestroyObject();
 	}
 	void DestroyObject()
 	{
 		Destroy (gameObject);
+		int i = 0;
+		while(i < essencesToDrop){
+			dropLocation = new Vector3((Random.value / 2), -.1f, (Random.value / 2));
+			Instantiate(essencePrefab, transform.position + dropLocation, transform.rotation);
+			i++;
+		}
 	}
 }
