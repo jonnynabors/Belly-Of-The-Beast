@@ -25,6 +25,26 @@ public class PlayerHealth : MonoBehaviour {
 		currentHealth = startingHealth;
 	}
 
+	public void potionUsed()
+	{
+		if ((currentHealth + 80) <= 200)
+			currentHealth += 80;
+
+		//protects against accidental use of potion.. skip
+		else if (currentHealth == 200);
+
+		//and restore hp to max hp (currently 200) if less than 80 health is missing
+		else
+			currentHealth = 200;
+
+		updateHealthBar ();
+	
+	}
+
+	void updateHealthBar(){
+		healthSlider.value = currentHealth;
+	}
+
 	public void TakeDamage(int amount)
 	{
 		//checks so health is never negative
@@ -33,8 +53,8 @@ public class PlayerHealth : MonoBehaviour {
 			currentHealth = 0;
 			Death ();
 		}
-		//set health bar slider value
-		healthSlider.value = currentHealth;
+
+		updateHealthBar ();
 	}
 
 	void Death()

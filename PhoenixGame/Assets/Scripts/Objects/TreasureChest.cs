@@ -23,13 +23,8 @@ public class TreasureChest : MonoBehaviour {
 		{
 			if (found == false){
 				found = true;
-				potionCounterScript.potionCount += potionsFound;
+				potionCounterScript.increasePotions(5);
 			}
 		}
-	}
-
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }
