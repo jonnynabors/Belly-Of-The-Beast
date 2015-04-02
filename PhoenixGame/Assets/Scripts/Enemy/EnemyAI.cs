@@ -48,6 +48,22 @@ public class EnemyAI : MonoBehaviour {
 	void Attack()
 	{
 		timer = 0f;
+
+		anim.SetBool ("EnemyAttacking", true);
+		if(anim.GetCurrentAnimatorStateInfo(0).IsName ("Attack1"))
+		{
+
+		}
+		else if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") && !anim.GetCurrentAnimatorStateInfo(0).IsName ("Attack3"))
+		{
+			anim.SetBool ("Attack1Complete", true);
+		}
+		else if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") && !anim.GetCurrentAnimatorStateInfo(0).IsName ("Attack2"))
+		{
+			anim.SetBool ("Attack1Complete", false);
+			anim.SetBool ("Attack2Complete", true);
+		}
+
 		if (playerHealth.currentHealth > 0)
 			playerHealth.TakeDamage (attackDamage);
 	}

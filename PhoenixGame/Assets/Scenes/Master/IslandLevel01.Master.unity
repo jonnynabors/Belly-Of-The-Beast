@@ -15785,10 +15785,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 150
   playerCharacter: {fileID: 0}
-  timer: 0
   playerInRange: 0
   enemyAIScript: {fileID: 1375552445}
   essencePrefab: {fileID: 464792, guid: 4b2db1e0576300e4f95dd202f29761cb, type: 2}
+  essencesToDrop: 10
 --- !u!1 &1384721400
 GameObject:
   m_ObjectHideFlags: 0

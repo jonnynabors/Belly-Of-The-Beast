@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour {
 	public int essencesToDrop = 10;							//Amount of Essences to drop
 	private NavMeshAgent nav;                               // Reference to the nav mesh agent.
 
+	int atackState = Animator.StringToHash ("Base.Attack1");
 	Animator anim;											//Enemy's Animator Controller
 	int currentHealth;										//Value of enemy's current health
 	Vector3 dropLocation;									//Location to drop Essences at
@@ -48,15 +49,29 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		if (other.gameObject == playerCharacter)
 			playerInRange = false;
+
+		anim.SetBool ("EnemyAttacking", false);
 	}
 
 	//Assign damage to the enemy
 	public void EnemyTakeDamage(int damageTaken)
 	{
+		anim.SetBool ("EnemyAttacking", true);
+
+		AnimatorStateInfo currentBaseState = anim.GetCurrentAnimatorStateInfo(0);
+		if(currentBaseState.nameHash == atackState)
+		{
+			playerCharacter.rigidbody.AddForce(transform.position + transform.forward * 20);
+		}
+		else{
+			anim.SetBool ("Attack1Complete", true);
+		}
+
 		if ((currentHealth -= damageTaken) <= 0) {
 			currentHealth = 0;
 			EnemyDeath();
 		}
+
 		Debug.Log (currentHealth);
 	}
 
