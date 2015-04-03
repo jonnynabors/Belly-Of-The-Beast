@@ -23,7 +23,7 @@ public class swordCollision : MonoBehaviour {
 		if(collision.transform.tag == "Enemy")
 		{
 			EnemyHealth enemyHealth = collision.transform.GetComponent <EnemyHealth> ();
-			if(enemyHealth != null && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"));
+			if(enemyHealth != null && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
 			{
 				enemyHealth.EnemyTakeDamage (attackDamage);
 			}
