@@ -20,6 +20,8 @@ TagManager:
   - Enemy
   - Essence
   - EssenceCounter
+  - DayLight
+  - NightLight
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

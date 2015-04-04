@@ -9,6 +9,12 @@ public class SunScript : MonoBehaviour
 	public float maxFlareBrightness;
 	public float minFlareBrightness;
 
+	public bool giveLight = false;
 
+	void Start()
+	{
+		if(GetComponent<Light>() != null)
+			giveLight = true;
+	}
 }
 
