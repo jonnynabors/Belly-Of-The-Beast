@@ -94,6 +94,7 @@ public class GameTime : MonoBehaviour {
 			}
 			for(int i = 0; i < GameObject.FindGameObjectsWithTag("NightLight").Length; i ++)
 			{
+				if(GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>())
 				GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>().enabled = false;
 			}
 		}
@@ -106,6 +107,7 @@ public class GameTime : MonoBehaviour {
 			}
 			for(int i = 0; i < GameObject.FindGameObjectsWithTag("NightLight").Length; i ++)
 			{
+				if(GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>())
 				GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>().enabled = true;
 			}
 		}

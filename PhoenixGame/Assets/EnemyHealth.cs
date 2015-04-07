@@ -50,7 +50,7 @@ public class EnemyHealth : MonoBehaviour {
 		if (other.gameObject == playerCharacter)
 			playerInRange = false;
 
-		anim.SetBool ("EnemyAttacking", false);
+		//anim.SetBool ("EnemyAttacking", false);
 	}
 
 	//Assign damage to the enemy

@@ -18,6 +18,8 @@ public class EnemyAI : MonoBehaviour {
 	private float distanceToPlayer = 0;						// Hold distance from the player.
 	Animator anim;											//The game character's animation
 	private RaycastHit hit;									//Calculate if enemy is hitting character
+	int atackState = Animator.StringToHash ("Base.Attack1");
+	bool isAttacking = false;
 
 	//Tom's code
 	public float timeBetweenAttacks = 1.0f;
@@ -26,6 +28,44 @@ public class EnemyAI : MonoBehaviour {
 	PlayerHealth playerHealth;
 	public bool playerInRange;
 	public float timer;
+
+	// Use this for initialization
+	void Start () {
+		nav = GetComponent<NavMeshAgent>();
+		player = GameObject.FindGameObjectWithTag(Tags.player).transform;
+		anim = GetComponent<Animator>();
+		//nav.autoBraking = false; //For continuous movement
+	}
+
+	// Update is called once per frame
+	void Update () {
+		//Calculate distance to player
+		//If within range, execute chase function
+		distanceToPlayer = GetDistanceToPlayer();
+		
+		// Continuously patrol
+		if(nav.remainingDistance < 0.1f && distanceToPlayer > 0.4)
+			Patrolling ();
+		
+		if(distanceToPlayer < 0.5 && distanceToPlayer > 0.2)
+			Chasing();
+				
+		//New attack code 4/6/2015
+		if(distanceToPlayer <= 0.1) //Might be too big of a number
+		{
+			Attack ();
+		}
+		else
+			isAttacking = false;
+		
+		//Tom's Code
+		timer += Time.deltaTime;
+		if (timer >= timeBetweenAttacks && playerInRange)
+			Attack ();
+		
+		if(isAttacking)
+			nav.Stop (true);
+	}
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -38,8 +78,7 @@ public class EnemyAI : MonoBehaviour {
 		if (other.gameObject == playerCharacter)
 						playerInRange = false;
 	}
-
-
+	
 	void Awake(){
 		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = playerCharacter.GetComponent<PlayerHealth>();
@@ -48,53 +87,20 @@ public class EnemyAI : MonoBehaviour {
 	void Attack()
 	{
 		timer = 0f;
-
 		anim.SetBool ("EnemyAttacking", true);
-		if(anim.GetCurrentAnimatorStateInfo(0).IsName ("Attack1"))
-		{
-
-		}
-		else if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") && !anim.GetCurrentAnimatorStateInfo(0).IsName ("Attack3"))
-		{
-			anim.SetBool ("Attack1Complete", true);
-		}
-		else if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") && !anim.GetCurrentAnimatorStateInfo(0).IsName ("Attack2"))
-		{
-			anim.SetBool ("Attack1Complete", false);
-			anim.SetBool ("Attack2Complete", true);
-		}
+		AnimatorStateInfo currentBaseState = anim.GetCurrentAnimatorStateInfo(0);
+		anim.SetTrigger("StartAttack1");
+		anim.SetTrigger("StartAttack2");
+		anim.SetTrigger("StartAttack3");
+		isAttacking = true;
 
 		if (playerHealth.currentHealth > 0)
 			playerHealth.TakeDamage (attackDamage);
+
+		//Face the player
+		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position), 1 * Time.deltaTime);
 	}
 	//End of Tom's Code
-
-
-	// Use this for initialization
-	void Start () {
-		nav = GetComponent<NavMeshAgent>();
-		player = GameObject.FindGameObjectWithTag(Tags.player).transform;
-		anim = GetComponent<Animator>();
-		nav.autoBraking = false; //For continuous movement
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		// Continuously patrol
-		if(nav.remainingDistance < 0.1f)
-			Patrolling ();
-
-		//Calculate distance to player
-		//If within range, execute chase function
-		distanceToPlayer = GetDistanceToPlayer();
-		if(distanceToPlayer < 0.4)
-			Chasing();
-
-		//Tom's Code
-		timer += Time.deltaTime;
-		if (timer >= timeBetweenAttacks && playerInRange)
-						Attack ();
-	}
 
 	void Patrolling ()
 	{
@@ -105,23 +111,29 @@ public class EnemyAI : MonoBehaviour {
 		nav.speed = patrolSpeed;
 		anim.SetBool ("EnemyRunning", false);
 		anim.SetBool ("EnemyWalking", true);
+		anim.SetBool ("EnemyAttacking", false);
 		//Tell NavAgent to go to next destination
 		nav.destination = patrolWayPoints[wayPointIndex].position;
 		//Increment waypoint array index
 		wayPointIndex = (wayPointIndex + 1) % patrolWayPoints.Length;
 	}
 
-	//Calculate the distance between the player and the enemy
-	public float GetDistanceToPlayer()
-	{
-		return Vector3.Distance(player.position, currentEnemy.position);
-	}
+
 
 	//Chase after the game player
 	void Chasing()
 	{
 		//anim.SetBool ("EnemyWalking", false);
+		isAttacking = false;
+		anim.SetBool ("EnemyAttacking", false);
 		anim.SetBool ("EnemyRunning", true);
+		nav.Resume();
 		nav.SetDestination(player.position);
+	}
+
+	//Calculate the distance between the player and the enemy
+	public float GetDistanceToPlayer()
+	{
+		return Vector3.Distance(player.position, currentEnemy.position);
 	}
 }
