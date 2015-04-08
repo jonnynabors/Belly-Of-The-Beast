@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	//bool damaged;
 	//reference to player control script
-	myControllerAnim playerController;
+	Animator playerController;
 	public GameObject playerCharacter;
 	Rigidbody rb;
 
@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Awake()
 	{
 		//assign script and currentHealth upon game start
-		playerController = GetComponent<myControllerAnim> ();
+		playerController = GetComponent<Animator> ();
 		currentHealth = startingHealth;
 	}
 
@@ -61,6 +61,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Death()
 	{
 		isDead = true;
+		playerController.SetBool ("isDead", isDead);
 		//Destroy(playerCharacter);
 	}
 }

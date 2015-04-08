@@ -28,7 +28,6 @@ using System.Collections;
 /// </summary>
 public class myControllerAnim: MonoBehaviour 
 {
-	#region Variables (private)
 	
 	// Inspector serialized
 	[SerializeField]
@@ -67,17 +66,7 @@ public class myControllerAnim: MonoBehaviour
 	private float capsuleHeight;	
 	
 	
-	// Hashes
-	private int m_LocomotionId = 0;
-	private int m_LocomotionPivotLId = 0;
-	private int m_LocomotionPivotRId = 0;	
-	private int m_LocomotionPivotLTransId = 0;	
-	private int m_LocomotionPivotRTransId = 0;	
-	
-	#endregion
-	
-	
-	#region Properties (public)
+
 	
 	public Animator Animator
 	{
@@ -94,39 +83,12 @@ public class myControllerAnim: MonoBehaviour
 			return this.speed;
 		}
 	}
-	
-	//	public float LocomotionThreshold { get { return 0.2f; } }
-	
-	#endregion
-	
-	
-	#region Unity event functions
-	
-	/// <summary>
-	/// Use this for initialization.
-	/// </summary>
+
 	void Start() 
 	{
-		//		animator = GetComponent<Animator>();
-		//		capCollider = GetComponent<CapsuleCollider>();
-		//		capsuleHeight = capCollider.height;
-		//		
-		//		if(animator.layerCount >= 2)
-		//		{
-		//			animator.SetLayerWeight(1, 1);
-		//		}		
-		//		
-		//		// Hash all animation names for performance
-		//		m_LocomotionId = Animator.StringToHash("Base Layer.Locomotion");
-		//		m_LocomotionPivotLId = Animator.StringToHash("Base Layer.LocomotionPivotL");
-		//		m_LocomotionPivotRId = Animator.StringToHash("Base Layer.LocomotionPivotR");
-		//		m_LocomotionPivotLTransId = Animator.StringToHash("Base Layer.Locomotion -> Base Layer.LocomotionPivotL");
-		//		m_LocomotionPivotRTransId = Animator.StringToHash("Base Layer.Locomotion -> Base Layer.LocomotionPivotR");
-	}
 	
-	/// <summary>
-	/// Update is called once per frame.
-	/// </summary>
+	}
+
 	void Update() 
 	{
 		if (animator) {	
@@ -134,85 +96,25 @@ public class myControllerAnim: MonoBehaviour
 			// Pull values from controller/keyboard
 			leftX = Input.GetAxis ("Horizontal");
 			leftY = Input.GetAxis ("Vertical");	
+
+			if (Input.GetButtonDown ("dashRight")) {
+				animator.SetTrigger("dashRight");
+			}
+			if (Input.GetButtonDown ("dashLeft")) {
+				animator.SetTrigger("dashLeft");
+			}
+			if (Input.GetButtonDown ("Jump")) {
+				animator.SetTrigger("isJump");
+			}
 			
 			speed = new Vector2(leftX,leftY).sqrMagnitude;
-			
-			animator.SetFloat("Speed", speed);
-			animator.SetFloat("Direction", direction, directionDampTime, Time.deltaTime);
-			
+
 			StickToWorldspace(this.transform, gamecam.transform, ref direction, ref speed);
+			animator.SetFloat("Speed", setSpeed(speed));
+			animator.SetFloat("Direction", direction, directionDampTime, Time.deltaTime);
 		}
 	}
-	
-	/// <summary>
-	/// Any code that moves the character needs to be checked against physics
-	/// </summary>
-	void FixedUpdate()
-	{							
-		// Rotate character model if stick is tilted right or left, but only if character is moving in that direction
-		//		if (IsInLocomotion() && gamecam.CamState != myCamera.CamStates.Free && !IsInPivot() && ((direction >= 0 && leftX >= 0) || (direction < 0 && leftX < 0)))
-		//		{
-		//			Vector3 rotationAmount = Vector3.Lerp(Vector3.zero, new Vector3(0f, rotationDegreePerSecond * (leftX < 0f ? -1f : 1f), 0f), Mathf.Abs(leftX));
-		//			Quaternion deltaRotation = Quaternion.Euler(rotationAmount * Time.deltaTime);
-		//			this.transform.rotation = (this.transform.rotation * deltaRotation);
-		//		}		
-		
-		//		if (IsInJump())
-		//		{
-		//			float oldY = transform.position.y;
-		//			transform.Translate(Vector3.up * jumpMultiplier * animator.GetFloat("JumpCurve"));
-		//			if (IsInLocomotionJump())
-		//			{
-		//				transform.Translate(Vector3.forward * Time.deltaTime * jumpDist);
-		//			}
-		//			capCollider.height = capsuleHeight + (animator.GetFloat("CapsuleCurve") * 0.5f);
-		//			if (gamecam.CamState != myCamera.CamStates.Free)
-		//			{
-		//				//gamecam.ParentRig.Translate(Vector3.up * (transform.position.y - oldY));
-		//			}
-		//		}
-	}
-	
-	/// <summary>
-	/// Debugging information should be put here.
-	/// </summary>
-	void OnDrawGizmos()
-	{	
-		
-	}
-	
-	#endregion
-	
-	
-	#region Methods
-	
-	//	public bool IsInJump()
-	//	{
-	//		return (IsInIdleJump() || IsInLocomotionJump());
-	//	}
-	
-	//	public bool IsInIdleJump()
-	//	{
-	//		return animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.IdleJump");
-	//	}
-	
-	//	public bool IsInLocomotionJump()
-	//	{
-	//		return animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.LocomotionJump");
-	//	}
-	
-	//	public bool IsInPivot()
-	//	{
-	//		return stateInfo.nameHash == m_LocomotionPivotLId || 
-	//			stateInfo.nameHash == m_LocomotionPivotRId || 
-	//				transInfo.nameHash == m_LocomotionPivotLTransId || 
-	//				transInfo.nameHash == m_LocomotionPivotRTransId;
-	//	}
-	
-	//	public bool IsInLocomotion()
-	//	{
-	//		return stateInfo.nameHash == m_LocomotionId;
-	//	}
+
 	
 	public void StickToWorldspace(Transform root, Transform camera, ref float directionOut, ref float speedOut)
 	{
@@ -241,7 +143,19 @@ public class myControllerAnim: MonoBehaviour
 		angleRootToMove /= 180f;
 		
 		directionOut = angleRootToMove * directionSpeed;
-	}	
-	
-	#endregion Methods
+	}
+	private float setSpeed(float speed){
+		if (Input.GetButton ("Walk")) {
+			speed *= 1;
+			return speed;
+		} 
+		else if(Input.GetButton ("Sprint")){
+			speed *= 3;
+			return speed;
+		}
+		else{
+			speed *= 2;
+			return speed;
+		}
+	}
 }
