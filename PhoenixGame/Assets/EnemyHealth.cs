@@ -77,7 +77,6 @@ public class EnemyHealth : MonoBehaviour {
 
 	public void EnemyDeath()
 	{
-		Debug.Log ("Dead");
 		anim.SetBool ("IsDead", true);
 		nav.enabled = false;
 		enemyAIScript.enabled = false;

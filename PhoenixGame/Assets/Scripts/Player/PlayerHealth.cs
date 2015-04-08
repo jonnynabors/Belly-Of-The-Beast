@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 	public int currentHealth;
 	public Slider healthSlider;
 	public bool isDead;
+
 	//bool damaged;
 	//reference to player control script
 	myControllerAnim playerController;

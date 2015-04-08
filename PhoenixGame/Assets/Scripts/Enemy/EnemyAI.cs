@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour {
 	private RaycastHit hit;									//Calculate if enemy is hitting character
 	int atackState = Animator.StringToHash ("Base.Attack1");
 	bool isAttacking = false;
+	GameObject enemyClawLeft;
 
 	//Tom's code
 	public float timeBetweenAttacks = 1.0f;
@@ -95,10 +96,15 @@ public class EnemyAI : MonoBehaviour {
 		isAttacking = true;
 
 		if (playerHealth.currentHealth > 0)
+		{
+			//Call damage script
 			playerHealth.TakeDamage (attackDamage);
+			//Play particle effect on damage taken on the enemy
+			gameObject.particleSystem.Play ();
+		}
 
 		//Face the player
-		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position), 1 * Time.deltaTime);
+		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position), 2 * Time.deltaTime);
 	}
 	//End of Tom's Code
 
