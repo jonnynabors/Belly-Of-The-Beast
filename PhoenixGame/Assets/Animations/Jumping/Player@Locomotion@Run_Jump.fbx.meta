@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 7720bce0b99e3c2449c642023bf9893a
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: Carl:Head
     100002: Carl:HeadTop_End
@@ -234,13 +234,17 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
     animationCompression: 0
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
+    extraExposedTransformPaths: []
     clipAnimations:
-    - name: Locomotion@Run_Jump
+    - serializedVersion: 16
+      name: Locomotion@Run_Jump
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 27
@@ -249,9 +253,10 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 1
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -332,7 +337,10 @@ ModelImporter:
             tangentMode: 0
           preInfinity: 2
           postInfinity: 2
+      events: []
       transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -364,8 +372,6 @@ ModelImporter:
         min: {x: -40, y: -40, z: -40}
         max: {x: 40, y: 40, z: 40}
         value: {x: .0748812035, y: 0, z: .0374406017}
-        preQ: {x: -.455934614, y: -.540484548, z: .455934644, w: .540484548}
-        postQ: {x: -.455934614, y: -.540484548, z: .455934644, w: .540484548}
         length: .0936015397
         modified: 1
     - boneName: Carl:LeftUpLeg
@@ -374,8 +380,6 @@ ModelImporter:
         min: {x: -60.0000038, y: -60.0000038, z: -90}
         max: {x: 60.0000038, y: 60.0000038, z: 50}
         value: {x: .374056667, y: 0, z: .187028334}
-        preQ: {x: -.605743229, y: .364794612, z: -.60574317, w: .364794672}
-        postQ: {x: -.490663081, y: .509165645, z: -.490663081, w: .509165704}
         length: .467570961
         modified: 1
     - boneName: Carl:RightUpLeg
@@ -384,8 +388,6 @@ ModelImporter:
         min: {x: -60.0000038, y: -60.0000038, z: -90}
         max: {x: 60.0000038, y: 60.0000038, z: 50}
         value: {x: .374056667, y: 0, z: .187028334}
-        preQ: {x: -.605743229, y: .364794612, z: -.60574317, w: .364794672}
-        postQ: {x: -.490663081, y: .509165645, z: -.490663081, w: .509165704}
         length: .467570961
         modified: 1
     - boneName: Carl:LeftLeg
@@ -394,8 +396,6 @@ ModelImporter:
         min: {x: -90, y: 0, z: -80}
         max: {x: 90, y: 0, z: 80}
         value: {x: .273638606, y: 0, z: .136819303}
-        preQ: {x: -.0529258475, y: .705252409, z: -.0529453009, w: .704992592}
-        postQ: {x: -.493674487, y: .506250978, z: -.49385637, w: .506064475}
         length: .342048407
         modified: 1
     - boneName: Carl:RightLeg
@@ -404,8 +404,6 @@ ModelImporter:
         min: {x: -90, y: 0, z: -80}
         max: {x: 90, y: 0, z: 80}
         value: {x: .273638606, y: 0, z: .136819303}
-        preQ: {x: -.0529258735, y: .705252469, z: -.0529453047, w: .704992592}
-        postQ: {x: -.493674457, y: .506251037, z: -.4938564, w: .506064415}
         length: .342048407
         modified: 1
     - boneName: Carl:LeftFoot
@@ -414,8 +412,6 @@ ModelImporter:
         min: {x: 0, y: -30.0000019, z: -50}
         max: {x: 0, y: 30.0000019, z: 50}
         value: {x: .119891569, y: 0, z: .0599457845}
-        preQ: {x: -.49999997, y: .49999997, z: -.5, w: .5}
-        postQ: {x: -.49999997, y: .49999997, z: -.49999997, w: .49999997}
         length: .149864495
         modified: 1
     - boneName: Carl:RightFoot
@@ -424,8 +420,6 @@ ModelImporter:
         min: {x: 0, y: -30.0000019, z: -50}
         max: {x: 0, y: 30.0000019, z: 50}
         value: {x: .119891569, y: 0, z: .0599457845}
-        preQ: {x: -.49999997, y: .49999997, z: -.5, w: .5}
-        postQ: {x: -.49999997, y: .49999997, z: -.49999997, w: .49999997}
         length: .149864495
         modified: 1
     - boneName: Carl:Spine
@@ -434,8 +428,6 @@ ModelImporter:
         min: {x: -40, y: -40, z: -40}
         max: {x: 40, y: 40, z: 40}
         value: {x: .130038843, y: 0, z: .0650194213}
-        preQ: {x: .502540529, y: .497446448, z: -.502540529, w: -.497446448}
-        postQ: {x: .502540469, y: .497446448, z: -.502540469, w: -.497446448}
         length: .162548631
         modified: 1
     - boneName: Carl:Spine1
@@ -444,8 +436,6 @@ ModelImporter:
         min: {x: -40, y: -40, z: -40}
         max: {x: 40, y: 40, z: 40}
         value: {x: .224723622, y: 0, z: .112361811}
-        preQ: {x: .547953188, y: .446930945, z: -.547953188, w: -.446930915}
-        postQ: {x: .547953188, y: .446930915, z: -.547953188, w: -.446930885}
         length: .280904591
         modified: 1
     - boneName: Carl:Neck
@@ -454,8 +444,6 @@ ModelImporter:
         min: {x: -40, y: -40, z: -40}
         max: {x: 40, y: 40, z: 40}
         value: {x: .0684399828, y: 0, z: .0342199914}
-        preQ: {x: -.444775671, y: -.549704015, z: .444775671, w: .549704075}
-        postQ: {x: -.444775701, y: -.549704075, z: .444775701, w: .549704134}
         length: .0855500102
         modified: 1
     - boneName: Carl:Head
@@ -464,8 +452,6 @@ ModelImporter:
         min: {x: -40, y: -40, z: -40}
         max: {x: 40, y: 40, z: 40}
         value: {x: .0684399828, y: 0, z: .0342199914}
-        preQ: {x: -.49999997, y: -.49999997, z: .49999997, w: .49999997}
-        postQ: {x: -.49999997, y: -.49999997, z: .5, w: .5}
         length: .0855500102
         modified: 1
     - boneName: Carl:LeftShoulder
@@ -474,8 +460,6 @@ ModelImporter:
         min: {x: 0, y: -15.000001, z: -15.000001}
         max: {x: 0, y: 15.000001, z: 30.0000019}
         value: {x: .0999888405, y: 0, z: .0499944203}
-        preQ: {x: -.0718595758, y: -.00323949568, z: .996397495, w: -.0449185036}
-        postQ: {x: -.0718595833, y: -.00323949591, z: .996397555, w: -.0449185073}
         length: .12498609
         modified: 1
     - boneName: Carl:RightShoulder
@@ -484,8 +468,6 @@ ModelImporter:
         min: {x: 0, y: -15.000001, z: -15.000001}
         max: {x: 0, y: 15.000001, z: 30.0000019}
         value: {x: .100020595, y: 0, z: .0500102974}
-        preQ: {x: .00323740998, y: .0718366951, z: -.0449039899, w: .99639982}
-        postQ: {x: .00323740998, y: .0718366951, z: -.0449039899, w: .99639982}
         length: .125025779
         modified: 1
     - boneName: Carl:LeftArm
@@ -494,8 +476,6 @@ ModelImporter:
         min: {x: -90, y: -100, z: -60.0000038}
         max: {x: 90, y: 100, z: 100}
         value: {x: .221495911, y: 0, z: .110747956}
-        preQ: {x: .244210228, y: -0, z: .911232233, w: -.331688493}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .276869953
         modified: 1
     - boneName: Carl:RightArm
@@ -504,8 +484,6 @@ ModelImporter:
         min: {x: -90, y: -100, z: -60.0000038}
         max: {x: 90, y: 100, z: 100}
         value: {x: .221495911, y: 0, z: .110747956}
-        preQ: {x: -0, y: -.244210228, z: -.331688493, w: .911232233}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .276869953
         modified: 1
     - boneName: Carl:LeftForeArm
@@ -514,8 +492,6 @@ ModelImporter:
         min: {x: -90, y: 0, z: -80}
         max: {x: 90, y: 0, z: 80}
         value: {x: .2229902, y: 0, z: .1114951}
-        preQ: {x: .454487771, y: .541701794, z: .541701794, w: -.454487771}
-        postQ: {x: -0, y: .707106769, z: .707106769, w: 0}
         length: .278737813
         modified: 1
     - boneName: Carl:RightForeArm
@@ -524,8 +500,6 @@ ModelImporter:
         min: {x: -90, y: 0, z: -80}
         max: {x: 90, y: 0, z: 80}
         value: {x: .222990215, y: 0, z: .111495107}
-        preQ: {x: -.541701734, y: -.454487801, z: -.454487741, w: .541701794}
-        postQ: {x: -.707106709, y: -0, z: -0, w: .707106769}
         length: .278737843
         modified: 1
     - boneName: Carl:LeftHand
@@ -534,8 +508,6 @@ ModelImporter:
         min: {x: 0, y: -40, z: -80}
         max: {x: 0, y: 40, z: 80}
         value: {x: .1114951, y: 0, z: .05574755}
-        preQ: {x: -0, y: -0, z: .99999994, w: 0}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .139368907
         modified: 1
     - boneName: Carl:RightHand
@@ -544,8 +516,6 @@ ModelImporter:
         min: {x: 0, y: -40, z: -80}
         max: {x: 0, y: 40, z: 80}
         value: {x: .111495107, y: 0, z: .0557475537}
-        preQ: {x: -0, y: -0, z: -0, w: .99999994}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .139368922
         modified: 1
     - boneName: Carl:LeftToeBase
@@ -554,8 +524,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -50}
         max: {x: 0, y: 0, z: 50}
         value: {x: .0589644872, y: 0, z: .0294822436}
-        preQ: {x: .707106769, y: -0, z: .707106769, w: 0}
-        postQ: {x: .707106769, y: -0, z: .707106769, w: 0}
         length: .0737056285
         modified: 1
     - boneName: Carl:RightToeBase
@@ -564,8 +532,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -50}
         max: {x: 0, y: 0, z: 50}
         value: {x: .0589644872, y: 0, z: .0294822436}
-        preQ: {x: .707106769, y: -0, z: .707106769, w: 0}
-        postQ: {x: .707106769, y: -0, z: .707106769, w: 0}
         length: .0737056285
         modified: 1
     - boneName: Carl:LeftEye
@@ -574,8 +540,6 @@ ModelImporter:
         min: {x: 0, y: -20, z: -10}
         max: {x: 0, y: 20, z: 15.000001}
         value: {x: .0799999759, y: 0, z: .0399999879}
-        preQ: {x: .707106769, y: -0, z: .707106769, w: 0}
-        postQ: {x: .707106769, y: -0, z: .707106769, w: 0}
         length: .100000001
         modified: 1
     - boneName: Carl:RightEye
@@ -584,8 +548,6 @@ ModelImporter:
         min: {x: 0, y: -20, z: -10}
         max: {x: 0, y: 20, z: 15.000001}
         value: {x: .0799999759, y: 0, z: .0399999879}
-        preQ: {x: .707106769, y: -0, z: .707106769, w: 0}
-        postQ: {x: .707106769, y: -0, z: .707106769, w: 0}
         length: .100000001
         modified: 1
     - boneName: Carl:Jaw
@@ -594,8 +556,6 @@ ModelImporter:
         min: {x: 0, y: -10, z: -10}
         max: {x: 0, y: 10, z: 10}
         value: {x: .0799999759, y: 0, z: .0399999879}
-        preQ: {x: .70426023, y: -.0633834228, z: .70426023, w: -.0633834228}
-        postQ: {x: .707092047, y: -.00455700932, z: .707092047, w: -.00455700932}
         length: .100000001
         modified: 1
     - boneName: Carl:LeftHandThumb1
@@ -604,8 +564,6 @@ ModelImporter:
         min: {x: 0, y: -25, z: -20}
         max: {x: 0, y: 25, z: 20}
         value: {x: .0361115858, y: 0, z: .0180557929}
-        preQ: {x: .227370948, y: .624001861, z: .594871044, w: -.452827185}
-        postQ: {x: .16864334, y: .629492223, z: .690060019, w: -.314826936}
         length: .045139499
         modified: 1
     - boneName: Carl:LeftHandThumb2
@@ -614,8 +572,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -40}
         max: {x: 0, y: 0, z: 35}
         value: {x: .041429311, y: 0, z: .0207146555}
-        preQ: {x: .00580924703, y: .666804671, z: .728768408, w: -.155673534}
-        postQ: {x: .0739956424, y: .640482962, z: .724174201, w: -.244699508}
         length: .0517866574
         modified: 1
     - boneName: Carl:LeftHandThumb3
@@ -624,8 +580,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -40}
         max: {x: 0, y: 0, z: 35}
         value: {x: .031071987, y: 0, z: .0155359935}
-        preQ: {x: -.0578429513, y: .659245551, z: .742914319, w: -.100636929}
-        postQ: {x: .172417745, y: .65825969, z: .702489436, w: -.208505973}
         length: .0388399921
         modified: 1
     - boneName: Carl:LeftHandIndex1
@@ -634,8 +588,6 @@ ModelImporter:
         min: {x: 0, y: -20, z: -50}
         max: {x: 0, y: 20, z: 50}
         value: {x: .0443942882, y: 0, z: .0221971441}
-        preQ: {x: .0764021128, y: -0, z: .955026507, w: -.286507934}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .055492878
         modified: 1
     - boneName: Carl:LeftHandIndex2
@@ -644,8 +596,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0271289758, y: 0, z: .0135644879}
-        preQ: {x: -0, y: -0, z: .949628592, w: -.31337744}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0339112282
         modified: 1
     - boneName: Carl:LeftHandIndex3
@@ -654,8 +604,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0203467291, y: 0, z: .0101733645}
-        preQ: {x: -0, y: -0, z: .949628592, w: -.31337741}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0254334211
         modified: 1
     - boneName: Carl:LeftHandMiddle1
@@ -664,8 +612,6 @@ ModelImporter:
         min: {x: 0, y: -7.50000048, z: -50}
         max: {x: 0, y: 7.50000048, z: 50}
         value: {x: .0463367328, y: 0, z: .0231683664}
-        preQ: {x: .0382849574, y: -0, z: .957124054, w: -.28713721}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0579209328
         modified: 1
     - boneName: Carl:LeftHandMiddle2
@@ -674,8 +620,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0297053736, y: 0, z: .0148526868}
-        preQ: {x: -0, y: -0, z: .949628592, w: -.31337744}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0371317267
         modified: 1
     - boneName: Carl:LeftHandMiddle3
@@ -684,8 +628,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0222790297, y: 0, z: .0111395149}
-        preQ: {x: -0, y: -0, z: .949628592, w: -.31337741}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0278487951
         modified: 1
     - boneName: Carl:LeftHandRing1
@@ -694,8 +636,6 @@ ModelImporter:
         min: {x: 0, y: -7.50000048, z: -50}
         max: {x: 0, y: 7.50000048, z: 50}
         value: {x: .0435618274, y: 0, z: .0217809137}
-        preQ: {x: -.0382849574, y: -0, z: .957124054, w: -.28713721}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0544523001
         modified: 1
     - boneName: Carl:LeftHandRing2
@@ -704,8 +644,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0297053736, y: 0, z: .0148526868}
-        preQ: {x: -0, y: -0, z: .949628592, w: -.31337744}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0371317267
         modified: 1
     - boneName: Carl:LeftHandRing3
@@ -714,8 +652,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0222790297, y: 0, z: .0111395149}
-        preQ: {x: -0, y: -0, z: .949628592, w: -.31337741}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0278487951
         modified: 1
     - boneName: Carl:LeftHandPinky1
@@ -724,8 +660,6 @@ ModelImporter:
         min: {x: 0, y: -20, z: -50}
         max: {x: 0, y: 20, z: 50}
         value: {x: .029409973, y: 0, z: .0147049865}
-        preQ: {x: -.0764021128, y: -0, z: .955026507, w: -.286507934}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .036762476
         modified: 1
     - boneName: Carl:LeftHandPinky2
@@ -734,8 +668,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0224906858, y: 0, z: .0112453429}
-        preQ: {x: -0, y: -0, z: .949628592, w: -.31337744}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0281133652
         modified: 1
     - boneName: Carl:LeftHandPinky3
@@ -744,8 +676,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .016868012, y: 0, z: .00843400601}
-        preQ: {x: -0, y: -0, z: .949628592, w: -.31337741}
-        postQ: {x: -0, y: -0, z: .99999994, w: 0}
         length: .0210850239
         modified: 1
     - boneName: Carl:RightHandThumb1
@@ -754,8 +684,6 @@ ModelImporter:
         min: {x: 0, y: -25, z: -20}
         max: {x: 0, y: 25, z: 20}
         value: {x: .0363416001, y: 0, z: .0181708001}
-        preQ: {x: .617460191, y: .22828427, z: .46319294, w: -.593364596}
-        postQ: {x: -.621556878, y: -.174809352, z: -.331976026, w: .687677681}
         length: .0454270169
         modified: 1
     - boneName: Carl:RightHandThumb2
@@ -764,8 +692,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -40}
         max: {x: 0, y: 0, z: 35}
         value: {x: .0407463536, y: 0, z: .0203731768}
-        preQ: {x: .663200676, y: .0137996068, z: .173237368, w: -.72798568}
-        postQ: {x: -.635863066, y: -.0717048198, z: -.247580156, w: .727489233}
         length: .0509329587
         modified: 1
     - boneName: Carl:RightHandThumb3
@@ -774,8 +700,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -40}
         max: {x: 0, y: 0, z: 35}
         value: {x: .0305597689, y: 0, z: .0152798845}
-        preQ: {x: .656251669, y: -.0597005785, z: .103196301, w: -.745063782}
-        postQ: {x: -.65532726, y: -.136875406, z: -.190635771, w: .717961907}
         length: .038199719
         modified: 1
     - boneName: Carl:RightHandIndex1
@@ -784,8 +708,6 @@ ModelImporter:
         min: {x: 0, y: -20, z: -50}
         max: {x: 0, y: 20, z: 50}
         value: {x: .0430140831, y: 0, z: .0215070415}
-        preQ: {x: -0, y: .0764021128, z: .286507934, w: -.955026507}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0537676215
         modified: 1
     - boneName: Carl:RightHandIndex2
@@ -794,8 +716,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0270837713, y: 0, z: .0135418857}
-        preQ: {x: -0, y: -0, z: .31337744, w: -.949628592}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .033854723
         modified: 1
     - boneName: Carl:RightHandIndex3
@@ -804,8 +724,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0203128271, y: 0, z: .0101564135}
-        preQ: {x: -0, y: -0, z: .31337741, w: -.949628592}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0253910422
         modified: 1
     - boneName: Carl:RightHandMiddle1
@@ -814,8 +732,6 @@ ModelImporter:
         min: {x: 0, y: -7.50000048, z: -50}
         max: {x: 0, y: 7.50000048, z: 50}
         value: {x: .0449341647, y: 0, z: .0224670824}
-        preQ: {x: -0, y: .0382849574, z: .28713721, w: -.957124054}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0561677217
         modified: 1
     - boneName: Carl:RightHandMiddle2
@@ -824,8 +740,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0298907682, y: 0, z: .0149453841}
-        preQ: {x: -0, y: -0, z: .31337744, w: -.949628592}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0373634696
         modified: 1
     - boneName: Carl:RightHandMiddle3
@@ -834,8 +748,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0224180743, y: 0, z: .0112090372}
-        preQ: {x: -0, y: -0, z: .31337741, w: -.949628592}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0280226022
         modified: 1
     - boneName: Carl:RightHandRing1
@@ -844,8 +756,6 @@ ModelImporter:
         min: {x: 0, y: -7.50000048, z: -50}
         max: {x: 0, y: 7.50000048, z: 50}
         value: {x: .04321016, y: 0, z: .02160508}
-        preQ: {x: -0, y: -.0382849574, z: .28713721, w: -.957124054}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0540127158
         modified: 1
     - boneName: Carl:RightHandRing2
@@ -854,8 +764,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0271327421, y: 0, z: .0135663711}
-        preQ: {x: -0, y: -0, z: .31337744, w: -.949628592}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0339159369
         modified: 1
     - boneName: Carl:RightHandRing3
@@ -864,8 +772,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0203495547, y: 0, z: .0101747774}
-        preQ: {x: -0, y: -0, z: .31337741, w: -.949628592}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0254369527
         modified: 1
     - boneName: Carl:RightHandPinky1
@@ -874,8 +780,6 @@ ModelImporter:
         min: {x: 0, y: -20, z: -50}
         max: {x: 0, y: 20, z: 50}
         value: {x: .0292220525, y: 0, z: .0146110263}
-        preQ: {x: -0, y: -.0764021128, z: .286507934, w: -.955026507}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0365275741
         modified: 1
     - boneName: Carl:RightHandPinky2
@@ -884,8 +788,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0222562719, y: 0, z: .011128136}
-        preQ: {x: -0, y: -0, z: .31337744, w: -.949628592}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0278203487
         modified: 1
     - boneName: Carl:RightHandPinky3
@@ -894,8 +796,6 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0166922025, y: 0, z: .00834610127}
-        preQ: {x: -0, y: -0, z: .31337741, w: -.949628592}
-        postQ: {x: -0, y: -0, z: -0, w: .99999994}
         length: .0208652616
         modified: 1
     skeleton:
@@ -1354,7 +1254,6 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: .99999994}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    handles: []
     armTwist: .5
     foreArmTwist: .5
     upperLegTwist: .5
@@ -1365,6 +1264,6 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 4ff29a25079ebf141ace52bfaf4bc4a3,
     type: 3}
-  additionalBone: 1
   animationType: 3
+  additionalBone: 1
   userData: 

@@ -18,9 +18,9 @@ public class swordCollision : MonoBehaviour {
 	void Update () {
 	
 	}
-	void OnCollisionEnter(Collision collision) 
+	void OnTriggerEnter(Collider collision) 
 	{
-		if(collision.transform.tag == "Enemy")
+		if(collision.gameObject.tag == "Enemy")
 		{
 			collision.gameObject.GetComponent <Animator>().SetBool("EnemyTrigger",true);
 			EnemyHealth enemyHealth = collision.transform.GetComponent <EnemyHealth> ();
