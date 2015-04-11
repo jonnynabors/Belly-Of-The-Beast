@@ -45,8 +45,11 @@ public class PotionCounter : MonoBehaviour {
 	public void detectUsePotion(){
 		if (Input.GetKeyDown("c"))
 		{
-			potionDrink();
-			playerHealthScript.potionUsed ();
+			if (potionCount > 0)
+			{
+				potionDrink();
+				playerHealthScript.potionUsed ();
+			}
 		}
 	}
 }

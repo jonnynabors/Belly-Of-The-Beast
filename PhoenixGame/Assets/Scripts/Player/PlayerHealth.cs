@@ -5,18 +5,22 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 	public int startingHealth = 200;
 	public int currentHealth;
-	public Slider healthSlider;
 	public bool isDead;
 
-	//bool damaged;
 	//reference to player control script
 	Animator playerController;
 	public GameObject playerCharacter;
 	Rigidbody rb;
 
+	//reference another script
+	public HealthBarMover healthBarMover;
+	public GameObject healthBar;
+
 	void Start()
 	{
 		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
+		healthBar = GameObject.FindGameObjectWithTag ("HealthBar");
+		healthBarMover = healthBar.GetComponent<HealthBarMover> ();
 	}
 
 	void Awake()
@@ -26,6 +30,12 @@ public class PlayerHealth : MonoBehaviour {
 		currentHealth = startingHealth;
 	}
 
+	//this script is called by the HealthBarMover
+	public double healthPercentage()
+	{
+		return currentHealth / startingHealth;
+	}
+	
 	public void potionUsed()
 	{
 		if ((currentHealth + 80) <= 200)
@@ -38,12 +48,8 @@ public class PlayerHealth : MonoBehaviour {
 		else
 			currentHealth = 200;
 
-		updateHealthBar ();
+		healthBarMover.updateHealthBar ();
 	
-	}
-
-	void updateHealthBar(){
-		healthSlider.value = currentHealth;
 	}
 
 	public void TakeDamage(int amount)
@@ -55,7 +61,7 @@ public class PlayerHealth : MonoBehaviour {
 			Death ();
 		}
 
-		updateHealthBar ();
+		healthBarMover.updateHealthBar ();
 	}
 
 	void Death()
