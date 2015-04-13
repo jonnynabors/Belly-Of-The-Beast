@@ -2,21 +2,42 @@
 using System.Collections;
 
 public class newCamera : MonoBehaviour {
-	
-	public float distanceAway = 5f;
-	private float distanceUp = 5f;
-	private float smooth = 5f;
+
+	public float maxDistance = 1;
+	public float viewAngle = 1;
+	public float distanceUp = 5f;
+	public float distanceAway = 1f;
 	public Transform follow;
 	public Vector3 targetPosition;
 	public Vector3 lookDir;
 	public float rotationUpdateSpeed = 60.0f,
 	lookUpSpeed = 20.0f;
+	public Camera camera;
+	
+	public LayerMask obstacleLayers = -1, groundLayers = -1;
 	
 	//position of camera
 	public Vector3 offset = new Vector3(0f, 0.0f, 0f);
 	
 	private Vector3 velocityCamSmooth = Vector3.zero;
 	private float camSmoothDampTime = 0.1f;
+	public bool grounded = false;
+	public float groundedDistance = 0.5f;
+	public float groundedCheckOffset = 0.0f;
+	public bool lookFromBelow = false;
+	float ViewRadius
+		// The minimum clear radius between the camera and the target
+	{
+		get
+		{
+			float fieldOfViewRadius = (distanceAway / Mathf.Sin (90.0f - camera.fieldOfView / 2.0f)) * Mathf.Sin (camera.fieldOfView / 2.0f);
+			// Half the width of the field of view of the camera at the position of the target
+			float doubleCharacterRadius = Mathf.Max (follow.gameObject.collider.bounds.extents.x, follow.gameObject.collider.bounds.extents.z) * 2.0f;
+			
+			return Mathf.Min (doubleCharacterRadius, fieldOfViewRadius);
+		}
+	}
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -24,7 +45,28 @@ public class newCamera : MonoBehaviour {
 		follow = GameObject.Find ("Player").GetComponent<Transform> ();
 	}
 	
-	// Update is called once per frame
+	void FixedUpdate ()
+	{
+		grounded = Physics.Raycast (
+			camera.transform.position + follow.up * -groundedCheckOffset,
+			follow.up * -1,
+			groundedDistance,
+			groundLayers
+			);
+		Vector3 inverseLineOfSight = camera.transform.position - follow.position;
+		RaycastHit hit;
+		if (Physics.SphereCast (follow.position, ViewRadius, inverseLineOfSight, out hit, distanceAway, obstacleLayers))
+			// Cast a sphere from the target towards the camera - using the view radius - checking against the obstacle layers
+		{
+			distanceAway = Mathf.Min ((hit.point - follow.position).magnitude, distanceAway);
+			// If something is hit, set the target distance to the hit position
+		}
+		else
+		{
+			distanceAway = maxDistance;
+			// If nothing is hit, target the optimal distance
+		}
+	}
 	void Update () {
 	}
 	
@@ -37,6 +79,7 @@ public class newCamera : MonoBehaviour {
 		rotationAmount = Input.GetAxis ("Mouse Y") * -1.0f * lookUpSpeed * Time.deltaTime;
 		camera.transform.RotateAround (follow.position, camera.transform.right, rotationAmount);
 		
+		DistanceUpdate ();
 		followUpdate ();
 	}
 	
@@ -49,24 +92,39 @@ public class newCamera : MonoBehaviour {
 		
 		targetPosition = charOffset + follow.up * distanceUp - lookDir * distanceAway;
 		Debug.DrawLine (follow.position, targetPosition, Color.magenta);
-
-		smoothPosition(this.transform.position, targetPosition);
 		
-		transform.LookAt (follow);
+		//wallCollision (charOffset, ref targetPosition);
+		smoothPosition(this.transform.position, targetPosition);
+		transform.LookAt (new Vector3 (follow.position.x, follow.position.y + viewAngle, follow.position.z));
+	}
+	void DistanceUpdate(){
+		targetPosition = follow.position + (camera.transform.position - follow.position).normalized * distanceAway;
 	}
 	
 	private void smoothPosition(Vector3 fromPos, Vector3 toPos){
-		if (camera.transform.position.y > 2.9) {
-			this.transform.position = new Vector3 (toPos.x, 2.9f, toPos.z);
-		} 
-		else if(camera.transform.position.y < 1.5){
-			this.transform.position = new Vector3 (toPos.x, 1.5f, toPos.z);
-		}
-		else {
-			this.transform.position = new Vector3 (toPos.x,camera.transform.position.y,toPos.z);
+		lookFromBelow = Vector3.Angle (camera.transform.forward, follow.up * -1) > Vector3.Angle (camera.transform.forward, follow.up);
+		if (grounded && lookFromBelow) {
+			this.transform.position = Vector3.SmoothDamp (fromPos, new Vector3 (toPos.x, follow.position.y + viewAngle, toPos.z), ref velocityCamSmooth, camSmoothDampTime);
+			//this.transform.position = new Vector3 (toPos.x,follow.transform.position.y,toPos.z);
+			if (toPos.y > camera.transform.position.y) {
+				lookFromBelow = false;
+			}
+		} else {
+			this.transform.position = Vector3.SmoothDamp (fromPos, new Vector3 (toPos.x, camera.transform.position.y, toPos.z), ref velocityCamSmooth, camSmoothDampTime);
 		}
 		
-		//this.transform.position = new Vector3 (toPos.x,camera.transform.position.y,toPos.z);
+	}
+	private void wallCollision(Vector3 fromObject, ref Vector3 toTarget){
+		Debug.DrawLine (fromObject, toTarget, Color.cyan);
+		RaycastHit wallHit = new RaycastHit ();
+		if(Physics.Linecast(fromObject, toTarget, out wallHit)){
+			toTarget = new Vector3(wallHit.point.x, toTarget.y, wallHit.point.z);
+		}
+	}
+	void OnDrawGizmosSelected(){
+		Gizmos.color = grounded ? Color.blue : Color.red;
+		Gizmos.DrawLine (camera.transform.position + follow.up * -groundedCheckOffset,
+		                 camera.transform.position + follow.up * -(groundedCheckOffset + groundedDistance));
 	}
 	
 }

@@ -110,6 +110,9 @@ public class myControllerAnim: MonoBehaviour
 			speed = new Vector2(leftX,leftY).sqrMagnitude;
 
 			StickToWorldspace(this.transform, gamecam.transform, ref direction, ref speed);
+			if (leftX > .2 || leftX < -.2 || leftY < -0.2 || leftY > 0.2){
+				speed = 1;
+			}
 			animator.SetFloat("Speed", setSpeed(speed));
 			animator.SetFloat("Direction", direction, directionDampTime, Time.deltaTime);
 		}
@@ -139,6 +142,11 @@ public class myControllerAnim: MonoBehaviour
 		Debug.DrawRay(new Vector3(root.position.x, root.position.y + 2.5f, root.position.z), axisSign, Color.red);
 		
 		float angleRootToMove = Vector3.Angle(rootDirection, moveDirection) * (axisSign.y >= 0 ? -1f : 1f);
+		Vector3 eulerAngles = transform.eulerAngles;
+		eulerAngles.y += angleRootToMove;
+		if(speed > .1){
+			transform.eulerAngles = eulerAngles;
+		}
 		
 		angleRootToMove /= 180f;
 		
