@@ -21,6 +21,7 @@ public class EnemyAI : MonoBehaviour {
 	int atackState = Animator.StringToHash ("Base.Attack1");
 	bool isAttacking = false;
 	GameObject enemyClawLeft;
+	bool isPlayerDead = false;
 
 	//Tom's code
 	public float timeBetweenAttacks = 1.0f;
@@ -47,25 +48,29 @@ public class EnemyAI : MonoBehaviour {
 		// Continuously patrol
 		if(nav.remainingDistance < 0.1f && distanceToPlayer > 0.4)
 			Patrolling ();
-		
-		if(distanceToPlayer < 0.5 && distanceToPlayer > 0.2)
-			Chasing();
-				
-		//New attack code 4/6/2015
-		if(distanceToPlayer <= 0.1) //Might be too big of a number
+
+		if(!isPlayerDead)
 		{
-			Attack ();
+			if(distanceToPlayer < 0.5 && distanceToPlayer > 0.2 && playerHealth.currentHealth > 0)
+				Chasing();
+			
+			//New attack code 4/6/2015
+			if(distanceToPlayer <= 0.1 && playerHealth.currentHealth > 0) //Might be too big of a number
+			{
+				Attack ();
+			}
+			else
+				isAttacking = false;
+			
+			//Tom's Code
+			timer += Time.deltaTime;
+			if (timer >= timeBetweenAttacks && playerInRange)
+				Attack ();
+			
+			if(isAttacking)
+				nav.Stop (true);
 		}
-		else
-			isAttacking = false;
-		
-		//Tom's Code
-		timer += Time.deltaTime;
-		if (timer >= timeBetweenAttacks && playerInRange)
-			Attack ();
-		
-		if(isAttacking)
-			nav.Stop (true);
+
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -90,9 +95,9 @@ public class EnemyAI : MonoBehaviour {
 		timer = 0f;
 		anim.SetBool ("EnemyAttacking", true);
 		AnimatorStateInfo currentBaseState = anim.GetCurrentAnimatorStateInfo(0);
-		anim.SetTrigger("StartAttack1");
-		anim.SetTrigger("StartAttack2");
-		anim.SetTrigger("StartAttack3");
+
+
+		StartCoroutine (AttackTriggers ());
 		isAttacking = true;
 
 		if (playerHealth.currentHealth > 0)
@@ -102,11 +107,27 @@ public class EnemyAI : MonoBehaviour {
 			//Play particle effect on damage taken on the enemy
 			gameObject.particleSystem.Play ();
 		}
+		else if (playerHealth.currentHealth <= 0)
+		{
+			//anim.SetBool ("PlayerDead", true);
+			anim.SetBool ("EnemyAttacking", false);
+			isPlayerDead = true;
+		}
 
 		//Face the player
-		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position), 2 * Time.deltaTime);
+		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position), 10 * Time.deltaTime);
 	}
 	//End of Tom's Code
+
+	IEnumerator AttackTriggers()
+	{
+		anim.SetTrigger("StartAttack1");
+		yield return new WaitForSeconds(1);
+		anim.SetTrigger("StartAttack2");
+		yield return new WaitForSeconds(1);
+		anim.SetTrigger("StartAttack3");
+		anim.SetTrigger ("SpecialAttack");
+	}
 
 	void Patrolling ()
 	{

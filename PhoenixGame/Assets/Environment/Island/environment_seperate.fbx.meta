@@ -1,0 +1,1085 @@
+fileFormatVersion: 2
+guid: fd374229f2322fd4ba091608068218b2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arms
+    100002: Arms 1
+    100004: Arms 2
+    100006: Ball
+    100008: BaseIsland
+    100010: CliffFaceAndStones
+    100012: Cloud
+    100014: Door
+    100016: DoorFrame
+    100018: //RootNode
+    100020: Ground_Torch
+    100022: Ground_Torch1
+    100024: Ground_Torch2
+    100026: Ground_Torches
+    100028: GroundTorch_Arm1
+    100030: GroundTorch_Arm1 1
+    100032: GroundTorch_Arm1 2
+    100034: GroundTorch_Arm2
+    100036: GroundTorch_Arm2 1
+    100038: GroundTorch_Arm2 2
+    100040: GroundTorch_Arm3
+    100042: GroundTorch_Arm3 1
+    100044: GroundTorch_Arm3 2
+    100046: GroundTorch_Arm4
+    100048: GroundTorch_Arm4 1
+    100050: GroundTorch_Arm4 2
+    100052: GroundTorch_Fire
+    100054: GroundTorch_Fire 1
+    100056: GroundTorch_Fire 2
+    100058: GroundTorch_Fire_Flame
+    100060: GroundTorch_Fire_Flame 1
+    100062: GroundTorch_Fire_Flame 2
+    100064: GroundTorch_Fire_Flame1
+    100066: GroundTorch_Fire_Flame1 1
+    100068: GroundTorch_Fire_Flame1 2
+    100070: GroundTorch_Fire_Flame2
+    100072: GroundTorch_Fire_Flame2 1
+    100074: GroundTorch_Fire_Flame2 2
+    100076: GroundTorch_Fire_Flame3
+    100078: GroundTorch_Fire_Flame3 1
+    100080: GroundTorch_Fire_Flame3 2
+    100082: GroundTorch_Fire_Flame4
+    100084: GroundTorch_Fire_Flame4 1
+    100086: GroundTorch_Fire_Flame4 2
+    100088: GroundTorch_Fire_Flame5
+    100090: GroundTorch_Fire_Flame5 1
+    100092: GroundTorch_Fire_Flame5 2
+    100094: GroundTorch_Fire_Flame6
+    100096: GroundTorch_Fire_Flame6 1
+    100098: GroundTorch_Fire_Flame6 2
+    100100: GroundTorch_Fire_Flame7
+    100102: GroundTorch_Fire_Flame7 1
+    100104: GroundTorch_Fire_Flame7 2
+    100106: GroundTorch_Fire_Flame8
+    100108: GroundTorch_Fire_Flame8 1
+    100110: GroundTorch_Fire_Flame8 2
+    100112: GroundTorch_Fire_Flame9
+    100114: GroundTorch_Fire_Flame9 1
+    100116: GroundTorch_Fire_Flame9 2
+    100118: GroundTorch_Post
+    100120: GroundTorch_Post 1
+    100122: GroundTorch_Post 2
+    100124: Ladder
+    100126: polySurface1
+    100128: polySurface10
+    100130: polySurface11
+    100132: polySurface12
+    100134: polySurface13
+    100136: polySurface14
+    100138: polySurface15
+    100140: polySurface16
+    100142: polySurface17
+    100144: polySurface18
+    100146: polySurface19
+    100148: polySurface2
+    100150: polySurface20
+    100152: polySurface21
+    100154: polySurface22
+    100156: polySurface23
+    100158: polySurface24
+    100160: polySurface25
+    100162: polySurface26
+    100164: polySurface27
+    100166: polySurface28
+    100168: polySurface29
+    100170: polySurface3
+    100172: polySurface30
+    100174: polySurface31
+    100176: polySurface32
+    100178: polySurface33
+    100180: polySurface34
+    100182: polySurface35
+    100184: polySurface36
+    100186: polySurface37
+    100188: polySurface38
+    100190: polySurface39
+    100192: polySurface4
+    100194: polySurface40
+    100196: polySurface41
+    100198: polySurface42
+    100200: polySurface43
+    100202: polySurface44
+    100204: polySurface45
+    100206: polySurface46
+    100208: polySurface47
+    100210: polySurface48
+    100212: polySurface5
+    100214: polySurface6
+    100216: polySurface7
+    100218: polySurface8
+    100220: polySurface9
+    100222: sunDirection
+    100224: transform1
+    100226: transform10
+    100228: transform2
+    100230: transform3
+    100232: transform4
+    100234: transform5
+    100236: transform6
+    100238: transform7
+    100240: transform8
+    100242: transform9
+    100244: Trees
+    100246: Wall_Torch
+    100248: Wall_Torch1
+    100250: Wall_Torch2
+    100252: Wall_Torch3
+    100254: Wall_Torch4
+    100256: Wall_Torch5
+    100258: Wall_Torches
+    100260: WallTorch_Flame
+    100262: WallTorch_Flame 1
+    100264: WallTorch_Flame 2
+    100266: WallTorch_Flame 3
+    100268: WallTorch_Flame 4
+    100270: WallTorch_Flame 5
+    100272: WallTorch_Flame1
+    100274: WallTorch_Flame1 1
+    100276: WallTorch_Flame1 2
+    100278: WallTorch_Flame1 3
+    100280: WallTorch_Flame1 4
+    100282: WallTorch_Flame1 5
+    100284: WallTorch_Flame2
+    100286: WallTorch_Flame2 1
+    100288: WallTorch_Flame2 2
+    100290: WallTorch_Flame2 3
+    100292: WallTorch_Flame2 4
+    100294: WallTorch_Flame2 5
+    100296: WallTorch_Flame3
+    100298: WallTorch_Flame3 1
+    100300: WallTorch_Flame3 2
+    100302: WallTorch_Flame3 3
+    100304: WallTorch_Flame3 4
+    100306: WallTorch_Flame3 5
+    100308: WallTorch_Flame4
+    100310: WallTorch_Flame4 1
+    100312: WallTorch_Flame4 2
+    100314: WallTorch_Flame4 3
+    100316: WallTorch_Flame4 4
+    100318: WallTorch_Flame4 5
+    100320: WallTorch_Flame5
+    100322: WallTorch_Flame5 1
+    100324: WallTorch_Flame5 2
+    100326: WallTorch_Flame5 3
+    100328: WallTorch_Flame5 4
+    100330: WallTorch_Flame5 5
+    100332: WallTorch_Flame6
+    100334: WallTorch_Flame6 1
+    100336: WallTorch_Flame6 2
+    100338: WallTorch_Flame6 3
+    100340: WallTorch_Flame6 4
+    100342: WallTorch_Flame6 5
+    100344: WallTorch_Flame7
+    100346: WallTorch_Flame7 1
+    100348: WallTorch_Flame7 2
+    100350: WallTorch_Flame7 3
+    100352: WallTorch_Flame7 4
+    100354: WallTorch_Flame7 5
+    100356: WallTorch_Flame8
+    100358: WallTorch_Flame8 1
+    100360: WallTorch_Flame8 2
+    100362: WallTorch_Flame8 3
+    100364: WallTorch_Flame8 4
+    100366: WallTorch_Flame8 5
+    100368: WallTorch_Flame9
+    100370: WallTorch_Flame9 1
+    100372: WallTorch_Flame9 2
+    100374: WallTorch_Flame9 3
+    100376: WallTorch_Flame9 4
+    100378: WallTorch_Flame9 5
+    100380: WallTorch_Holder1
+    100382: WallTorch_Holder2
+    100384: WallTorch_Holder3
+    100386: WallTorch_Holder4
+    100388: WallTorch_Holder5
+    100390: WallTorch_Holder6
+    100392: WallTorch_Post
+    100394: WallTorch_Post 1
+    100396: WallTorch_Post 2
+    100398: WallTorch_Post 3
+    100400: WallTorch_Post 4
+    100402: WallTorch_Post 5
+    100404: Waterline
+    400000: Arms
+    400002: Arms 1
+    400004: Arms 2
+    400006: Ball
+    400008: BaseIsland
+    400010: CliffFaceAndStones
+    400012: Cloud
+    400014: Door
+    400016: DoorFrame
+    400018: //RootNode
+    400020: Ground_Torch
+    400022: Ground_Torch1
+    400024: Ground_Torch2
+    400026: Ground_Torches
+    400028: GroundTorch_Arm1
+    400030: GroundTorch_Arm1 1
+    400032: GroundTorch_Arm1 2
+    400034: GroundTorch_Arm2
+    400036: GroundTorch_Arm2 1
+    400038: GroundTorch_Arm2 2
+    400040: GroundTorch_Arm3
+    400042: GroundTorch_Arm3 1
+    400044: GroundTorch_Arm3 2
+    400046: GroundTorch_Arm4
+    400048: GroundTorch_Arm4 1
+    400050: GroundTorch_Arm4 2
+    400052: GroundTorch_Fire
+    400054: GroundTorch_Fire 1
+    400056: GroundTorch_Fire 2
+    400058: GroundTorch_Fire_Flame
+    400060: GroundTorch_Fire_Flame 1
+    400062: GroundTorch_Fire_Flame 2
+    400064: GroundTorch_Fire_Flame1
+    400066: GroundTorch_Fire_Flame1 1
+    400068: GroundTorch_Fire_Flame1 2
+    400070: GroundTorch_Fire_Flame2
+    400072: GroundTorch_Fire_Flame2 1
+    400074: GroundTorch_Fire_Flame2 2
+    400076: GroundTorch_Fire_Flame3
+    400078: GroundTorch_Fire_Flame3 1
+    400080: GroundTorch_Fire_Flame3 2
+    400082: GroundTorch_Fire_Flame4
+    400084: GroundTorch_Fire_Flame4 1
+    400086: GroundTorch_Fire_Flame4 2
+    400088: GroundTorch_Fire_Flame5
+    400090: GroundTorch_Fire_Flame5 1
+    400092: GroundTorch_Fire_Flame5 2
+    400094: GroundTorch_Fire_Flame6
+    400096: GroundTorch_Fire_Flame6 1
+    400098: GroundTorch_Fire_Flame6 2
+    400100: GroundTorch_Fire_Flame7
+    400102: GroundTorch_Fire_Flame7 1
+    400104: GroundTorch_Fire_Flame7 2
+    400106: GroundTorch_Fire_Flame8
+    400108: GroundTorch_Fire_Flame8 1
+    400110: GroundTorch_Fire_Flame8 2
+    400112: GroundTorch_Fire_Flame9
+    400114: GroundTorch_Fire_Flame9 1
+    400116: GroundTorch_Fire_Flame9 2
+    400118: GroundTorch_Post
+    400120: GroundTorch_Post 1
+    400122: GroundTorch_Post 2
+    400124: Ladder
+    400126: polySurface1
+    400128: polySurface10
+    400130: polySurface11
+    400132: polySurface12
+    400134: polySurface13
+    400136: polySurface14
+    400138: polySurface15
+    400140: polySurface16
+    400142: polySurface17
+    400144: polySurface18
+    400146: polySurface19
+    400148: polySurface2
+    400150: polySurface20
+    400152: polySurface21
+    400154: polySurface22
+    400156: polySurface23
+    400158: polySurface24
+    400160: polySurface25
+    400162: polySurface26
+    400164: polySurface27
+    400166: polySurface28
+    400168: polySurface29
+    400170: polySurface3
+    400172: polySurface30
+    400174: polySurface31
+    400176: polySurface32
+    400178: polySurface33
+    400180: polySurface34
+    400182: polySurface35
+    400184: polySurface36
+    400186: polySurface37
+    400188: polySurface38
+    400190: polySurface39
+    400192: polySurface4
+    400194: polySurface40
+    400196: polySurface41
+    400198: polySurface42
+    400200: polySurface43
+    400202: polySurface44
+    400204: polySurface45
+    400206: polySurface46
+    400208: polySurface47
+    400210: polySurface48
+    400212: polySurface5
+    400214: polySurface6
+    400216: polySurface7
+    400218: polySurface8
+    400220: polySurface9
+    400222: sunDirection
+    400224: transform1
+    400226: transform10
+    400228: transform2
+    400230: transform3
+    400232: transform4
+    400234: transform5
+    400236: transform6
+    400238: transform7
+    400240: transform8
+    400242: transform9
+    400244: Trees
+    400246: Wall_Torch
+    400248: Wall_Torch1
+    400250: Wall_Torch2
+    400252: Wall_Torch3
+    400254: Wall_Torch4
+    400256: Wall_Torch5
+    400258: Wall_Torches
+    400260: WallTorch_Flame
+    400262: WallTorch_Flame 1
+    400264: WallTorch_Flame 2
+    400266: WallTorch_Flame 3
+    400268: WallTorch_Flame 4
+    400270: WallTorch_Flame 5
+    400272: WallTorch_Flame1
+    400274: WallTorch_Flame1 1
+    400276: WallTorch_Flame1 2
+    400278: WallTorch_Flame1 3
+    400280: WallTorch_Flame1 4
+    400282: WallTorch_Flame1 5
+    400284: WallTorch_Flame2
+    400286: WallTorch_Flame2 1
+    400288: WallTorch_Flame2 2
+    400290: WallTorch_Flame2 3
+    400292: WallTorch_Flame2 4
+    400294: WallTorch_Flame2 5
+    400296: WallTorch_Flame3
+    400298: WallTorch_Flame3 1
+    400300: WallTorch_Flame3 2
+    400302: WallTorch_Flame3 3
+    400304: WallTorch_Flame3 4
+    400306: WallTorch_Flame3 5
+    400308: WallTorch_Flame4
+    400310: WallTorch_Flame4 1
+    400312: WallTorch_Flame4 2
+    400314: WallTorch_Flame4 3
+    400316: WallTorch_Flame4 4
+    400318: WallTorch_Flame4 5
+    400320: WallTorch_Flame5
+    400322: WallTorch_Flame5 1
+    400324: WallTorch_Flame5 2
+    400326: WallTorch_Flame5 3
+    400328: WallTorch_Flame5 4
+    400330: WallTorch_Flame5 5
+    400332: WallTorch_Flame6
+    400334: WallTorch_Flame6 1
+    400336: WallTorch_Flame6 2
+    400338: WallTorch_Flame6 3
+    400340: WallTorch_Flame6 4
+    400342: WallTorch_Flame6 5
+    400344: WallTorch_Flame7
+    400346: WallTorch_Flame7 1
+    400348: WallTorch_Flame7 2
+    400350: WallTorch_Flame7 3
+    400352: WallTorch_Flame7 4
+    400354: WallTorch_Flame7 5
+    400356: WallTorch_Flame8
+    400358: WallTorch_Flame8 1
+    400360: WallTorch_Flame8 2
+    400362: WallTorch_Flame8 3
+    400364: WallTorch_Flame8 4
+    400366: WallTorch_Flame8 5
+    400368: WallTorch_Flame9
+    400370: WallTorch_Flame9 1
+    400372: WallTorch_Flame9 2
+    400374: WallTorch_Flame9 3
+    400376: WallTorch_Flame9 4
+    400378: WallTorch_Flame9 5
+    400380: WallTorch_Holder1
+    400382: WallTorch_Holder2
+    400384: WallTorch_Holder3
+    400386: WallTorch_Holder4
+    400388: WallTorch_Holder5
+    400390: WallTorch_Holder6
+    400392: WallTorch_Post
+    400394: WallTorch_Post 1
+    400396: WallTorch_Post 2
+    400398: WallTorch_Post 3
+    400400: WallTorch_Post 4
+    400402: WallTorch_Post 5
+    400404: Waterline
+    2300000: Ball
+    2300002: Cloud
+    2300004: Door
+    2300006: DoorFrame
+    2300008: GroundTorch_Arm1
+    2300010: GroundTorch_Arm1 1
+    2300012: GroundTorch_Arm1 2
+    2300014: GroundTorch_Arm2
+    2300016: GroundTorch_Arm2 1
+    2300018: GroundTorch_Arm2 2
+    2300020: GroundTorch_Arm3
+    2300022: GroundTorch_Arm3 1
+    2300024: GroundTorch_Arm3 2
+    2300026: GroundTorch_Arm4
+    2300028: GroundTorch_Arm4 1
+    2300030: GroundTorch_Arm4 2
+    2300032: GroundTorch_Fire_Flame
+    2300034: GroundTorch_Fire_Flame 1
+    2300036: GroundTorch_Fire_Flame 2
+    2300038: GroundTorch_Fire_Flame1
+    2300040: GroundTorch_Fire_Flame1 1
+    2300042: GroundTorch_Fire_Flame1 2
+    2300044: GroundTorch_Fire_Flame2
+    2300046: GroundTorch_Fire_Flame2 1
+    2300048: GroundTorch_Fire_Flame2 2
+    2300050: GroundTorch_Fire_Flame3
+    2300052: GroundTorch_Fire_Flame3 1
+    2300054: GroundTorch_Fire_Flame3 2
+    2300056: GroundTorch_Fire_Flame4
+    2300058: GroundTorch_Fire_Flame4 1
+    2300060: GroundTorch_Fire_Flame4 2
+    2300062: GroundTorch_Fire_Flame5
+    2300064: GroundTorch_Fire_Flame5 1
+    2300066: GroundTorch_Fire_Flame5 2
+    2300068: GroundTorch_Fire_Flame6
+    2300070: GroundTorch_Fire_Flame6 1
+    2300072: GroundTorch_Fire_Flame6 2
+    2300074: GroundTorch_Fire_Flame8
+    2300076: GroundTorch_Fire_Flame8 1
+    2300078: GroundTorch_Fire_Flame8 2
+    2300080: GroundTorch_Fire_Flame9
+    2300082: GroundTorch_Fire_Flame9 1
+    2300084: GroundTorch_Fire_Flame9 2
+    2300086: GroundTorch_Post
+    2300088: GroundTorch_Post 1
+    2300090: GroundTorch_Post 2
+    2300092: Ladder
+    2300094: polySurface1
+    2300096: polySurface10
+    2300098: polySurface12
+    2300100: polySurface14
+    2300102: polySurface15
+    2300104: polySurface17
+    2300106: polySurface18
+    2300108: polySurface2
+    2300110: polySurface20
+    2300112: polySurface21
+    2300114: polySurface22
+    2300116: polySurface23
+    2300118: polySurface24
+    2300120: polySurface25
+    2300122: polySurface26
+    2300124: polySurface27
+    2300126: polySurface28
+    2300128: polySurface29
+    2300130: polySurface3
+    2300132: polySurface30
+    2300134: polySurface31
+    2300136: polySurface32
+    2300138: polySurface33
+    2300140: polySurface34
+    2300142: polySurface35
+    2300144: polySurface36
+    2300146: polySurface37
+    2300148: polySurface38
+    2300150: polySurface39
+    2300152: polySurface41
+    2300154: polySurface42
+    2300156: polySurface43
+    2300158: polySurface44
+    2300160: polySurface45
+    2300162: polySurface46
+    2300164: polySurface47
+    2300166: polySurface48
+    2300168: polySurface5
+    2300170: polySurface6
+    2300172: polySurface7
+    2300174: polySurface8
+    2300176: WallTorch_Flame
+    2300178: WallTorch_Flame 1
+    2300180: WallTorch_Flame 2
+    2300182: WallTorch_Flame 3
+    2300184: WallTorch_Flame 4
+    2300186: WallTorch_Flame 5
+    2300188: WallTorch_Flame1
+    2300190: WallTorch_Flame1 1
+    2300192: WallTorch_Flame1 2
+    2300194: WallTorch_Flame1 3
+    2300196: WallTorch_Flame1 4
+    2300198: WallTorch_Flame1 5
+    2300200: WallTorch_Flame2
+    2300202: WallTorch_Flame2 1
+    2300204: WallTorch_Flame2 2
+    2300206: WallTorch_Flame2 3
+    2300208: WallTorch_Flame2 4
+    2300210: WallTorch_Flame2 5
+    2300212: WallTorch_Flame3
+    2300214: WallTorch_Flame3 1
+    2300216: WallTorch_Flame3 2
+    2300218: WallTorch_Flame3 3
+    2300220: WallTorch_Flame3 4
+    2300222: WallTorch_Flame3 5
+    2300224: WallTorch_Flame4
+    2300226: WallTorch_Flame4 1
+    2300228: WallTorch_Flame4 2
+    2300230: WallTorch_Flame4 3
+    2300232: WallTorch_Flame4 4
+    2300234: WallTorch_Flame4 5
+    2300236: WallTorch_Flame5
+    2300238: WallTorch_Flame5 1
+    2300240: WallTorch_Flame5 2
+    2300242: WallTorch_Flame5 3
+    2300244: WallTorch_Flame5 4
+    2300246: WallTorch_Flame5 5
+    2300248: WallTorch_Flame6
+    2300250: WallTorch_Flame6 1
+    2300252: WallTorch_Flame6 2
+    2300254: WallTorch_Flame6 3
+    2300256: WallTorch_Flame6 4
+    2300258: WallTorch_Flame6 5
+    2300260: WallTorch_Flame8
+    2300262: WallTorch_Flame8 1
+    2300264: WallTorch_Flame8 2
+    2300266: WallTorch_Flame8 3
+    2300268: WallTorch_Flame8 4
+    2300270: WallTorch_Flame8 5
+    2300272: WallTorch_Flame9
+    2300274: WallTorch_Flame9 1
+    2300276: WallTorch_Flame9 2
+    2300278: WallTorch_Flame9 3
+    2300280: WallTorch_Flame9 4
+    2300282: WallTorch_Flame9 5
+    2300284: WallTorch_Holder1
+    2300286: WallTorch_Holder2
+    2300288: WallTorch_Holder3
+    2300290: WallTorch_Holder4
+    2300292: WallTorch_Holder5
+    2300294: WallTorch_Holder6
+    2300296: WallTorch_Post
+    2300298: WallTorch_Post 1
+    2300300: WallTorch_Post 2
+    2300302: WallTorch_Post 3
+    2300304: WallTorch_Post 4
+    2300306: WallTorch_Post 5
+    2300308: Waterline
+    3300000: Ball
+    3300002: Cloud
+    3300004: Door
+    3300006: DoorFrame
+    3300008: GroundTorch_Arm1
+    3300010: GroundTorch_Arm1 1
+    3300012: GroundTorch_Arm1 2
+    3300014: GroundTorch_Arm2
+    3300016: GroundTorch_Arm2 1
+    3300018: GroundTorch_Arm2 2
+    3300020: GroundTorch_Arm3
+    3300022: GroundTorch_Arm3 1
+    3300024: GroundTorch_Arm3 2
+    3300026: GroundTorch_Arm4
+    3300028: GroundTorch_Arm4 1
+    3300030: GroundTorch_Arm4 2
+    3300032: GroundTorch_Fire_Flame
+    3300034: GroundTorch_Fire_Flame 1
+    3300036: GroundTorch_Fire_Flame 2
+    3300038: GroundTorch_Fire_Flame1
+    3300040: GroundTorch_Fire_Flame1 1
+    3300042: GroundTorch_Fire_Flame1 2
+    3300044: GroundTorch_Fire_Flame2
+    3300046: GroundTorch_Fire_Flame2 1
+    3300048: GroundTorch_Fire_Flame2 2
+    3300050: GroundTorch_Fire_Flame3
+    3300052: GroundTorch_Fire_Flame3 1
+    3300054: GroundTorch_Fire_Flame3 2
+    3300056: GroundTorch_Fire_Flame4
+    3300058: GroundTorch_Fire_Flame4 1
+    3300060: GroundTorch_Fire_Flame4 2
+    3300062: GroundTorch_Fire_Flame5
+    3300064: GroundTorch_Fire_Flame5 1
+    3300066: GroundTorch_Fire_Flame5 2
+    3300068: GroundTorch_Fire_Flame6
+    3300070: GroundTorch_Fire_Flame6 1
+    3300072: GroundTorch_Fire_Flame6 2
+    3300074: GroundTorch_Fire_Flame8
+    3300076: GroundTorch_Fire_Flame8 1
+    3300078: GroundTorch_Fire_Flame8 2
+    3300080: GroundTorch_Fire_Flame9
+    3300082: GroundTorch_Fire_Flame9 1
+    3300084: GroundTorch_Fire_Flame9 2
+    3300086: GroundTorch_Post
+    3300088: GroundTorch_Post 1
+    3300090: GroundTorch_Post 2
+    3300092: Ladder
+    3300094: polySurface1
+    3300096: polySurface10
+    3300098: polySurface12
+    3300100: polySurface14
+    3300102: polySurface15
+    3300104: polySurface17
+    3300106: polySurface18
+    3300108: polySurface2
+    3300110: polySurface20
+    3300112: polySurface21
+    3300114: polySurface22
+    3300116: polySurface23
+    3300118: polySurface24
+    3300120: polySurface25
+    3300122: polySurface26
+    3300124: polySurface27
+    3300126: polySurface28
+    3300128: polySurface29
+    3300130: polySurface3
+    3300132: polySurface30
+    3300134: polySurface31
+    3300136: polySurface32
+    3300138: polySurface33
+    3300140: polySurface34
+    3300142: polySurface35
+    3300144: polySurface36
+    3300146: polySurface37
+    3300148: polySurface38
+    3300150: polySurface39
+    3300152: polySurface41
+    3300154: polySurface42
+    3300156: polySurface43
+    3300158: polySurface44
+    3300160: polySurface45
+    3300162: polySurface46
+    3300164: polySurface47
+    3300166: polySurface48
+    3300168: polySurface5
+    3300170: polySurface6
+    3300172: polySurface7
+    3300174: polySurface8
+    3300176: WallTorch_Flame
+    3300178: WallTorch_Flame 1
+    3300180: WallTorch_Flame 2
+    3300182: WallTorch_Flame 3
+    3300184: WallTorch_Flame 4
+    3300186: WallTorch_Flame 5
+    3300188: WallTorch_Flame1
+    3300190: WallTorch_Flame1 1
+    3300192: WallTorch_Flame1 2
+    3300194: WallTorch_Flame1 3
+    3300196: WallTorch_Flame1 4
+    3300198: WallTorch_Flame1 5
+    3300200: WallTorch_Flame2
+    3300202: WallTorch_Flame2 1
+    3300204: WallTorch_Flame2 2
+    3300206: WallTorch_Flame2 3
+    3300208: WallTorch_Flame2 4
+    3300210: WallTorch_Flame2 5
+    3300212: WallTorch_Flame3
+    3300214: WallTorch_Flame3 1
+    3300216: WallTorch_Flame3 2
+    3300218: WallTorch_Flame3 3
+    3300220: WallTorch_Flame3 4
+    3300222: WallTorch_Flame3 5
+    3300224: WallTorch_Flame4
+    3300226: WallTorch_Flame4 1
+    3300228: WallTorch_Flame4 2
+    3300230: WallTorch_Flame4 3
+    3300232: WallTorch_Flame4 4
+    3300234: WallTorch_Flame4 5
+    3300236: WallTorch_Flame5
+    3300238: WallTorch_Flame5 1
+    3300240: WallTorch_Flame5 2
+    3300242: WallTorch_Flame5 3
+    3300244: WallTorch_Flame5 4
+    3300246: WallTorch_Flame5 5
+    3300248: WallTorch_Flame6
+    3300250: WallTorch_Flame6 1
+    3300252: WallTorch_Flame6 2
+    3300254: WallTorch_Flame6 3
+    3300256: WallTorch_Flame6 4
+    3300258: WallTorch_Flame6 5
+    3300260: WallTorch_Flame8
+    3300262: WallTorch_Flame8 1
+    3300264: WallTorch_Flame8 2
+    3300266: WallTorch_Flame8 3
+    3300268: WallTorch_Flame8 4
+    3300270: WallTorch_Flame8 5
+    3300272: WallTorch_Flame9
+    3300274: WallTorch_Flame9 1
+    3300276: WallTorch_Flame9 2
+    3300278: WallTorch_Flame9 3
+    3300280: WallTorch_Flame9 4
+    3300282: WallTorch_Flame9 5
+    3300284: WallTorch_Holder1
+    3300286: WallTorch_Holder2
+    3300288: WallTorch_Holder3
+    3300290: WallTorch_Holder4
+    3300292: WallTorch_Holder5
+    3300294: WallTorch_Holder6
+    3300296: WallTorch_Post
+    3300298: WallTorch_Post 1
+    3300300: WallTorch_Post 2
+    3300302: WallTorch_Post 3
+    3300304: WallTorch_Post 4
+    3300306: WallTorch_Post 5
+    3300308: Waterline
+    4300000: polySurface5
+    4300002: polySurface6
+    4300004: polySurface7
+    4300006: Door
+    4300008: DoorFrame
+    4300010: Ball
+    4300012: Waterline
+    4300014: Cloud
+    4300016: Ladder
+    4300018: polySurface1
+    4300020: polySurface2
+    4300022: polySurface3
+    4300024: polySurface8
+    4300026: polySurface17
+    4300028: polySurface18
+    4300030: polySurface32
+    4300032: polySurface33
+    4300034: polySurface34
+    4300036: polySurface35
+    4300038: polySurface36
+    4300040: polySurface37
+    4300042: polySurface38
+    4300044: polySurface39
+    4300046: polySurface41
+    4300048: polySurface42
+    4300050: polySurface43
+    4300052: polySurface44
+    4300054: polySurface45
+    4300056: polySurface46
+    4300058: polySurface47
+    4300060: polySurface48
+    4300062: polySurface10
+    4300064: polySurface12
+    4300066: polySurface14
+    4300068: polySurface15
+    4300070: polySurface20
+    4300072: polySurface21
+    4300074: polySurface22
+    4300076: polySurface23
+    4300078: polySurface24
+    4300080: polySurface25
+    4300082: polySurface26
+    4300084: polySurface27
+    4300086: polySurface28
+    4300088: polySurface29
+    4300090: polySurface30
+    4300092: polySurface31
+    4300094: GroundTorch_Fire_Flame6
+    4300096: GroundTorch_Fire_Flame5
+    4300098: GroundTorch_Fire_Flame4
+    4300100: GroundTorch_Fire_Flame3
+    4300102: GroundTorch_Fire_Flame2
+    4300104: GroundTorch_Fire_Flame1
+    4300106: GroundTorch_Fire_Flame
+    4300108: GroundTorch_Fire_Flame8
+    4300110: GroundTorch_Fire_Flame9
+    4300112: GroundTorch_Arm4
+    4300114: GroundTorch_Arm3
+    4300116: GroundTorch_Arm2
+    4300118: GroundTorch_Arm1
+    4300120: GroundTorch_Post
+    4300122: GroundTorch_Fire_Flame6
+    4300124: GroundTorch_Fire_Flame5
+    4300126: GroundTorch_Fire_Flame4
+    4300128: GroundTorch_Fire_Flame3
+    4300130: GroundTorch_Fire_Flame2
+    4300132: GroundTorch_Fire_Flame1
+    4300134: GroundTorch_Fire_Flame
+    4300136: GroundTorch_Fire_Flame8
+    4300138: GroundTorch_Fire_Flame9
+    4300140: GroundTorch_Arm4
+    4300142: GroundTorch_Arm3
+    4300144: GroundTorch_Arm2
+    4300146: GroundTorch_Arm1
+    4300148: GroundTorch_Post
+    4300150: GroundTorch_Fire_Flame6
+    4300152: GroundTorch_Fire_Flame5
+    4300154: GroundTorch_Fire_Flame4
+    4300156: GroundTorch_Fire_Flame3
+    4300158: GroundTorch_Fire_Flame2
+    4300160: GroundTorch_Fire_Flame1
+    4300162: GroundTorch_Fire_Flame
+    4300164: GroundTorch_Fire_Flame8
+    4300166: GroundTorch_Fire_Flame9
+    4300168: GroundTorch_Arm4
+    4300170: GroundTorch_Arm3
+    4300172: GroundTorch_Arm2
+    4300174: GroundTorch_Arm1
+    4300176: GroundTorch_Post
+    4300178: WallTorch_Post
+    4300180: WallTorch_Holder1
+    4300182: WallTorch_Flame6
+    4300184: WallTorch_Flame5
+    4300186: WallTorch_Flame4
+    4300188: WallTorch_Flame3
+    4300190: WallTorch_Flame2
+    4300192: WallTorch_Flame1
+    4300194: WallTorch_Flame
+    4300196: WallTorch_Flame8
+    4300198: WallTorch_Flame9
+    4300200: WallTorch_Post
+    4300202: WallTorch_Holder2
+    4300204: WallTorch_Flame6
+    4300206: WallTorch_Flame5
+    4300208: WallTorch_Flame4
+    4300210: WallTorch_Flame3
+    4300212: WallTorch_Flame2
+    4300214: WallTorch_Flame1
+    4300216: WallTorch_Flame
+    4300218: WallTorch_Flame8
+    4300220: WallTorch_Flame9
+    4300222: WallTorch_Post
+    4300224: WallTorch_Holder3
+    4300226: WallTorch_Flame6
+    4300228: WallTorch_Flame5
+    4300230: WallTorch_Flame4
+    4300232: WallTorch_Flame3
+    4300234: WallTorch_Flame2
+    4300236: WallTorch_Flame1
+    4300238: WallTorch_Flame
+    4300240: WallTorch_Flame8
+    4300242: WallTorch_Flame9
+    4300244: WallTorch_Post
+    4300246: WallTorch_Holder4
+    4300248: WallTorch_Flame6
+    4300250: WallTorch_Flame5
+    4300252: WallTorch_Flame4
+    4300254: WallTorch_Flame3
+    4300256: WallTorch_Flame2
+    4300258: WallTorch_Flame1
+    4300260: WallTorch_Flame
+    4300262: WallTorch_Flame8
+    4300264: WallTorch_Flame9
+    4300266: WallTorch_Post
+    4300268: WallTorch_Holder5
+    4300270: WallTorch_Flame6
+    4300272: WallTorch_Flame5
+    4300274: WallTorch_Flame4
+    4300276: WallTorch_Flame3
+    4300278: WallTorch_Flame2
+    4300280: WallTorch_Flame1
+    4300282: WallTorch_Flame
+    4300284: WallTorch_Flame8
+    4300286: WallTorch_Flame9
+    4300288: WallTorch_Post
+    4300290: WallTorch_Holder6
+    4300292: WallTorch_Flame6
+    4300294: WallTorch_Flame5
+    4300296: WallTorch_Flame4
+    4300298: WallTorch_Flame3
+    4300300: WallTorch_Flame2
+    4300302: WallTorch_Flame1
+    4300304: WallTorch_Flame
+    4300306: WallTorch_Flame8
+    4300308: WallTorch_Flame9
+    6400000: Ball
+    6400002: Cloud
+    6400004: Door
+    6400006: DoorFrame
+    6400008: GroundTorch_Arm1
+    6400010: GroundTorch_Arm1 1
+    6400012: GroundTorch_Arm1 2
+    6400014: GroundTorch_Arm2
+    6400016: GroundTorch_Arm2 1
+    6400018: GroundTorch_Arm2 2
+    6400020: GroundTorch_Arm3
+    6400022: GroundTorch_Arm3 1
+    6400024: GroundTorch_Arm3 2
+    6400026: GroundTorch_Arm4
+    6400028: GroundTorch_Arm4 1
+    6400030: GroundTorch_Arm4 2
+    6400032: GroundTorch_Fire_Flame
+    6400034: GroundTorch_Fire_Flame 1
+    6400036: GroundTorch_Fire_Flame 2
+    6400038: GroundTorch_Fire_Flame1
+    6400040: GroundTorch_Fire_Flame1 1
+    6400042: GroundTorch_Fire_Flame1 2
+    6400044: GroundTorch_Fire_Flame2
+    6400046: GroundTorch_Fire_Flame2 1
+    6400048: GroundTorch_Fire_Flame2 2
+    6400050: GroundTorch_Fire_Flame3
+    6400052: GroundTorch_Fire_Flame3 1
+    6400054: GroundTorch_Fire_Flame3 2
+    6400056: GroundTorch_Fire_Flame4
+    6400058: GroundTorch_Fire_Flame4 1
+    6400060: GroundTorch_Fire_Flame4 2
+    6400062: GroundTorch_Fire_Flame5
+    6400064: GroundTorch_Fire_Flame5 1
+    6400066: GroundTorch_Fire_Flame5 2
+    6400068: GroundTorch_Fire_Flame6
+    6400070: GroundTorch_Fire_Flame6 1
+    6400072: GroundTorch_Fire_Flame6 2
+    6400074: GroundTorch_Fire_Flame8
+    6400076: GroundTorch_Fire_Flame8 1
+    6400078: GroundTorch_Fire_Flame8 2
+    6400080: GroundTorch_Fire_Flame9
+    6400082: GroundTorch_Fire_Flame9 1
+    6400084: GroundTorch_Fire_Flame9 2
+    6400086: GroundTorch_Post
+    6400088: GroundTorch_Post 1
+    6400090: GroundTorch_Post 2
+    6400092: Ladder
+    6400094: polySurface1
+    6400096: polySurface10
+    6400098: polySurface12
+    6400100: polySurface14
+    6400102: polySurface15
+    6400104: polySurface17
+    6400106: polySurface18
+    6400108: polySurface2
+    6400110: polySurface20
+    6400112: polySurface21
+    6400114: polySurface22
+    6400116: polySurface23
+    6400118: polySurface24
+    6400120: polySurface25
+    6400122: polySurface26
+    6400124: polySurface27
+    6400126: polySurface28
+    6400128: polySurface29
+    6400130: polySurface3
+    6400132: polySurface30
+    6400134: polySurface31
+    6400136: polySurface32
+    6400138: polySurface33
+    6400140: polySurface34
+    6400142: polySurface35
+    6400144: polySurface36
+    6400146: polySurface37
+    6400148: polySurface38
+    6400150: polySurface39
+    6400152: polySurface41
+    6400154: polySurface42
+    6400156: polySurface43
+    6400158: polySurface44
+    6400160: polySurface45
+    6400162: polySurface46
+    6400164: polySurface47
+    6400166: polySurface48
+    6400168: polySurface5
+    6400170: polySurface6
+    6400172: polySurface7
+    6400174: polySurface8
+    6400176: WallTorch_Flame
+    6400178: WallTorch_Flame 1
+    6400180: WallTorch_Flame 2
+    6400182: WallTorch_Flame 3
+    6400184: WallTorch_Flame 4
+    6400186: WallTorch_Flame 5
+    6400188: WallTorch_Flame1
+    6400190: WallTorch_Flame1 1
+    6400192: WallTorch_Flame1 2
+    6400194: WallTorch_Flame1 3
+    6400196: WallTorch_Flame1 4
+    6400198: WallTorch_Flame1 5
+    6400200: WallTorch_Flame2
+    6400202: WallTorch_Flame2 1
+    6400204: WallTorch_Flame2 2
+    6400206: WallTorch_Flame2 3
+    6400208: WallTorch_Flame2 4
+    6400210: WallTorch_Flame2 5
+    6400212: WallTorch_Flame3
+    6400214: WallTorch_Flame3 1
+    6400216: WallTorch_Flame3 2
+    6400218: WallTorch_Flame3 3
+    6400220: WallTorch_Flame3 4
+    6400222: WallTorch_Flame3 5
+    6400224: WallTorch_Flame4
+    6400226: WallTorch_Flame4 1
+    6400228: WallTorch_Flame4 2
+    6400230: WallTorch_Flame4 3
+    6400232: WallTorch_Flame4 4
+    6400234: WallTorch_Flame4 5
+    6400236: WallTorch_Flame5
+    6400238: WallTorch_Flame5 1
+    6400240: WallTorch_Flame5 2
+    6400242: WallTorch_Flame5 3
+    6400244: WallTorch_Flame5 4
+    6400246: WallTorch_Flame5 5
+    6400248: WallTorch_Flame6
+    6400250: WallTorch_Flame6 1
+    6400252: WallTorch_Flame6 2
+    6400254: WallTorch_Flame6 3
+    6400256: WallTorch_Flame6 4
+    6400258: WallTorch_Flame6 5
+    6400260: WallTorch_Flame8
+    6400262: WallTorch_Flame8 1
+    6400264: WallTorch_Flame8 2
+    6400266: WallTorch_Flame8 3
+    6400268: WallTorch_Flame8 4
+    6400270: WallTorch_Flame8 5
+    6400272: WallTorch_Flame9
+    6400274: WallTorch_Flame9 1
+    6400276: WallTorch_Flame9 2
+    6400278: WallTorch_Flame9 3
+    6400280: WallTorch_Flame9 4
+    6400282: WallTorch_Flame9 5
+    6400284: WallTorch_Holder1
+    6400286: WallTorch_Holder2
+    6400288: WallTorch_Holder3
+    6400290: WallTorch_Holder4
+    6400292: WallTorch_Holder5
+    6400294: WallTorch_Holder6
+    6400296: WallTorch_Post
+    6400298: WallTorch_Post 1
+    6400300: WallTorch_Post 2
+    6400302: WallTorch_Post 3
+    6400304: WallTorch_Post 4
+    6400306: WallTorch_Post 5
+    6400308: Waterline
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

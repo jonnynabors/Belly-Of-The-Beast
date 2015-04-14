@@ -42,7 +42,7 @@ public class newCamera : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Screen.lockCursor = true;
-		follow = GameObject.Find ("Player").GetComponent<Transform> ();
+		follow = GameObject.FindGameObjectWithTag(Tags.player).transform;
 	}
 	
 	void FixedUpdate ()

@@ -74,6 +74,18 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: PlayerDead
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: SpecialAttack
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base
@@ -149,6 +161,10 @@ Transition:
     m_ConditionEvent: EnemyWalking
     m_EventTreshold: 0
     m_ExitTime: 1
+  - m_ConditionMode: 2
+    m_ConditionEvent: PlayerDead
+    m_EventTreshold: 0
+    m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -166,7 +182,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: PlayerDead
     m_EventTreshold: 0
     m_ExitTime: .605263233
   - m_ConditionMode: 1
@@ -234,7 +250,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: PlayerDead
     m_EventTreshold: 0
     m_ExitTime: .659090877
   - m_ConditionMode: 1
@@ -245,6 +261,34 @@ Transition:
     m_ConditionEvent: EnemyAttacking
     m_EventTreshold: 0
     m_ExitTime: .659090877
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110137104
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 0}
+  m_DstState: {fileID: 110214752}
+  m_TransitionDuration: .100000001
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: EnemyAttacking
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
+  - m_ConditionMode: 1
+    m_ConditionEvent: SpecialAttack
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
+  - m_ConditionMode: 2
+    m_ConditionEvent: PlayerDead
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -262,7 +306,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: PlayerDead
     m_EventTreshold: 0
     m_ExitTime: .659090877
   - m_ConditionMode: 2
@@ -334,7 +378,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: PlayerDead
     m_EventTreshold: 0
     m_ExitTime: .659090877
   - m_ConditionMode: 1
@@ -382,7 +426,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: PlayerDead
     m_EventTreshold: 0
     m_ExitTime: .659090877
   - m_ConditionMode: 2
@@ -406,7 +450,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: PlayerDead
     m_EventTreshold: 0
     m_ExitTime: .605263233
   - m_ConditionMode: 2
@@ -455,6 +499,10 @@ Transition:
     m_ExitTime: .899999976
   - m_ConditionMode: 1
     m_ConditionEvent: StartAttack1
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
+  - m_ConditionMode: 2
+    m_ConditionEvent: PlayerDead
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -512,7 +560,22 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 1cb8ed3cbba15f0479fbae54e0a963df, type: 3}
   m_ParentStateMachine: {fileID: 110792070}
-  m_Position: {x: -228, y: -120, z: 0}
+  m_Position: {x: -228, y: -252, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110214752
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SpecialAttack
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400022, guid: bdb3a2d689b051d42930cb124dda102e, type: 3}
+  m_ParentStateMachine: {fileID: 110792070}
+  m_Position: {x: 12, y: -24, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -542,7 +605,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 981fecf0ddc376d41aeb447873898028, type: 2}
   m_ParentStateMachine: {fileID: 110792070}
-  m_Position: {x: 24, y: -156, z: 0}
+  m_Position: {x: 252, y: -156, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -572,7 +635,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 981fecf0ddc376d41aeb447873898028, type: 2}
   m_ParentStateMachine: {fileID: 110792070}
-  m_Position: {x: 24, y: -252, z: 0}
+  m_Position: {x: 252, y: -252, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -602,7 +665,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 25bf2726ae4183a42867249269d88264, type: 2}
   m_ParentStateMachine: {fileID: 110792070}
-  m_Position: {x: 24, y: -48, z: 0}
+  m_Position: {x: 252, y: -48, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: Attack_1
@@ -638,19 +701,20 @@ StateMachine:
   - {fileID: 110229812}
   - {fileID: 110253380}
   - {fileID: 110276832}
+  - {fileID: 110214752}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110276832}
-      second:
-      - {fileID: 110109584}
+      first: {fileID: 110214752}
+      second: []
     data:
       first: {fileID: 0}
       second:
       - {fileID: 110189358}
       - {fileID: 110160148}
       - {fileID: 110177790}
+      - {fileID: 110137104}
     data:
       first: {fileID: 110298932}
       second:
@@ -684,6 +748,10 @@ StateMachine:
       second:
       - {fileID: 110148446}
       - {fileID: 110123084}
+    data:
+      first: {fileID: 110276832}
+      second:
+      - {fileID: 110109584}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 36, y: 36, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
