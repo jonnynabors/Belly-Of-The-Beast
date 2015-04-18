@@ -37,6 +37,7 @@ public class inGameMenuController : MonoBehaviour {
 		mainMenu.enabled = false;
 		quitMenu.enabled = false;
 		subMenu.enabled = false;
+		Time.timeScale = 1;
 	}
 	void Update ()
 	{

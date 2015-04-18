@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour {
 		nav = GetComponent<NavMeshAgent>();
 		player = GameObject.FindGameObjectWithTag(Tags.player).transform;
 		anim = GetComponent<Animator>();
-		//nav.autoBraking = false; //For continuous movement
+		nav.autoBraking = false; //For continuous movement
 	}
 
 	// Update is called once per frame
@@ -105,7 +105,7 @@ public class EnemyAI : MonoBehaviour {
 			//Call damage script
 			playerHealth.TakeDamage (attackDamage);
 			//Play particle effect on damage taken on the enemy
-			gameObject.particleSystem.Play ();
+			gameObject.GetComponent<ParticleSystem>().Play ();
 		}
 		else if (playerHealth.currentHealth <= 0)
 		{
@@ -139,10 +139,21 @@ public class EnemyAI : MonoBehaviour {
 		anim.SetBool ("EnemyRunning", false);
 		anim.SetBool ("EnemyWalking", true);
 		anim.SetBool ("EnemyAttacking", false);
-		//Tell NavAgent to go to next destination
-		nav.destination = patrolWayPoints[wayPointIndex].position;
-		//Increment waypoint array index
-		wayPointIndex = (wayPointIndex + 1) % patrolWayPoints.Length;
+
+		patrolTimer += Time.deltaTime;
+		if(patrolTimer >= patrolWaitTime)
+		{
+			nav.Resume();
+			//Tell NavAgent to go to next destination
+			nav.destination = patrolWayPoints[wayPointIndex].position;
+			//Increment waypoint array index
+			wayPointIndex = (wayPointIndex + 1) % patrolWayPoints.Length;
+			patrolTimer = 0;
+		}
+		else{
+			anim.SetBool ("EnemyWalking", false);
+			//nav.Stop ();
+		}
 	}
 
 

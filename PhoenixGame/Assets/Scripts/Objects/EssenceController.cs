@@ -25,7 +25,7 @@ public class EssenceController : MonoBehaviour {
 		//Initialize variables
 		essenceCounter = GameObject.FindGameObjectWithTag("EssenceCounter").GetComponent<Text>();
 		player = GameObject.FindGameObjectWithTag(Tags.player).transform;
-		gameObject.renderer.material.mainTexture = sphereTexture;
+		gameObject.GetComponent<Renderer>().material.mainTexture = sphereTexture;
 	}
 
 	void Update () {

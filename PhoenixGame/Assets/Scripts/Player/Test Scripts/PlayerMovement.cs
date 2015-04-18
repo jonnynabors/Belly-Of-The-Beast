@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 		Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
 		
 		// Create a rotation that is an increment closer to the target rotation from the player's rotation.
-		Quaternion newRotation = Quaternion.Lerp(rigidbody.rotation, targetRotation, turningSpeed * Time.deltaTime);
+		Quaternion newRotation = Quaternion.Lerp(GetComponent<Rigidbody>().rotation, targetRotation, turningSpeed * Time.deltaTime);
 		playerRigidbody.MoveRotation (newRotation);
 	}
 	

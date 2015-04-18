@@ -23,8 +23,8 @@ public class BoulderMoveController : MonoBehaviour {
 		if(other.gameObject == player)
 		{
 			//Remove Kinematic property from Rigidbody component.
-			rigidbody.isKinematic = false;
-			rigidbody.angularDrag = 10;
+			GetComponent<Rigidbody>().isKinematic = false;
+			GetComponent<Rigidbody>().angularDrag = 10;
 		}
 	}
 }

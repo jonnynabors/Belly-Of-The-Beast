@@ -32,7 +32,7 @@ public class newCamera : MonoBehaviour {
 		{
 			float fieldOfViewRadius = (distanceAway / Mathf.Sin (90.0f - camera.fieldOfView / 2.0f)) * Mathf.Sin (camera.fieldOfView / 2.0f);
 			// Half the width of the field of view of the camera at the position of the target
-			float doubleCharacterRadius = Mathf.Max (follow.gameObject.collider.bounds.extents.x, follow.gameObject.collider.bounds.extents.z) * 2.0f;
+			float doubleCharacterRadius = Mathf.Max (follow.gameObject.GetComponent<Collider>().bounds.extents.x, follow.gameObject.GetComponent<Collider>().bounds.extents.z) * 2.0f;
 			
 			return Mathf.Min (doubleCharacterRadius, fieldOfViewRadius);
 		}
