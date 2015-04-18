@@ -28,8 +28,8 @@ public class QueueUvAnimation : MonoBehaviour
     count = rows * colums;
     index += colums - 1;
     var size = new Vector2(1f / colums, 1f / rows);
-    renderer.material.SetTextureScale("_MainTex", size);
-    if (IsBump) renderer.material.SetTextureScale("_BumpMap", size);
+    GetComponent<Renderer>().material.SetTextureScale("_MainTex", size);
+    if (IsBump) GetComponent<Renderer>().material.SetTextureScale("_BumpMap", size);
   }
 
   private void OnBecameVisible()
@@ -54,17 +54,17 @@ public class QueueUvAnimation : MonoBehaviour
         ? new Vector2((float) index / ColumnsFadeIn - (index / ColumnsFadeIn), 1 - (index / ColumnsFadeIn) / (float) RowsFadeIn)
         : new Vector2((float) index / ColumnsLoop - (index / ColumnsLoop), 1 - (index / ColumnsLoop) / (float) RowsLoop);
       if (!isFadeHandle) {
-        renderer.material.SetTextureOffset("_MainTex", offset);
-        if (IsBump) renderer.material.SetTextureOffset("_BumpMap", offset);
+        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", offset);
+        if (IsBump) GetComponent<Renderer>().material.SetTextureOffset("_BumpMap", offset);
       }
       else {
-        renderer.material.SetTextureOffset("_MainTex", offset);
-        if (IsBump) renderer.material.SetTextureOffset("_BumpMap", offset);
+        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", offset);
+        if (IsBump) GetComponent<Renderer>().material.SetTextureOffset("_BumpMap", offset);
       }
 
       if (allCount==count) {
         isFadeHandle = true;
-        renderer.material = NextMaterial;
+        GetComponent<Renderer>().material = NextMaterial;
         InitDefaultTex(RowsLoop, ColumnsLoop);
       }
       yield return new WaitForSeconds(deltaTime);

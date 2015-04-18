@@ -57,7 +57,7 @@ public class WhaleMoveController : MonoBehaviour {
 			//AudioSource.PlayClipAtPoint(triggerAudioEvent, transform.position);
 			//Play death animation
 			anima.Play ("death");
-			whale.rigidbody.velocity = Vector3.zero; //Stop movement
+			whale.GetComponent<Rigidbody>().velocity = Vector3.zero; //Stop movement
 			isDead = true; //Set flag of is dead to true
 		}
 	}

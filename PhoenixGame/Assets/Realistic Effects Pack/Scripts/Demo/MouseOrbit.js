@@ -18,15 +18,15 @@ function Start () {
     y = angles.x;
 
 	// Make the rigid body not change rotation
-   	if (rigidbody)
-		rigidbody.freezeRotation = true;
+   	if (GetComponent.<Rigidbody>())
+		GetComponent.<Rigidbody>().freezeRotation = true;
 }
 
 function LateUpdate () {
     if (target && (Input.GetMouseButton(0) || Input.GetMouseButton(1))) {
         var pos = Input.mousePosition;
         if (pos.x < 250 && Screen.height - pos.y < 250) return;
-		Screen.showCursor = false;
+		Cursor.visible = false;
         //Screen.lockCursor = true;
 
         x += Input.GetAxis("Mouse X") * xSpeed * 0.02;
@@ -40,7 +40,7 @@ function LateUpdate () {
         transform.rotation = rotation;
         transform.position = position;
     } else {
-        Screen.showCursor = true;
+        Cursor.visible = true;
         //Screen.lockCursor = false;
     }
 }

@@ -15,7 +15,7 @@ public class WaterUvAnimation : MonoBehaviour
   
   private void Awake()
   {
-    mat = renderer.materials[MaterialNomber];
+    mat = GetComponent<Renderer>().materials[MaterialNomber];
   }
 
   private void Update()
