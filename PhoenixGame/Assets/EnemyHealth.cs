@@ -61,7 +61,7 @@ public class EnemyHealth : MonoBehaviour {
 		AnimatorStateInfo currentBaseState = anim.GetCurrentAnimatorStateInfo(0);
 		if(currentBaseState.nameHash == atackState)
 		{
-			playerCharacter.rigidbody.AddForce(transform.position + transform.forward * 20);
+			playerCharacter.GetComponent<Rigidbody>().AddForce(transform.position + transform.forward * 20);
 		}
 		else{
 			anim.SetBool ("Attack1Complete", true);
@@ -80,7 +80,7 @@ public class EnemyHealth : MonoBehaviour {
 		anim.SetBool ("IsDead", true);
 		nav.enabled = false;
 		enemyAIScript.enabled = false;
-		rigidbody.detectCollisions = false;
+		GetComponent<Rigidbody>().detectCollisions = false;
 		StartCoroutine (ClearGameObject ());
 	}
 

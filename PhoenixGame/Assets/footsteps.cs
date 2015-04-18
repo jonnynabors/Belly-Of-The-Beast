@@ -18,12 +18,12 @@ public class footsteps : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//grounded = isGrounded ();
-		rVelocity = rigidbody.velocity.magnitude;
-		audio.clip = current[Random.Range (0, current.Length)];
+		rVelocity = GetComponent<Rigidbody>().velocity.magnitude;
+		GetComponent<AudioSource>().clip = current[Random.Range (0, current.Length)];
 		if(grounded == true && rVelocity > .2f){
-			audio.volume = Random.Range (0.8f, 1);
-			audio.pitch = Random.Range (0.8f, 1.1f);
-			audio.PlayOneShot(audio.clip);
+			GetComponent<AudioSource>().volume = Random.Range (0.8f, 1);
+			GetComponent<AudioSource>().pitch = Random.Range (0.8f, 1.1f);
+			GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
 		}
 	}
 	bool isGrounded(){

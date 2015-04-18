@@ -105,7 +105,7 @@ public class EnemyAI : MonoBehaviour {
 			//Call damage script
 			playerHealth.TakeDamage (attackDamage);
 			//Play particle effect on damage taken on the enemy
-			gameObject.particleSystem.Play ();
+			gameObject.GetComponent<ParticleSystem>().Play ();
 		}
 		else if (playerHealth.currentHealth <= 0)
 		{

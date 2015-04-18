@@ -15,7 +15,7 @@ public class WaterWaveUvAnimation: MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	  mat = renderer.material;
+	  mat = GetComponent<Renderer>().material;
     delta = 1f / fps * speed;
     StartCoroutine(updateTiling());
 	}
