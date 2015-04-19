@@ -28,6 +28,7 @@ TagManager:
   - Grass
   - OpenChest
   - CloseChest
+  - StaminaBar
   layers:
   - Default
   - TransparentFX

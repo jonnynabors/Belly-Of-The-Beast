@@ -30,17 +30,23 @@ public class EnemyAI : MonoBehaviour {
 	PlayerHealth playerHealth;
 	public bool playerInRange;
 	public float timer;
+	public bool playerIsBlocking;
+	public Animator playerAnim;
 
 	// Use this for initialization
 	void Start () {
 		nav = GetComponent<NavMeshAgent>();
 		player = GameObject.FindGameObjectWithTag(Tags.player).transform;
 		anim = GetComponent<Animator>();
-		nav.autoBraking = false; //For continuous movement
+		//nav.autoBraking = false; //For continuous movement
+		playerAnim = playerCharacter.GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
 	void Update () {
+		//get current player blocking state
+		playerIsBlocking = playerAnim.GetCurrentAnimatorStateInfo (0).IsName ("Block") || playerAnim.GetCurrentAnimatorStateInfo (0).IsName ("Walking Block");
+
 		//Calculate distance to player
 		//If within range, execute chase function
 		distanceToPlayer = GetDistanceToPlayer();
@@ -102,6 +108,11 @@ public class EnemyAI : MonoBehaviour {
 
 		if (playerHealth.currentHealth > 0)
 		{
+			//check for block
+			if (playerIsBlocking);
+
+			//if not blocking, take damage
+			else
 			//Call damage script
 			playerHealth.TakeDamage (attackDamage);
 			//Play particle effect on damage taken on the enemy
@@ -139,21 +150,10 @@ public class EnemyAI : MonoBehaviour {
 		anim.SetBool ("EnemyRunning", false);
 		anim.SetBool ("EnemyWalking", true);
 		anim.SetBool ("EnemyAttacking", false);
-
-		patrolTimer += Time.deltaTime;
-		if(patrolTimer >= patrolWaitTime)
-		{
-			nav.Resume();
-			//Tell NavAgent to go to next destination
-			nav.destination = patrolWayPoints[wayPointIndex].position;
-			//Increment waypoint array index
-			wayPointIndex = (wayPointIndex + 1) % patrolWayPoints.Length;
-			patrolTimer = 0;
-		}
-		else{
-			anim.SetBool ("EnemyWalking", false);
-			//nav.Stop ();
-		}
+		//Tell NavAgent to go to next destination
+		nav.destination = patrolWayPoints[wayPointIndex].position;
+		//Increment waypoint array index
+		wayPointIndex = (wayPointIndex + 1) % patrolWayPoints.Length;
 	}
 
 
