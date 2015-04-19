@@ -1,0 +1,10 @@
+diff a/PhoenixGame/Assets/Scenes/Master/IslandLevel01.Master.unity b/PhoenixGame/Assets/Scenes/Master/IslandLevel01.Master.unity	(rejected hunks)
+@@ -242,7 +242,7 @@
+     m_RemovedComponents: []
+   m_ParentPrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
+   m_IsPrefabParent: 0
+---- !u!4 &17787491
++--- !u!4 &17787491 stripped
+ Transform:
+   m_PrefabParentObject: {fileID: 400000, guid: 1e5c742accdc1824fb01f98f446fa63c, type: 2}
+   m_PrefabInternal: {fileID: 940519402}
