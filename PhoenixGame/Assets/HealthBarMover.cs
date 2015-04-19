@@ -14,6 +14,7 @@ public class HealthBarMover : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealthScript = player.GetComponent<PlayerHealth> ();
+		hp = playerHealthScript.currentHealth;
 	}
 
 	public void updateHealthBar()
