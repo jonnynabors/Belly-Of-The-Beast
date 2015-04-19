@@ -7,7 +7,7 @@ TagManager:
   - New Tag
   - New Tag
   - New Tag
-  - New Tag
+  - StaminaBar
   - HealthBar
   - NightLight
   - FriendlyNPC
@@ -25,6 +25,7 @@ TagManager:
   - Enemy
   - Boulder
   - Grass
+  - DayLight
   layers:
   - Default
   - TransparentFX

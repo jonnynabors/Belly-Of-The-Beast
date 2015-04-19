@@ -18384,6 +18384,7 @@ GameObject:
   - 114: {fileID: 1175731143}
   - 114: {fileID: 1175731145}
   - 64: {fileID: 1175731144}
+  - 114: {fileID: 1175731146}
   m_Layer: 0
   m_Name: jomz
   m_TagString: Player
@@ -18509,7 +18510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed: 1
-  anim: {fileID: 0}
+  anim: {fileID: 1175731141}
   playerStamina: {fileID: 0}
   currentStamina: 0
 --- !u!114 &1175731143
@@ -18560,6 +18561,31 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b045c3deb125ea14899645189a8767d4, type: 3}
   current:
   - {fileID: 0}
+--- !u!114 &1175731146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175731135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bae7c32151388428ae82f6c6f25dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingStamina: 150
+  currentStamina: 0
+  isMoving: 0
+  anim: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  staminaBarMover: {fileID: 0}
+  staminaBar: {fileID: 0}
+  timer: 0
+  regenRate: 10
+  speed: 0
+  isBlocking: 0
+  isAttacking: 0
+  isDashing: 0
+  exhausted: 0
 --- !u!1001 &1177621425
 Prefab:
   m_ObjectHideFlags: 0
@@ -20661,7 +20687,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13578008, guid: 918b2346ce921ed459895ca12df50280, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13678008, guid: 918b2346ce921ed459895ca12df50280, type: 2}
       propertyPath: m_Enabled
@@ -38739,7 +38765,7 @@ GameObject:
   - 114: {fileID: 2134626761}
   m_Layer: 0
   m_Name: env_Sun
-  m_TagString: Untagged
+  m_TagString: DayLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
