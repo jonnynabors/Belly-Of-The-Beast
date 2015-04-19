@@ -28,7 +28,11 @@ TagManager:
   - Grass
   - OpenChest
   - CloseChest
+<<<<<<< HEAD
   - Bubble
+=======
+  - StaminaBar
+>>>>>>> 2d6b38960b340260c94f4cd217ce7a815ad46c23
   layers:
   - Default
   - TransparentFX
