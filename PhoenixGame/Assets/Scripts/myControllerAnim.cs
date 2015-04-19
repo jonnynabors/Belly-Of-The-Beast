@@ -63,9 +63,12 @@ public class myControllerAnim: MonoBehaviour
 	private const float SPRINT_SPEED = 2.0f;	
 	private const float SPRINT_FOV = 75.0f;
 	private const float NORMAL_FOV = 60.0f;
-	private float capsuleHeight;	
-	
-	
+	private float capsuleHeight;
+
+	public PlayerStamina playerStamina;
+
+	//if true, the player has restricted movements because of having 0 stamina
+	public bool exhausted = false;
 
 	
 	public Animator Animator
@@ -86,22 +89,26 @@ public class myControllerAnim: MonoBehaviour
 
 	void Start() 
 	{
-	
+		playerStamina = GetComponent<PlayerStamina> ();
 	}
 
 	void Update() 
 	{
+		exhausted = playerStamina.exhausted;
+
 		if (animator) {	
 			
 			// Pull values from controller/keyboard
 			leftX = Input.GetAxis ("Horizontal");
 			leftY = Input.GetAxis ("Vertical");	
 
-			if (Input.GetButtonDown ("dashRight")) {
-				animator.SetTrigger("dashRight");
-			}
-			if (Input.GetButtonDown ("dashLeft")) {
-				animator.SetTrigger("dashLeft");
+			if (!exhausted && playerStamina.currentStamina >= 15){
+				if (Input.GetButtonDown ("dashRight")) {
+					animator.SetTrigger("dashRight");
+				}
+				if (Input.GetButtonDown ("dashLeft")) {
+					animator.SetTrigger("dashLeft");
+				}
 			}
 			if (Input.GetButtonDown ("Jump")) {
 				animator.SetTrigger("isJump");
@@ -157,7 +164,7 @@ public class myControllerAnim: MonoBehaviour
 			speed *= 1;
 			return speed;
 		} 
-		else if(Input.GetButton ("Sprint")){
+		else if(Input.GetButton ("Sprint") && !exhausted && playerStamina.currentStamina >= 15){
 			speed *= 3;
 			return speed;
 		}

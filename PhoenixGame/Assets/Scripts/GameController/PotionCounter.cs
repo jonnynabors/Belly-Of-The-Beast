@@ -7,6 +7,7 @@ public class PotionCounter : MonoBehaviour {
 	public int potionCount=0;
 	public PlayerHealth playerHealthScript;
 	public GameObject playerObject;
+	public PlayerStamina playerStaminaScript;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,7 @@ public class PotionCounter : MonoBehaviour {
 		playerObject = GameObject.FindGameObjectWithTag ("Player");
 		playerHealthScript = playerObject.GetComponent<PlayerHealth>();
 		potionCounter.text = "" + potionCount;
+		playerStaminaScript = playerObject.GetComponent<PlayerStamina> ();
 	}
 	
 	// Update is called once per frame
@@ -49,6 +51,7 @@ public class PotionCounter : MonoBehaviour {
 			{
 				potionDrink();
 				playerHealthScript.potionUsed ();
+				playerStaminaScript.potionUsed();
 			}
 		}
 	}
