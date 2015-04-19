@@ -4,28 +4,31 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - New Tag
-  - New Tag
-  - New Tag
-  - StaminaBar
-  - HealthBar
-  - NightLight
-  - FriendlyNPC
-  - PotionCounter
-  - OpenChest
-  - Bubble
-  - EssenceCounter
-  - Essence
-  - Puzzle
-  - Tile3
-  - Tile1
-  - Tile2
   - Whale
-  - CloseChest
-  - Enemy
+  - Sun
+  - Moon
   - Boulder
-  - Grass
+  - Day
+  - Dusk
+  - Night
+  - HealthBar
+  - FriendlyNPC
+  - Tile2
+  - Puzzle
+  - Tile1
+  - Tile3
+  - PotionCounter
+  - Enemy
+  - Essence
+  - EssenceCounter
   - DayLight
+  - NightLight
+  - TagLight
+  - Water
+  - Grass
+  - OpenChest
+  - CloseChest
+  - StaminaBar
   layers:
   - Default
   - TransparentFX
