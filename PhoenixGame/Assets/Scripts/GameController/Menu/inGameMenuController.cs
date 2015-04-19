@@ -16,9 +16,10 @@ public class inGameMenuController : MonoBehaviour {
 	public Button controlsButton;
 	public Button exitButton;
 	public myCamera cameraScript;
-	private bool isInMenu;
-
-	
+	public bool isInMenu;
+	public PlayerHealth playerHealth;
+	public GameObject playerCharacter;
+	public bool isDead;
 	
 	// Use this for initialization
 	void Start (){
@@ -32,6 +33,9 @@ public class inGameMenuController : MonoBehaviour {
 		controlsButton = controlsButton.GetComponent<Button> ();
 		exitButton = exitButton.GetComponent<Button> ();
 
+		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
+		playerHealth = playerCharacter.GetComponent<PlayerHealth> ();
+
 		//Makes quit menu NOT visible
 		isInMenu = false;
 		mainMenu.enabled = false;
@@ -39,9 +43,10 @@ public class inGameMenuController : MonoBehaviour {
 		subMenu.enabled = false;
 		Time.timeScale = 1;
 	}
+
 	void Update ()
-	{
-		if(Input.GetKeyDown (KeyCode.Escape))
+	{//check for escape keypress, and also that the player isn't dead
+		if(Input.GetKeyDown (KeyCode.Escape) && !playerHealth.isDead)
 		{
 			if (isInMenu)
 			{

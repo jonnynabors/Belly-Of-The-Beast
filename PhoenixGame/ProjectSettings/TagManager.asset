@@ -29,6 +29,9 @@ TagManager:
   - OpenChest
   - CloseChest
   - StaminaBar
+  - inGameMenu
+  - HUD
+  - GameOverMenu
   layers:
   - Default
   - TransparentFX

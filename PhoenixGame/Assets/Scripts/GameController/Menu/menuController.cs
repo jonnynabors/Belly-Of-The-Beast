@@ -16,6 +16,8 @@ public class menuController : MonoBehaviour {
 	public Button controlsButton;
 	public Button creditsButton;
 	public Button exitButton;
+	public GameObject hud;
+	public Canvas hudCanvas;
 
 
 	// Use this for initialization
@@ -30,6 +32,9 @@ public class menuController : MonoBehaviour {
 		creditsButton = creditsButton.GetComponent<Button> ();
 		exitButton = exitButton.GetComponent<Button> ();
 
+		hud = GameObject.FindGameObjectWithTag ("HUD");
+		hudCanvas = hud.GetComponent<Canvas> ();
+
 		//Makes quit menu NOT visible
 		quitMenu.enabled = false;
 		subMenu.enabled = false;
@@ -40,6 +45,7 @@ public class menuController : MonoBehaviour {
 		Time.timeScale = 1;
 		//loads first level
 		Application.LoadLevel (1);
+		hudCanvas.enabled = true;
 	}
 
 	public void optionsPress(){

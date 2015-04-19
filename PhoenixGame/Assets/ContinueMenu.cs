@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ContinueMenu : MonoBehaviour {
 	public Button restartButton;
-	public Button mainMenuButton;
+	//public Button mainMenuButton;
 	public Button quitButton;
 	public Canvas continueOverlay;
 	public PlayerHealth playerHealth;
@@ -14,6 +14,8 @@ public class ContinueMenu : MonoBehaviour {
 	public inGameMenuController inGameMenu;
 	public GameObject inGameMenuObject;
 
+	public GameObject hud;
+	public Canvas hudCanvas;
 	public void restartPress()
 	{
 		Time.timeScale = 1;
@@ -23,12 +25,8 @@ public class ContinueMenu : MonoBehaviour {
 
 	public void mainMenuButtonPress()
 	{
-		inGameMenu.mainPress ();
-		/**continueOverlay.enabled = false;
-		//Time.timeScale = 0;
-		//loads first level
 		Application.LoadLevel (0);
-	*/}
+	}
 
 	public void quitButtonPress()
 	{
@@ -36,21 +34,31 @@ public class ContinueMenu : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = playerCharacter.GetComponent<PlayerHealth> ();
 		continueOverlay.enabled = false;
 		Time.timeScale = 1;
 		inGameMenuObject = GameObject.FindGameObjectWithTag ("inGameMenu");
 		inGameMenu = inGameMenuObject.GetComponent<inGameMenuController> ();
+		hud = GameObject.FindGameObjectWithTag ("HUD");
+		hudCanvas = hud.GetComponent<Canvas> ();
 	}
-	
+
+	IEnumerator GameOver()
+	{
+		yield return new WaitForSeconds(2);
+		continueOverlay.enabled = true;
+		Screen.lockCursor = false;
+		Time.timeScale = 0;
+		hudCanvas.enabled = false;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (playerHealth.isDead) {
-			continueOverlay.enabled = true;
-			Screen.lockCursor = false;
-			//Time.timeScale = 0;
+			StartCoroutine (GameOver ());
 		}
 	}
 }
