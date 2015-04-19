@@ -3,9 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ContinueMenu : MonoBehaviour {
-	public Button restartButton;
-	//public Button mainMenuButton;
-	public Button quitButton;
+
 	public Canvas continueOverlay;
 	public PlayerHealth playerHealth;
 	public GameObject playerCharacter;
@@ -42,7 +40,6 @@ public class ContinueMenu : MonoBehaviour {
 		Time.timeScale = 1;
 		inGameMenuObject = GameObject.FindGameObjectWithTag ("inGameMenu");
 		inGameMenu = inGameMenuObject.GetComponent<inGameMenuController> ();
-		hud = GameObject.FindGameObjectWithTag ("HUD");
 		hudCanvas = hud.GetComponent<Canvas> ();
 	}
 
