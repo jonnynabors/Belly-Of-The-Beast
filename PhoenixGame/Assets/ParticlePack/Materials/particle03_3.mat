@@ -2,13 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: particle03_3
   m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: []
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -24,7 +25,7 @@ Material:
       data:
         first:
           name: _InvFade
-        second: 1.6586194
+        second: 1.55999994
     m_Colors:
       data:
         first:
@@ -33,7 +34,7 @@ Material:
       data:
         first:
           name: _TintColor
-        second: {r: .805970132, g: .44559285, b: .0481176265, a: .501960814}
+        second: {r: 1, g: .52447921, b: 0, a: .501960814}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

@@ -20,6 +20,8 @@ public class EssenceController : MonoBehaviour {
 	private float distanceToPlayer = 0f; 	//Distance between Essence & Character
 	private Transform player; 				//Player gameObject
 
+	public GameObject essenceView;
+
 
 	void Start(){
 		//Initialize variables
@@ -32,9 +34,16 @@ public class EssenceController : MonoBehaviour {
 		transform.Rotate(new Vector3(15,30,45) * Time.deltaTime);	//Rotate the essence
 		distanceToPlayer = GetDistanceToPlayer ();					//Calculate distance to player
 		if(distanceToPlayer < 0.3)
+		{
 			transform.position = Vector3.MoveTowards (transform.position, 
 			                                          player.position, 
 			                                          moveSpeed * Time.deltaTime);	//Move towards player
+
+			essenceView.transform.position = Vector3.MoveTowards (transform.position, 
+			                                          player.position, 
+			                                          moveSpeed * Time.deltaTime);	//Move towards player
+		}
+
 	}
 	
 	void OnTriggerEnter(Collider other) 

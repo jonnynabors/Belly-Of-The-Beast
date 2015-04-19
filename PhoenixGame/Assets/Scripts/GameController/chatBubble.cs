@@ -39,6 +39,7 @@ public class chatBubble : MonoBehaviour {
 		{
 			flagReset();
 			disableDialogues ();
+			GameObject.FindGameObjectWithTag("Bubble").GetComponent<Image>().enabled = false;
 		}
 
 		// enable appropriate dialogue string according to flags, and
@@ -46,6 +47,7 @@ public class chatBubble : MonoBehaviour {
 		else
 		{
 			textEnabler();
+			GameObject.FindGameObjectWithTag("Bubble").GetComponent<Image>().enabled = true;
 			if (Input.GetKeyDown("f"))
 				flagger ();
 		}

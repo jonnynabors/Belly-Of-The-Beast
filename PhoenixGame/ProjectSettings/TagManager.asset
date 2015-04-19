@@ -28,6 +28,7 @@ TagManager:
   - Grass
   - OpenChest
   - CloseChest
+  - Bubble
   layers:
   - Default
   - TransparentFX
