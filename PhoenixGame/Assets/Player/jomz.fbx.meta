@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 4d302ef7db81b3b4cb708f3c7629e785
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: abdomen
     100002: abdomen2
@@ -158,6 +158,8 @@ ModelImporter:
     4300004: Body001
     4300006: Pants
     4300008: TShirt
+    6400000: EyeL
+    6400002: EyeR
     7400000: mixamo.com
     9500000: //RootNode
     13700000: Body001
@@ -184,17 +186,19 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -1014,3 +1018,5 @@ ModelImporter:
   animationType: 3
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

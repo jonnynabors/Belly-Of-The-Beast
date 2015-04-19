@@ -29,7 +29,7 @@ GameObject:
   - 114: {fileID: 11406564}
   m_Layer: 5
   m_Name: inGameMenu
-  m_TagString: Untagged
+  m_TagString: inGameMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1511,8 +1511,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2166,12 +2166,16 @@ MonoBehaviour:
   optionsCanvas: {fileID: 106640}
   controlsCanvas: {fileID: 106658}
   exitCanvas: {fileID: 106660}
-  mainButton: {fileID: 11406566}
-  returnButton: {fileID: 11406566}
-  optionsButton: {fileID: 11406570}
-  controlsButton: {fileID: 11406574}
-  exitButton: {fileID: 11406582}
+  mainButton: {fileID: 0}
+  returnButton: {fileID: 0}
+  optionsButton: {fileID: 0}
+  controlsButton: {fileID: 0}
+  exitButton: {fileID: 0}
   cameraScript: {fileID: 0}
+  isInMenu: 0
+  playerHealth: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  isDead: 0
 --- !u!114 &11406566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2697,16 +2701,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 998ec7db551b03740bed2f13b1d1648a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reso1: {fileID: 11406594}
-  reso2: {fileID: 11406598}
-  reso3: {fileID: 11406602}
-  reso4: {fileID: 11406606}
-  quality1: {fileID: 11406610}
-  quality2: {fileID: 11406588}
-  quality3: {fileID: 11406614}
-  quality4: {fileID: 11406618}
-  quality5: {fileID: 11406622}
-  quality6: {fileID: 11406626}
+  reso1: {fileID: 0}
+  reso2: {fileID: 0}
+  reso3: {fileID: 0}
+  reso4: {fileID: 0}
+  quality1: {fileID: 0}
+  quality2: {fileID: 0}
+  quality3: {fileID: 0}
+  quality4: {fileID: 0}
+  quality5: {fileID: 0}
+  quality6: {fileID: 0}
   brightness: {fileID: 11406544}
   brightnessCanvas: {fileID: 11406630}
 --- !u!114 &11406594
@@ -3816,8 +3820,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4548,8 +4552,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5518,7 +5522,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -269.100006, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22406632
@@ -6594,4 +6598,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 106610}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

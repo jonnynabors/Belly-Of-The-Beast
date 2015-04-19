@@ -33,7 +33,7 @@ public class myControllerAnim: MonoBehaviour
 	[SerializeField]
 	private Animator animator;
 	[SerializeField]
-	private myCamera gamecam;
+	private newCamera gamecam;
 	[SerializeField]
 	private float rotationDegreePerSecond = 120f;
 	[SerializeField]
@@ -45,7 +45,7 @@ public class myControllerAnim: MonoBehaviour
 	[SerializeField]
 	private float fovDampTime = 3f;
 	[SerializeField]
-	private float jumpMultiplier = 1f;
+	public float jumpMultiplier;
 	[SerializeField]
 	private CapsuleCollider capCollider;
 	[SerializeField]
@@ -65,7 +65,15 @@ public class myControllerAnim: MonoBehaviour
 	private const float NORMAL_FOV = 60.0f;
 	private float capsuleHeight;
 
+
+	//Declare the stamina and player script/objects
 	public PlayerStamina playerStamina;
+	public GameObject player;
+	public Rigidbody rigid;
+	public float distanceToTheGround;
+	public bool isInTheAir;
+	public float fallTime = 0f;
+
 
 	//if true, the player has restricted movements because of having 0 stamina
 	public bool exhausted = false;
@@ -90,11 +98,29 @@ public class myControllerAnim: MonoBehaviour
 	void Start() 
 	{
 		playerStamina = GetComponent<PlayerStamina> ();
+		player = GameObject.FindGameObjectWithTag ("Player");
+		rigid = player.GetComponent<Rigidbody> ();
+		distanceToTheGround = player.GetComponent<CapsuleCollider> ().bounds.extents.y;
 	}
 
 	void Update() 
 	{
 		exhausted = playerStamina.exhausted;
+
+		//Check if player is on the ground.
+		isInTheAir = IsInTheAir ();
+
+//		if (isInTheAir) {
+//			fallTime += Time.deltaTime;
+//			if (fallTime > 1.45)
+//			{
+//				Debug.Log ("I am in the air");
+//				animator.SetBool ("isFalling",true);
+//			}
+//		} else {
+//			fallTime = 0;
+//			animator.SetBool ("isFalling",false);
+//		}
 
 		if (animator) {	
 			
@@ -112,6 +138,11 @@ public class myControllerAnim: MonoBehaviour
 			}
 			if (Input.GetButtonDown ("Jump")) {
 				animator.SetTrigger("isJump");
+				rigid.AddForce (Vector3.up * jumpMultiplier);
+			}
+			//Roll code
+			if(Input.GetButtonDown("Roll")){
+				animator.SetTrigger("isRoll");
 			}
 			
 			speed = new Vector2(leftX,leftY).sqrMagnitude;
@@ -172,5 +203,9 @@ public class myControllerAnim: MonoBehaviour
 			speed *= 2;
 			return speed;
 		}
+	}
+
+	private bool IsInTheAir(){
+		return (Physics.Raycast(player.transform.position, -Vector3.up, distanceToTheGround + 0.1f));
 	}
 }

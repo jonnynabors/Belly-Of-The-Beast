@@ -8,7 +8,7 @@ public class PotionCounter : MonoBehaviour {
 	public PlayerHealth playerHealthScript;
 	public GameObject playerObject;
 	public PlayerStamina playerStaminaScript;
-
+	public Animator anim;
 	// Use this for initialization
 	void Start () {
 		potionCounter = GetComponent<Text> ();
@@ -16,6 +16,7 @@ public class PotionCounter : MonoBehaviour {
 		playerHealthScript = playerObject.GetComponent<PlayerHealth>();
 		potionCounter.text = "" + potionCount;
 		playerStaminaScript = playerObject.GetComponent<PlayerStamina> ();
+		anim = playerObject.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -28,7 +29,10 @@ public class PotionCounter : MonoBehaviour {
 		//first if statement protects against accidental use of potion at max hp
 		if (playerHealthScript.currentHealth != 200){
 			if ((potionCount - 1) >= 0)
+			{
 				potionCount -= 1;
+				anim.SetTrigger("isDrinking");
+			}
 		}
 		updateCount ();
 	}

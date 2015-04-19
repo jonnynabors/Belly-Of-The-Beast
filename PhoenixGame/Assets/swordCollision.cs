@@ -6,12 +6,13 @@ public class swordCollision : MonoBehaviour {
 	public int attackDamage = 50;
 	public Animator anim;
 	public Collider player;
-
+	public PlayerStamina playerStamina;
 	// Use this forinitialization
 	void Start () {
 		anim = GetComponentInParent<Animator>();
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>();
 		Physics.IgnoreCollision(GetComponent<Collider>(), player);
+		playerStamina = GetComponent<PlayerStamina> ();
 	}
 	
 	// Update is called once per frame

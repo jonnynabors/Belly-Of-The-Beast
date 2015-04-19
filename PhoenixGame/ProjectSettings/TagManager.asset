@@ -32,6 +32,7 @@ TagManager:
   - inGameMenu
   - HUD
   - GameOverMenu
+  - Slash
   layers:
   - Default
   - TransparentFX

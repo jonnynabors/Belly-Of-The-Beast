@@ -15,7 +15,7 @@ public class inGameMenuController : MonoBehaviour {
 	public Button optionsButton;
 	public Button controlsButton;
 	public Button exitButton;
-	public myCamera cameraScript;
+	public newCamera cameraScript;
 	public bool isInMenu;
 	public PlayerHealth playerHealth;
 	public GameObject playerCharacter;

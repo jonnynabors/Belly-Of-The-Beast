@@ -8,12 +8,14 @@ public class playerAttack : MonoBehaviour {
 	float timer;
 	public PlayerStamina playerStamina;
 	public int currentStamina;
+	public GameObject SlashEffect;
 
 	void Awake ()
 	{
 		anim = GetComponent<Animator> ();
 		playerStamina = GetComponent<PlayerStamina> ();
 		currentStamina = playerStamina.currentStamina;
+		SlashEffect = GameObject.FindGameObjectWithTag ("Slash");
 	}
 
 	
@@ -39,5 +41,6 @@ public class playerAttack : MonoBehaviour {
 	void attack ()
 	{
 		anim.SetTrigger ("isAttack");
+		SlashEffect.GetComponent<ParticleSystem> ().Play ();
 	}
 }
