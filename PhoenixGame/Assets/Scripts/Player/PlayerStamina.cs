@@ -29,6 +29,9 @@ public class PlayerStamina : MonoBehaviour {
 	//restricting their movement (sprint, dash, etc)
 	public bool exhausted; 
 
+	public GameObject victoryMenuObject;
+	public VictoryMenu victoryMenuScript;
+
 	public GameObject inGameMenuObject;
 	public inGameMenuController inGameMenu;
 
@@ -45,6 +48,8 @@ public class PlayerStamina : MonoBehaviour {
 		inGameMenu = inGameMenuObject.GetComponent<inGameMenuController> ();
 		gameOverObject = GameObject.FindGameObjectWithTag ("GameOverMenu");
 		gameOverMenuScript = gameOverObject.GetComponent<ContinueMenu> ();
+		victoryMenuObject = GameObject.FindGameObjectWithTag ("VictoryMenu");
+		victoryMenuScript = victoryMenuObject.GetComponent<VictoryMenu> ();	
 	}
 
 	void Awake()
@@ -123,7 +128,7 @@ public class PlayerStamina : MonoBehaviour {
 		}
 
 		//handles attack cooldown
-		if (attackTimer > 0.75f && Input.GetMouseButtonDown(0) && !inGameMenu.isInMenu && !gameOverMenuScript.isActive)
+		if (attackTimer > 0.75f && Input.GetMouseButtonDown(0) && !inGameMenu.isInMenu && !gameOverMenuScript.isActive && !victoryMenuScript.isActive)
 		{
 			Attack ();
 			attackTimer = 0f;

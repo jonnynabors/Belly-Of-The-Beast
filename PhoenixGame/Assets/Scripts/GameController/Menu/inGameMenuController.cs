@@ -24,8 +24,9 @@ public class inGameMenuController : MonoBehaviour {
 
 	public GameObject gameOverObject;
 	public ContinueMenu gameOverMenuScript;
+	public GameObject victoryMenuObject;
+	public VictoryMenu victoryMenuScript;
 
-	
 	// Use this for initialization
 	void Start (){
 		//grab components
@@ -39,6 +40,9 @@ public class inGameMenuController : MonoBehaviour {
 		controlsButton = controlsButton.GetComponent<Button> ();
 		exitButton = exitButton.GetComponent<Button> ();*/
 
+		victoryMenuObject = GameObject.FindGameObjectWithTag ("VictoryMenu");
+		victoryMenuScript = victoryMenuObject.GetComponent<VictoryMenu> ();
+
 		gameOverObject = GameObject.FindGameObjectWithTag ("GameOverMenu");
 		gameOverMenuScript = gameOverObject.GetComponent<ContinueMenu> ();
 
@@ -46,7 +50,7 @@ public class inGameMenuController : MonoBehaviour {
 		playerHealth = playerCharacter.GetComponent<PlayerHealth> ();
 
 		gameOverMenuScript.isActive = false;
-
+		victoryMenuScript.isActive = false;
 		//Makes quit menu NOT visible
 		isInMenu = false;
 		mainMenu.enabled = false;
@@ -57,7 +61,7 @@ public class inGameMenuController : MonoBehaviour {
 
 	void Update ()
 	{//check for escape keypress, and also that the player isn't dead
-		if(Input.GetKeyDown (KeyCode.Escape) && !playerHealth.isDead)
+		if(Input.GetKeyDown (KeyCode.Escape) && !playerHealth.isDead && !victoryMenuScript.isActive)
 		{
 			if (isInMenu)
 			{
