@@ -24,14 +24,14 @@ public class inGameMenuController : MonoBehaviour {
 	// Use this for initialization
 	void Start (){
 		//grab components
-		mainMenu = mainMenu.GetComponent<Canvas> ();
-		subMenu = subMenu.GetComponent<Canvas> ();
-		quitMenu = quitMenu.GetComponent<Canvas> ();
-		mainButton = mainButton.GetComponent<Button> ();
-		returnButton = returnButton.GetComponent<Button> ();
-		optionsButton = optionsButton.GetComponent<Button> ();
-		controlsButton = controlsButton.GetComponent<Button> ();
-		exitButton = exitButton.GetComponent<Button> ();
+//		mainMenu = mainMenu.GetComponent<Canvas> ();
+//		subMenu = subMenu.GetComponent<Canvas> ();
+//		quitMenu = quitMenu.GetComponent<Canvas> ();
+//		mainButton = mainButton.GetComponent<Button> ();
+//		returnButton = returnButton.GetComponent<Button> ();
+//		optionsButton = optionsButton.GetComponent<Button> ();
+//		controlsButton = controlsButton.GetComponent<Button> ();
+//		exitButton = exitButton.GetComponent<Button> ();
 
 		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = playerCharacter.GetComponent<PlayerHealth> ();
