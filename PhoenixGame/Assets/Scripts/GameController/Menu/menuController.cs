@@ -26,11 +26,11 @@ public class menuController : MonoBehaviour {
 		mainMenu = mainMenu.GetComponent<Canvas> ();
 		subMenu = subMenu.GetComponent<Canvas> ();
 		quitMenu = quitMenu.GetComponent<Canvas> ();
-		playButton = playButton.GetComponent<Button> ();
-		optionsButton = optionsButton.GetComponent<Button> ();
-		controlsButton = controlsButton.GetComponent<Button> ();
-		creditsButton = creditsButton.GetComponent<Button> ();
-		exitButton = exitButton.GetComponent<Button> ();
+//		playButton = playButton.GetComponent<Button> ();
+//		optionsButton = optionsButton.GetComponent<Button> ();
+//		controlsButton = controlsButton.GetComponent<Button> ();
+//		creditsButton = creditsButton.GetComponent<Button> ();
+//		exitButton = exitButton.GetComponent<Button> ();
 
 		hud = GameObject.FindGameObjectWithTag ("HUD");
 		hudCanvas = hud.GetComponent<Canvas> ();
@@ -46,6 +46,8 @@ public class menuController : MonoBehaviour {
 		//loads first level
 		Application.LoadLevel (1);
 		hudCanvas.enabled = true;
+		Screen.lockCursor = true;
+		Time.timeScale = 1;
 	}
 
 	public void optionsPress(){
@@ -67,28 +69,28 @@ public class menuController : MonoBehaviour {
 	}
 
 	//exitPress
-	public void ExitPress(){
-		//Makes quit menu visible and disables our main menu buttons
-		quitMenu.enabled = true;
-		playButton.enabled = false;
-		optionsButton.enabled = false;
-		controlsButton.enabled = false;
-		creditsButton.enabled = false;
-		exitButton.enabled = false;
-		exitCanvas.SetActive (true);
-	}
-
-	//noButton Exit Warning
-	public void NoPress(){
-		//re-enable our main menu buttons and hide quitmenu
-		quitMenu.enabled = false;
-		playButton.enabled = true;
-		optionsButton.enabled = true;
-		controlsButton.enabled = true;
-		creditsButton.enabled = true;
-		exitButton.enabled = true;
-		exitCanvas.SetActive (false);
-	}
+//	public void ExitPress(){
+//		//Makes quit menu visible and disables our main menu buttons
+//		quitMenu.enabled = true;
+//		playButton.enabled = false;
+//		optionsButton.enabled = false;
+//		controlsButton.enabled = false;
+//		creditsButton.enabled = false;
+//		exitButton.enabled = false;
+//		exitCanvas.SetActive (true);
+//	}
+//
+//	//noButton Exit Warning
+//	public void NoPress(){
+//		//re-enable our main menu buttons and hide quitmenu
+//		quitMenu.enabled = false;
+//		playButton.enabled = true;
+//		optionsButton.enabled = true;
+//		controlsButton.enabled = true;
+//		creditsButton.enabled = true;
+//		exitButton.enabled = true;
+//		exitCanvas.SetActive (false);
+//	}
 
 	//yesButton Exit Warning	
 	public void ExitGame(){
