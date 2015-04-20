@@ -95,7 +95,9 @@ public class GameTime : MonoBehaviour {
 			for(int i = 0; i < GameObject.FindGameObjectsWithTag("NightLight").Length; i ++)
 			{
 				if(GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>())
-				GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>().enabled = false;
+					GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>().enabled = false;
+				if(GameObject.FindGameObjectsWithTag ("NightLight")[i].GetComponent<AudioSource>())
+					GameObject.FindGameObjectsWithTag ("NightLight")[i].GetComponent<AudioSource>().enabled = false;
 			}
 		}
 		else if(isMorning && timeOfDay > nightLight)
@@ -108,7 +110,9 @@ public class GameTime : MonoBehaviour {
 			for(int i = 0; i < GameObject.FindGameObjectsWithTag("NightLight").Length; i ++)
 			{
 				if(GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>())
-				GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>().enabled = true;
+					GameObject.FindGameObjectsWithTag("NightLight")[i].GetComponent<Light>().enabled = true;
+				if(GameObject.FindGameObjectsWithTag ("NightLight")[i].GetComponent<AudioSource>())
+					GameObject.FindGameObjectsWithTag ("NightLight")[i].GetComponent<AudioSource>().enabled = true;
 			}
 		}
 

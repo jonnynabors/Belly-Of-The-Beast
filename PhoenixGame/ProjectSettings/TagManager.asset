@@ -33,6 +33,9 @@ TagManager:
   - HUD
   - GameOverMenu
   - Slash
+  - Bubble
+  - VictoryMenu
+  - VictoryZone
   layers:
   - Default
   - TransparentFX
