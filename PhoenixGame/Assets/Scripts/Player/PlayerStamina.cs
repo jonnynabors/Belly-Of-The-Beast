@@ -31,6 +31,9 @@ public class PlayerStamina : MonoBehaviour {
 
 	public GameObject inGameMenuObject;
 	public inGameMenuController inGameMenu;
+
+	public GameObject gameOverObject;
+	public ContinueMenu gameOverMenuScript;
 	
 	void Start()
 	{
@@ -40,6 +43,8 @@ public class PlayerStamina : MonoBehaviour {
 		anim = playerCharacter.GetComponent<Animator> ();
 		inGameMenuObject = GameObject.FindGameObjectWithTag ("inGameMenu");
 		inGameMenu = inGameMenuObject.GetComponent<inGameMenuController> ();
+		gameOverObject = GameObject.FindGameObjectWithTag ("GameOverMenu");
+		gameOverMenuScript = gameOverObject.GetComponent<ContinueMenu> ();
 	}
 
 	void Awake()
@@ -118,7 +123,7 @@ public class PlayerStamina : MonoBehaviour {
 		}
 
 		//handles attack cooldown
-		if (attackTimer > 0.75f && Input.GetMouseButtonDown(0) && !inGameMenu.isInMenu)
+		if (attackTimer > 0.75f && Input.GetMouseButtonDown(0) && !inGameMenu.isInMenu && !gameOverMenuScript.isActive)
 		{
 			Attack ();
 			attackTimer = 0f;

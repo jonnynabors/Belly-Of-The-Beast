@@ -14,6 +14,8 @@ public class ContinueMenu : MonoBehaviour {
 
 	public GameObject hud;
 	public Canvas hudCanvas;
+	public bool isActive;
+
 	public void restartPress()
 	{
 		Time.timeScale = 1;
@@ -50,6 +52,7 @@ public class ContinueMenu : MonoBehaviour {
 		Screen.lockCursor = false;
 		Time.timeScale = 0;
 		hudCanvas.enabled = false;
+		isActive = true;
 	}
 
 	// Update is called once per frame

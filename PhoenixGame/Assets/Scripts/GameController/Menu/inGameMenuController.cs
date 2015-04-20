@@ -10,31 +10,40 @@ public class inGameMenuController : MonoBehaviour {
 	public GameObject optionsCanvas;
 	public GameObject controlsCanvas;
 	public GameObject exitCanvas;
-	public Button mainButton;
+	/**public Button mainButton;
 	public Button returnButton;
 	public Button optionsButton;
 	public Button controlsButton;
-	public Button exitButton;
+	public Button exitButton;*/
 	public newCamera cameraScript;
 	public bool isInMenu;
 	public PlayerHealth playerHealth;
 	public GameObject playerCharacter;
 	public bool isDead;
+
+	public GameObject gameOverObject;
+	public ContinueMenu gameOverMenuScript;
+
 	
 	// Use this for initialization
 	void Start (){
 		//grab components
-//		mainMenu = mainMenu.GetComponent<Canvas> ();
-//		subMenu = subMenu.GetComponent<Canvas> ();
-//		quitMenu = quitMenu.GetComponent<Canvas> ();
-//		mainButton = mainButton.GetComponent<Button> ();
-//		returnButton = returnButton.GetComponent<Button> ();
-//		optionsButton = optionsButton.GetComponent<Button> ();
-//		controlsButton = controlsButton.GetComponent<Button> ();
-//		exitButton = exitButton.GetComponent<Button> ();
+		mainMenu = mainMenu.GetComponent<Canvas> ();
+		subMenu = subMenu.GetComponent<Canvas> ();
+		quitMenu = quitMenu.GetComponent<Canvas> ();
+		/**mainButton = mainButton.GetComponent<Button> ();
+		returnButton = returnButton.GetComponent<Button> ();
+		optionsButton = optionsButton.GetComponent<Button> ();
+		controlsButton = controlsButton.GetComponent<Button> ();
+		exitButton = exitButton.GetComponent<Button> ();*/
+
+		gameOverObject = GameObject.FindGameObjectWithTag ("GameOverMenu");
+		gameOverMenuScript = gameOverObject.GetComponent<ContinueMenu> ();
 
 		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = playerCharacter.GetComponent<PlayerHealth> ();
+
+		gameOverMenuScript.isActive = false;
 
 		//Makes quit menu NOT visible
 		isInMenu = false;
@@ -91,7 +100,7 @@ public class inGameMenuController : MonoBehaviour {
 		subMenu.enabled = true;
 		controlsCanvas.SetActive (true);
 	}
-	
+	/**
 	//exitPress
 	public void ExitPress(){
 		//Makes quit menu visible and disables our main menu buttons
@@ -114,7 +123,7 @@ public class inGameMenuController : MonoBehaviour {
 		controlsButton.enabled = true;
 		exitButton.enabled = true;
 		exitCanvas.SetActive (false);
-	}
+	}*/
 	
 	//yesButton Exit Warning	
 	public void ExitGame(){
