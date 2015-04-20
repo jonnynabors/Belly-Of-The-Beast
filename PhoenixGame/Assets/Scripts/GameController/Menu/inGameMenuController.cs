@@ -7,6 +7,7 @@ public class inGameMenuController : MonoBehaviour {
 	public Canvas mainMenu;
 	public Canvas subMenu;
 	public Canvas quitMenu;
+	public Canvas HUD;
 	public GameObject optionsCanvas;
 	public GameObject controlsCanvas;
 	public GameObject exitCanvas;
@@ -31,6 +32,7 @@ public class inGameMenuController : MonoBehaviour {
 		mainMenu = mainMenu.GetComponent<Canvas> ();
 		subMenu = subMenu.GetComponent<Canvas> ();
 		quitMenu = quitMenu.GetComponent<Canvas> ();
+		HUD = HUD.GetComponent<Canvas> ();
 		/**mainButton = mainButton.GetComponent<Button> ();
 		returnButton = returnButton.GetComponent<Button> ();
 		optionsButton = optionsButton.GetComponent<Button> ();
@@ -64,6 +66,7 @@ public class inGameMenuController : MonoBehaviour {
 				mainMenu.enabled = false;
 				subMenu.enabled = false;
 				cameraScript.enabled = true;
+				HUD.enabled = true;
 				Time.timeScale = 1;
 			}
 			else
@@ -72,6 +75,7 @@ public class inGameMenuController : MonoBehaviour {
 				mainMenu.enabled = true;
 				cameraScript.enabled = false;
 				Screen.lockCursor = false;
+				HUD.enabled = false;
 				Time.timeScale = 0;
 			}
 		}
@@ -85,8 +89,10 @@ public class inGameMenuController : MonoBehaviour {
 	
 	public void returnPress(){
 		Time.timeScale = 1;
+		HUD.enabled = true;
 		cameraScript.enabled = true;
 		mainMenu.enabled = false;
+		Screen.lockCursor = true;
 	}
 	
 	public void optionsPress(){
