@@ -36,6 +36,12 @@ TagManager:
   - Bubble
   - VictoryMenu
   - VictoryZone
+  - TopLadderLandingPadExt
+  - Ladder
+  - TopLadderLandingPad
+  - BottomLadderLandingPadExt
+  - BottomLadderLandingPad
+  - Dialogue
   layers:
   - Default
   - TransparentFX

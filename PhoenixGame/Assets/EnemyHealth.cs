@@ -22,6 +22,9 @@ public class EnemyHealth : MonoBehaviour {
 	int currentHealth;										//Value of enemy's current health
 	Vector3 dropLocation;									//Location to drop Essences at
 
+	public chatBubble dialogueBox;
+	public GameObject dialogueBoxObject;
+
 	// Use this for initialization
 	void Start () {
 		//Initialize variables
@@ -29,6 +32,8 @@ public class EnemyHealth : MonoBehaviour {
 		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
 		anim = GetComponent<Animator>();
 		nav = GetComponent<NavMeshAgent>();
+		dialogueBoxObject = GameObject.FindGameObjectWithTag ("Dialogue");
+		dialogueBox = dialogueBoxObject.GetComponent<chatBubble> ();
 	}
 	
 	// Update is called once per frame
@@ -67,6 +72,7 @@ public class EnemyHealth : MonoBehaviour {
 		}
 
 		if ((currentHealth -= damageTaken) <= 0) {
+			dialogueBox.enemiesDefeated += 1;
 			currentHealth = 0;
 			EnemyDeath();
 		}
