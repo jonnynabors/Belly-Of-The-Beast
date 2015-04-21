@@ -16,10 +16,17 @@ public class chatBubble : MonoBehaviour {
 
 	public Text[] dialogue;
 	public bool dialogueComplete;
+	public bool enemiesCleared;
 
 	//call the animator for friendly npc to talk
 	public Animator anim;
 
+	public int firstTextTalk = 0;
+
+	//will change the bool for the NPC animation to make him
+	// 'hurray' when all enemies are defeated.
+	public int enemiesDefeated=0;
+	public int enemiesTotal=1;
 
 	/// flags for maintaining order&flow of dialogue
 	/// flag1 is for the first string of dialogue, flag2 is the 2nd, and so on..
@@ -39,9 +46,12 @@ public class chatBubble : MonoBehaviour {
 	void Update () {
 		bool closeEnough = detectRange ();
 		rotate ();
-		//if player is not in range, deactivate chat bubble
+		//if player is not in range, deactivate chat bubble, and reset firstTextTalk
 		if (!closeEnough)
 		{
+			firstTextTalk = 0;
+			if (enemiesDefeated >= enemiesTotal)
+				anim.SetBool("victorious", true);
 			flagReset();
 			disableDialogues ();
 			GameObject.FindGameObjectWithTag("Bubble").GetComponent<Image>().enabled = false;
@@ -51,7 +61,16 @@ public class chatBubble : MonoBehaviour {
 		// call flagger if player is in range and F (Interact) is pushed
 		else
 		{
+			//will trigger talk animation for the first dialogue when in range
+			if (firstTextTalk == 0)
+			{
+				anim.SetTrigger("talk");
+				firstTextTalk = 1;
+			}
+			//enables text to be displayed
 			textEnabler();
+
+			//call Flagger to change displayed dialogue when f is pressed.
 			GameObject.FindGameObjectWithTag("Bubble").GetComponent<Image>().enabled = true;
 			if (Input.GetKeyDown("f"))
 			{
@@ -73,25 +92,38 @@ public class chatBubble : MonoBehaviour {
 	// enables the text object according to which flags are set
 	public void textEnabler()
 	{
-		// if no interaction has yet occured, but player is within range,
-		// enable first string of dialogue
-		if (!flag1 && !flag2)
-			dialogue[0].enabled = true;
 
-		else if (flag1 && !flag2)
+		//checks for victory state, and will alter animation bool
+		if (enemiesDefeated >= enemiesTotal)
 		{
-			dialogue[0].enabled = false;
-			dialogue[1].enabled = true;
-			dialogue[2].enabled = false;
-		}
-		else if (flag1 && flag2)
-		{
+			anim.SetBool ("victorious", true);
 			dialogue[0].enabled = false;
 			dialogue[1].enabled = false;
-			dialogue[2].enabled = true;
-			dialogueComplete = true;
+			dialogue[2].enabled = false;
+			dialogue[3].enabled = true;
 		}
-		else;
+		else
+		{
+			// if no interaction has yet occured, but player is within range,
+			// enable first string of dialogue
+			if (!flag1 && !flag2)
+				dialogue[0].enabled = true;
+
+			else if (flag1 && !flag2)
+			{
+				dialogue[0].enabled = false;
+				dialogue[1].enabled = true;
+				dialogue[2].enabled = false;
+			}
+			else if (flag1 && flag2)
+			{
+				dialogue[0].enabled = false;
+				dialogue[1].enabled = false;
+				dialogue[2].enabled = true;
+				dialogueComplete = true;
+			}
+			else;
+		}
 	}
 
 	// marks the appropriate flags for how much the player has

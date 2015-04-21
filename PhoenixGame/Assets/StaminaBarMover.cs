@@ -54,7 +54,7 @@ public class StaminaBarMover : MonoBehaviour {
 		else if (stam >= 15)
 			staminaBar.sprite = sprites[9];
 		
-		else if (stam <= 1)
+		else if (stam <= 0)
 			staminaBar.enabled = false;
 	}
 }
