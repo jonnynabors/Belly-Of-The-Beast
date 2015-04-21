@@ -686,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &140954
 GameObject:
   m_ObjectHideFlags: 1
@@ -1530,7 +1530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &179246
 GameObject:
   m_ObjectHideFlags: 1
@@ -1704,7 +1704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &186020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,7 +1722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &187300
 GameObject:
   m_ObjectHideFlags: 1
@@ -2239,7 +2239,7 @@ MonoBehaviour:
   m_Color: {r: .941176474, g: .941176474, b: .941176474, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 43476f6805daffb46833e1e9599f09a7, type: 3}
-    m_FontSize: 0
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -5483,6 +5483,8 @@ MonoBehaviour:
   isDead: 0
   gameOverObject: {fileID: 0}
   gameOverMenuScript: {fileID: 0}
+  victoryMenuObject: {fileID: 0}
+  victoryMenuScript: {fileID: 0}
 --- !u!114 &11477640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7407,8 +7409,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 18, y: 57}
-  m_SizeDelta: {x: 557, y: 49}
+  m_AnchoredPosition: {x: 21, y: 47}
+  m_SizeDelta: {x: 564, y: 68}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22411030
 RectTransform:
@@ -7672,8 +7674,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -312.299988, y: 0}
-  m_SizeDelta: {x: -9.09990025, y: 20}
+  m_AnchoredPosition: {x: -4.14996338, y: 0}
+  m_SizeDelta: {x: -8.30000019, y: 20}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22421536
 RectTransform:
