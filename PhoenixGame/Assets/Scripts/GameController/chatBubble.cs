@@ -15,6 +15,11 @@ public class chatBubble : MonoBehaviour {
 	public Image backgroundImage;
 
 	public Text[] dialogue;
+	public bool dialogueComplete;
+
+	//call the animator for friendly npc to talk
+	public Animator anim;
+
 
 	/// flags for maintaining order&flow of dialogue
 	/// flag1 is for the first string of dialogue, flag2 is the 2nd, and so on..
@@ -25,7 +30,7 @@ public class chatBubble : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		Player = GameObject.FindGameObjectWithTag("Player");
-
+		anim = NPC.GetComponent<Animator> ();
 		// initialize dialogue to first string
 		dialogue [0].enabled = true;
 	}
@@ -49,7 +54,12 @@ public class chatBubble : MonoBehaviour {
 			textEnabler();
 			GameObject.FindGameObjectWithTag("Bubble").GetComponent<Image>().enabled = true;
 			if (Input.GetKeyDown("f"))
+			{
 				flagger ();
+				//if dialogue isn't complete, trigger talk animation
+				if(!dialogueComplete)
+					anim.SetTrigger("talk");
+			}
 		}
 	}
 
@@ -79,6 +89,7 @@ public class chatBubble : MonoBehaviour {
 			dialogue[0].enabled = false;
 			dialogue[1].enabled = false;
 			dialogue[2].enabled = true;
+			dialogueComplete = true;
 		}
 		else;
 	}
@@ -102,6 +113,7 @@ public class chatBubble : MonoBehaviour {
 	{
 		flag1 = false;
 		flag2 = false;
+		dialogueComplete = false;
 	}
 
 	bool detectRange(){
