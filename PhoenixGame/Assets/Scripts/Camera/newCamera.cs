@@ -120,7 +120,7 @@ public class newCamera : MonoBehaviour {
 		Debug.DrawLine (fromObject, toTarget, Color.cyan);
 		RaycastHit wallHit = new RaycastHit ();
 		if(Physics.Linecast(fromObject, toTarget, out wallHit)){
-			toTarget = new Vector3(wallHit.point.x, toTarget.y, wallHit.point.z);
+			toTarget = new Vector3(toTarget.x, toTarget.y, wallHit.point.z);
 		}
 	}
 	void OnDrawGizmosSelected(){
