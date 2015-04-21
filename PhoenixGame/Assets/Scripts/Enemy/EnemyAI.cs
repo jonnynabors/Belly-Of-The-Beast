@@ -163,8 +163,6 @@ public class EnemyAI : MonoBehaviour {
 		wayPointIndex = (wayPointIndex + 1) % patrolWayPoints.Length;
 	}
 
-
-
 	//Chase after the game player
 	void Chasing()
 	{
