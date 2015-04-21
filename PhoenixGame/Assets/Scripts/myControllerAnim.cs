@@ -118,12 +118,16 @@ public class myControllerAnim: MonoBehaviour
 		//Calculate if player is currently falling.
 		if (rigid.velocity.y < -2) {
 			fallTime += Time.deltaTime;
+			animator.SetBool("isFalling", true);
+			animator.applyRootMotion = false;
 		} else if (rigid.velocity.y > -1 && fallTime > 0) {
 			fallDamage = fallTime - Mathf.Floor (fallTime);
 			playerHealth.TakeDamage((int)(fallDamage * 150));
 			Debug.Log (fallDamage * 150);
 			Debug.Log ("Landed");
 			fallTime = 0;
+			animator.SetBool("isFalling", false);
+			animator.applyRootMotion = true;
 		} else {
 			fallDamage = 0;
 		}
