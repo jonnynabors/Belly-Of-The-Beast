@@ -18,6 +18,8 @@ public var charBody : Rigidbody;
 public var weaponAway : boolean = false;
 public var sword : GameObject;
 public var shield: GameObject;
+private var swordrend: Renderer;
+private var shieldrend: Renderer;
 
 
 function Start () {
@@ -35,8 +37,10 @@ function OnTriggerEnter (other : Collider) {
 		anim.SetTrigger("Ladder");
 		if(!latchedToLadder && !weaponAway){
 			anim.SetTrigger("weaponBack");
-			sword.GetComponent(MeshRenderer).SetActive(false);
-			shield.GetComponent(MeshRenderer).SetActive(false);
+			swordrend = sword.GetComponent.<Renderer>();
+			swordrend.enabled = false;
+			shieldrend = shield.GetComponent.<Renderer>();
+			shieldrend.enabled = false;
 			weaponAway = true;
 		}
 	}
@@ -61,8 +65,10 @@ function OnTriggerEnter (other : Collider) {
 		anim.SetBool("botLadderExt", true);
 		if(!latchedToLadder && !weaponAway){	
 			anim.SetTrigger("weaponBack");
-			sword.GetComponent(MeshRenderer).SetActive(false);
-			shield.GetComponent(MeshRenderer).SetActive(false);
+			swordrend = sword.GetComponent.<Renderer>();
+			swordrend.enabled = false;
+			shieldrend = shield.GetComponent.<Renderer>();
+			shieldrend.enabled = false;
 			weaponAway = true;
 		}	
 	}
@@ -74,8 +80,10 @@ function OnTriggerExit (other : Collider) {
 		anim.SetBool("topLadderExt", false);
 		if(!latchedToLadder && weaponAway){
 			anim.SetTrigger("takeWeapon");
-			sword.GetComponent(MeshRenderer).SetActive(true);
-			shield.GetComponent(MeshRenderer).SetActive(true);
+			swordrend = sword.GetComponent.<Renderer>();
+			swordrend.enabled = true;
+			shieldrend = shield.GetComponent.<Renderer>();
+			shieldrend.enabled = true;
 			weaponAway = false;
 		}
 	}
@@ -94,8 +102,10 @@ function OnTriggerExit (other : Collider) {
 		anim.SetBool("botLadderExt", false);
 		if(!latchedToLadder && weaponAway){
 			anim.SetTrigger("takeWeapon");
-			sword.GetComponent(MeshRenderer).SetActive(true);
-			shield.GetComponent(MeshRenderer).SetActive(true);
+			swordrend = sword.GetComponent.<Renderer>();
+			swordrend.enabled = true;
+			shieldrend = shield.GetComponent.<Renderer>();
+			shieldrend.enabled = true;
 			weaponAway = false;	
 		}
 	}
@@ -153,7 +163,10 @@ function Update () {
 	if(latchedToLadder){
 		charTransform.Translate(ladderMovement * climbSpeed * Time.deltaTime);	
 	}
-		
+	
+	if(currentLadder){
+		//charTransform.LookAt(currentLadder.GetComponent.<Transform>().y);
+	}
 }
 
 //@script RequireComponent(CharacterController)

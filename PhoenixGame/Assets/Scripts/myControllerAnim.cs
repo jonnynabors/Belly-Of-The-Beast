@@ -210,7 +210,7 @@ public class myControllerAnim: MonoBehaviour
 		float angleRootToMove = Vector3.Angle(rootDirection, moveDirection) * (axisSign.y >= 0 ? -1f : 1f);
 		Vector3 eulerAngles = transform.eulerAngles;
 		eulerAngles.y += angleRootToMove;
-		if(speed > .1){
+		if(speed > .1 && !animator.GetBool("isLatched")){
 			transform.eulerAngles = eulerAngles;
 		}
 		

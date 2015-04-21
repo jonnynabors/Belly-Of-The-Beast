@@ -25,6 +25,7 @@ public class newCamera : MonoBehaviour {
 	public float groundedDistance = 0.5f;
 	public float groundedCheckOffset = 0.0f;
 	public bool lookFromBelow = false;
+	public Vector3 prevPos = new Vector3 (0f,0f,0f);
 	float ViewRadius
 		// The minimum clear radius between the camera and the target
 	{
@@ -110,7 +111,8 @@ public class newCamera : MonoBehaviour {
 				lookFromBelow = false;
 			}
 		} else {
-			this.transform.position = Vector3.SmoothDamp (fromPos, new Vector3 (toPos.x, camera.transform.position.y, toPos.z), ref velocityCamSmooth, camSmoothDampTime);
+			this.transform.position = Vector3.SmoothDamp (fromPos, new Vector3 (toPos.x, camera.transform.position.y + (follow.position.y - prevPos.y)*3, toPos.z), ref velocityCamSmooth, camSmoothDampTime);
+			prevPos = follow.position;
 		}
 		
 	}
