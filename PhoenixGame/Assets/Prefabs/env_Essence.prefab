@@ -626,7 +626,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ad03aba1a1583422b87a3966c8f741d3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c33d5d8b455df684c930e7c56d03919e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -764,7 +764,7 @@ MonoBehaviour:
   essenceCounter: {fileID: 0}
   moveSpeed: .200000003
   sphereTexture: {fileID: 1317947734, guid: 1e3bfaa4c8080a84ab11b92c542c021d, type: 3}
-  audioClip: {fileID: 8300000, guid: ad03aba1a1583422b87a3966c8f741d3, type: 3}
+  audioClip: {fileID: 8300000, guid: c33d5d8b455df684c930e7c56d03919e, type: 3}
   essenceView: {fileID: 0}
 --- !u!135 &13564792
 SphereCollider:

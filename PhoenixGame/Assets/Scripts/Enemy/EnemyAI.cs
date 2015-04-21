@@ -1,6 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * Written by: Jonny Nabors
+ * Date Created: 4/1/2015
+ * Date Edited:
+ * Purpose: Handle general AI for enemy including
+ * attacking/patrolling/movement
+ */
+
 public class EnemyAI : MonoBehaviour {
 
 	public float patrolSpeed = 2f;                          // The nav mesh agent's speed when patrolling.
@@ -17,7 +25,6 @@ public class EnemyAI : MonoBehaviour {
 	private int wayPointIndex = 0;                              // A counter for the way point array.
 	private float distanceToPlayer = 0;						// Hold distance from the player.
 	Animator anim;											//The game character's animation
-	private RaycastHit hit;									//Calculate if enemy is hitting character
 	int atackState = Animator.StringToHash ("Base.Attack1");
 	bool isAttacking = false;
 	GameObject enemyClawLeft;

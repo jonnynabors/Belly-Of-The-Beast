@@ -73,6 +73,10 @@ public class myControllerAnim: MonoBehaviour
 	public float distanceToTheGround;
 	public bool isInTheAir;
 	public float fallTime = 0f;
+	public float fallDamage = 0f;
+	public RaycastHit castToGround;
+	public bool isGrounded = false;
+	public PlayerHealth playerHealth;
 
 
 	//if true, the player has restricted movements because of having 0 stamina
@@ -98,6 +102,7 @@ public class myControllerAnim: MonoBehaviour
 	void Start() 
 	{
 		playerStamina = GetComponent<PlayerStamina> ();
+		playerHealth = GetComponent<PlayerHealth> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
 		rigid = player.GetComponent<Rigidbody> ();
 		distanceToTheGround = player.GetComponent<CapsuleCollider> ().bounds.extents.y;
@@ -108,7 +113,26 @@ public class myControllerAnim: MonoBehaviour
 		exhausted = playerStamina.exhausted;
 
 		//Check if player is on the ground.
-		isInTheAir = IsInTheAir ();
+//		isInTheAir = IsInTheAir ();
+
+		//Calculate if player is currently falling.
+		if (rigid.velocity.y < -2) {
+			fallTime += Time.deltaTime;
+		} else if (rigid.velocity.y > -1 && fallTime > 0) {
+			fallDamage = fallTime - Mathf.Floor (fallTime);
+			playerHealth.TakeDamage((int)(fallDamage * 150));
+			Debug.Log (fallDamage * 150);
+			Debug.Log ("Landed");
+			fallTime = 0;
+		} else {
+			fallDamage = 0;
+		}
+
+//		if (Physics.Raycast (transform.position, -Vector3.up, out castToGround, 100.0f)) {
+//			distanceToTheGround = castToGround.distance;
+//
+//			Debug.Log ("Ray: Hit.Distance = " + castToGround.distance);
+//		}
 
 //		if (isInTheAir) {
 //			fallTime += Time.deltaTime;
@@ -204,8 +228,9 @@ public class myControllerAnim: MonoBehaviour
 			return speed;
 		}
 	}
+//
+//	private bool IsInTheAir(){
+//		return (Physics.Raycast(player.transform.position, -Vector3.up, distanceToTheGround + 0.1f));
+//	}
 
-	private bool IsInTheAir(){
-		return (Physics.Raycast(player.transform.position, -Vector3.up, distanceToTheGround + 0.1f));
-	}
 }

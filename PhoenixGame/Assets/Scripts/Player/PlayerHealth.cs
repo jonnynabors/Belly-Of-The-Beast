@@ -16,6 +16,8 @@ public class PlayerHealth : MonoBehaviour {
 	public HealthBarMover healthBarMover;
 	public GameObject healthBar;
 
+
+
 	void Start()
 	{
 		playerCharacter = GameObject.FindGameObjectWithTag ("Player");

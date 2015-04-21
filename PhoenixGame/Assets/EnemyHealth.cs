@@ -22,7 +22,6 @@ public class EnemyHealth : MonoBehaviour {
 	int currentHealth;										//Value of enemy's current health
 	Vector3 dropLocation;									//Location to drop Essences at
 
-
 	// Use this for initialization
 	void Start () {
 		//Initialize variables
@@ -71,13 +70,14 @@ public class EnemyHealth : MonoBehaviour {
 			currentHealth = 0;
 			EnemyDeath();
 		}
-
+		anim.SetTrigger ("EnemyHit");
 		Debug.Log (currentHealth);
 	}
 
 	public void EnemyDeath()
 	{
 		anim.SetBool ("IsDead", true);
+		//anim.SetTrigger ("DeadTrigger");
 		nav.enabled = false;
 		enemyAIScript.enabled = false;
 		GetComponent<Rigidbody>().detectCollisions = false;
@@ -90,6 +90,8 @@ public class EnemyHealth : MonoBehaviour {
 		yield return new WaitForSeconds(3);
 		DestroyObject();
 	}
+
+	//Destroy the enemy game object
 	void DestroyObject()
 	{
 		Destroy (gameObject);
