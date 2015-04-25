@@ -7,6 +7,7 @@ public class swordCollision : MonoBehaviour {
 	public Animator anim;
 	public Collider player;
 	public PlayerStamina playerStamina;
+	public bool isInBody;
 	// Use this forinitialization
 	void Start () {
 		anim = GetComponentInParent<Animator>();
@@ -19,16 +20,22 @@ public class swordCollision : MonoBehaviour {
 	void Update () {
 	
 	}
-	void OnTriggerEnter(Collider collision) 
+	void OnCollisionEnter(Collision collision) 
 	{
 		if(collision.gameObject.tag == "Enemy")
 		{
 			collision.gameObject.GetComponent <Animator>().SetBool("EnemyTrigger",true);
 			EnemyHealth enemyHealth = collision.transform.GetComponent <EnemyHealth> ();
-			if(enemyHealth != null && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+			if(enemyHealth != null && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && !isInBody)
 			{
+				isInBody = true;
 				enemyHealth.EnemyTakeDamage (attackDamage);
 			}
 		}
+	}
+
+	void OnCollisionExit(Collision collision)
+	{
+		isInBody = false;
 	}
 }
