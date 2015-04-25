@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class onWater : MonoBehaviour {
+public class onSand : MonoBehaviour {
 	public playerFootsteps playerFootsteps;
 	
 	
@@ -13,12 +13,12 @@ public class onWater : MonoBehaviour {
 	// Update is called once per frame
 	void OnTriggerEnter (Collider collider) {
 		if(collider.gameObject.tag == "Player"){
-			playerFootsteps.inWater = true;
+			playerFootsteps.onSand = true;
 		}
 	}
 	void OnTriggerExit (Collider collider) {
 		if(collider.gameObject.tag == "Player"){
-			playerFootsteps.inWater = false;
+			playerFootsteps.onSand = false;
 		}
 	}
 }

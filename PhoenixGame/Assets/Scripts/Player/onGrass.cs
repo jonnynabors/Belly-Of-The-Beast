@@ -2,22 +2,23 @@
 using System.Collections;
 
 public class onGrass : MonoBehaviour {
-	public playerFootsteps footsteps;
+	public playerFootsteps playerFootsteps;
 	
 	
 	// Use this for initialization
 	void Start () {
+		playerFootsteps = GameObject.FindGameObjectWithTag("Player").GetComponent<playerFootsteps>();
 	}
 	
 	// Update is called once per frame
 	void OnTriggerEnter (Collider collider) {
 		if(collider.gameObject.tag == "Player"){
-			footsteps.onGrass = true;
+			playerFootsteps.onGrass = true;
 		}
 	}
 	void OnTriggerExit (Collider collider) {
 		if(collider.gameObject.tag == "Player"){
-			footsteps.onGrass = false;
+			playerFootsteps.onGrass = false;
 		}
 	}
 }

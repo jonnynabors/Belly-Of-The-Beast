@@ -16034,7 +16034,7 @@ MeshCollider:
   m_GameObject: {fileID: 150626}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300024, guid: fd374229f2322fd4ba091608068218b2, type: 3}
@@ -16345,10 +16345,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160960}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
+  m_Convex: 0
   m_Mesh: {fileID: 4300064, guid: fd374229f2322fd4ba091608068218b2, type: 3}
 --- !u!64 &6440084
 MeshCollider:
@@ -17906,7 +17906,7 @@ MeshCollider:
   m_GameObject: {fileID: 193586}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300066, guid: fd374229f2322fd4ba091608068218b2, type: 3}

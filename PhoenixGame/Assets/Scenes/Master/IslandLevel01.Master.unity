@@ -7363,7 +7363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205f323904b9f2e4fa2a2f097caa799f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footsteps: {fileID: 631532121}
+  playerFootsteps: {fileID: 0}
 --- !u!1 &376030391
 GameObject:
   m_ObjectHideFlags: 0
@@ -13910,7 +13910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf662decc721ae34ba0877016918c005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footsteps: {fileID: 631532121}
+  playerFootsteps: {fileID: 0}
 --- !u!82 &566634394
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16094,10 +16094,14 @@ MonoBehaviour:
   onGrass: 0
   onWood: 0
   onGravel: 0
+  onSand: 0
+  onStone: 0
   waterStepSound: {fileID: 8300000, guid: 0179822fb3e064c97912c11771e37086, type: 3}
   woodStepSound: {fileID: 8300000, guid: 95cad670971b94217af458396b975169, type: 3}
-  gravelStepSound: {fileID: 8300000, guid: a1382e4f297374edea614c369f31dcb2, type: 3}
+  gravelStepSound: {fileID: 8300000, guid: a29835503aea043d7b4e71c6e9f61b37, type: 3}
   grassStepSound: {fileID: 8300000, guid: 5926e9177458f0e41a497cb18a066615, type: 3}
+  sandStepSound: {fileID: 8300000, guid: 0a1d8f8e7595b4fb4835610b3ece8901, type: 3}
+  stoneStepSound: {fileID: 8300000, guid: f6a094d56931c46ae8a7cc6ca93fcdce, type: 3}
   waterTimer: 0
   waterCool: .600000024
   audio: {fileID: 631532120}
@@ -21060,7 +21064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463498, guid: 4bba4d4e2fce2494e81e042573003c34, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 180762, guid: 4bba4d4e2fce2494e81e042573003c34, type: 2}
       propertyPath: m_Name
@@ -21154,7 +21158,9 @@ Prefab:
       propertyPath: attackSound
       value: 
       objectReference: {fileID: 8300000, guid: 3ca121c001790493aac9f6aec90cfc06, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6422462, guid: 4bba4d4e2fce2494e81e042573003c34, type: 2}
+    - {fileID: 11485608, guid: 4bba4d4e2fce2494e81e042573003c34, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4bba4d4e2fce2494e81e042573003c34, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &843398514
@@ -25001,7 +25007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa48207058e86bb4e9c6e12bbe64a0ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footsteps: {fileID: 631532121}
+  playerFootsteps: {fileID: 0}
 --- !u!1001 &990960948
 Prefab:
   m_ObjectHideFlags: 0
@@ -27483,7 +27489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa48207058e86bb4e9c6e12bbe64a0ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footsteps: {fileID: 631532121}
+  playerFootsteps: {fileID: 0}
 --- !u!64 &1104010551
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28920,7 +28926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897ba3bd20469e64183ff85a5421e6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footsteps: {fileID: 631532121}
+  playerFootsteps: {fileID: 0}
 --- !u!1 &1123437375
 GameObject:
   m_ObjectHideFlags: 0
@@ -38476,7 +38482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205f323904b9f2e4fa2a2f097caa799f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footsteps: {fileID: 631532121}
+  playerFootsteps: {fileID: 0}
 --- !u!64 &1347705102
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39332,6 +39338,18 @@ Prefab:
     - target: {fileID: 429472, guid: 12bb0c0aae7e86c4aad001bc4703d776, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494558, guid: 12bb0c0aae7e86c4aad001bc4703d776, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 105342, guid: 12bb0c0aae7e86c4aad001bc4703d776, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424758, guid: 12bb0c0aae7e86c4aad001bc4703d776, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12bb0c0aae7e86c4aad001bc4703d776, type: 2}
@@ -47266,7 +47284,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1 &1650981395
 GameObject:
   m_ObjectHideFlags: 0
@@ -51074,7 +51092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa48207058e86bb4e9c6e12bbe64a0ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footsteps: {fileID: 631532121}
+  playerFootsteps: {fileID: 0}
 --- !u!64 &1876405849
 MeshCollider:
   m_ObjectHideFlags: 0

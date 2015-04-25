@@ -6,10 +6,14 @@ public class playerFootsteps : MonoBehaviour {
 	public bool onGrass = false;
 	public bool onWood = false;
 	public bool onGravel = false;
+	public bool onSand = false;
+	public bool onStone = false;
 	public AudioClip waterStepSound;
 	public AudioClip woodStepSound;
 	public AudioClip gravelStepSound;
 	public AudioClip grassStepSound;
+	public AudioClip sandStepSound;
+	public AudioClip stoneStepSound;
 	public float waterTimer = 0;
 	public float waterCool = 0.6f;
 	public AudioSource audio;
@@ -23,49 +27,66 @@ public class playerFootsteps : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (anim.GetFloat ("ladderDir") > 0 || anim.GetFloat ("ladderDir") < 0) {
-			if(onWood == true){
-				woodSound ();
-			}		
-		}
-		if(anim.GetFloat("Speed") > 0){
-			if(inWater == true){
-				waterSound();
+		if (anim.GetCurrentAnimatorStateInfo (0).IsName ("Locomotion")) {
+			if (anim.GetFloat ("ladderDir") > 0 || anim.GetFloat ("ladderDir") < 0) {
+					if (onWood == true) {
+							woodSound ();
+					}		
 			}
-			if(onGrass == true){
-				grassSound();
+			if (anim.GetFloat ("Speed") > 0) {
+					if (inWater == true) {
+							waterSound ();
+					}
+
+					if (onWood == true) {
+							woodSound ();
+					}
+					if (onSand == true) {
+							sandSound ();
+					}
+					if (onStone == true) {
+							stoneSound ();
+					}
+					if (onGrass == true) {
+							grassSound ();
+					}
+					if (onGravel == true) {
+							gravelSound ();
+					}
 			}
-			if(onWood == true){
-				woodSound();
+			if (anim.GetFloat ("Speed") > 1) {
+					waterCool = 0.4f;
+					if (inWater == true) {
+							waterSound ();
+					}
+
+					if (onWood == true) {
+							woodSound ();
+					}
+					if (onSand == true) {
+							sandSound ();
+					}
+					if (onStone == true) {
+							stoneSound ();
+					}
+					if (onGrass == true) {
+							grassSound ();	
+					}
+					if (onGravel == true && !onGrass) {
+							gravelSound ();
+					}
+			} else {
+					waterCool = 0.6f;		
 			}
-			if(onGravel == true){
-				gravelSound();
+			if (waterTimer > 0) {
+					waterTimer -= Time.deltaTime;
 			}
-		}
-		if (anim.GetFloat ("Speed") > 1) {
-			waterCool = 0.4f;
-			if(inWater == true){
-				waterSound();
-			}
-			if(onGrass == true){
-				grassSound();
-			}
-			if(onWood == true){
-				woodSound();
-			}
-			if(onGravel == true){
-				gravelSound();
+			if (waterTimer < 0) {
+					waterTimer = 0;
 			}
 		} 
-
 		else {
-			waterCool = 0.6f;		
-		}
-		if(waterTimer > 0){
-			waterTimer -= Time.deltaTime;
-		}
-		if(waterTimer < 0){
-			waterTimer = 0;
+			//audio.Stop();
 		}
 	}
 
@@ -90,6 +111,18 @@ public class playerFootsteps : MonoBehaviour {
 	void grassSound(){
 		if (waterTimer == 0) {
 			audio.PlayOneShot(grassStepSound);		
+			waterTimer = waterCool;
+		}
+	}
+	void sandSound(){
+		if (waterTimer == 0) {
+			audio.PlayOneShot(sandStepSound);		
+			waterTimer = waterCool;
+		}
+	}
+	void stoneSound(){
+		if (waterTimer == 0) {
+			audio.PlayOneShot(stoneStepSound);		
 			waterTimer = waterCool;
 		}
 	}
