@@ -765,7 +765,7 @@ MonoBehaviour:
   moveSpeed: .200000003
   sphereTexture: {fileID: 1317947734, guid: 1e3bfaa4c8080a84ab11b92c542c021d, type: 3}
   audioClip: {fileID: 8300000, guid: c33d5d8b455df684c930e7c56d03919e, type: 3}
-  essenceView: {fileID: 0}
+  essenceView: {fileID: 194622}
 --- !u!135 &13564792
 SphereCollider:
   m_ObjectHideFlags: 1
