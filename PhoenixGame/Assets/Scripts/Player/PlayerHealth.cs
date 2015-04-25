@@ -6,7 +6,8 @@ public class PlayerHealth : MonoBehaviour {
 	public int startingHealth = 200;
 	public int currentHealth;
 	public bool isDead;
-
+	public AudioClip deathSound;
+	public AudioClip hitSound;
 	//reference to player control script
 	Animator playerController;
 	public GameObject playerCharacter;
@@ -15,7 +16,7 @@ public class PlayerHealth : MonoBehaviour {
 	//reference another script
 	public HealthBarMover healthBarMover;
 	public GameObject healthBar;
-
+	public AudioSource audio;
 
 
 	void Start()
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour {
 		playerCharacter = GameObject.FindGameObjectWithTag ("Player");
 		healthBar = GameObject.FindGameObjectWithTag ("HealthBar");
 		healthBarMover = healthBar.GetComponent<HealthBarMover> ();
+		audio = GetComponent<AudioSource> ();
 	}
 
 	void Awake()
@@ -62,13 +64,14 @@ public class PlayerHealth : MonoBehaviour {
 			currentHealth = 0;
 			Death ();
 		}
-
+		audio.PlayOneShot (hitSound);
 		healthBarMover.updateHealthBar ();
 	}
 
 	void Death()
 	{
 		isDead = true;
+		audio.PlayOneShot (deathSound);
 		playerController.SetBool ("isDead", isDead);
 		//Destroy(playerCharacter);
 	}

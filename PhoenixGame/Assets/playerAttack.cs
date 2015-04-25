@@ -10,6 +10,8 @@ public class playerAttack : MonoBehaviour {
 	public int currentStamina;
 	public GameObject SlashEffect;
 	public float startDelay = 0.5f;
+	public AudioClip attackSound;
+	public AudioSource audio;
 
 	void Awake ()
 	{
@@ -17,6 +19,7 @@ public class playerAttack : MonoBehaviour {
 		playerStamina = GetComponent<PlayerStamina> ();
 		currentStamina = playerStamina.currentStamina;
 		SlashEffect = GameObject.FindGameObjectWithTag ("Slash");
+		audio = GetComponent<AudioSource> ();
 	}
 
 	
@@ -42,6 +45,7 @@ public class playerAttack : MonoBehaviour {
 	void attack ()
 	{
 		anim.SetTrigger ("isAttack");
+		audio.PlayOneShot (attackSound);
 		SlashEffect.GetComponent<ParticleSystem> ().startDelay = startDelay;
 		SlashEffect.GetComponent<ParticleSystem> ().Play ();
 	}
