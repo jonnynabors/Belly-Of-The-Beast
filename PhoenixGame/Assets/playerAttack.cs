@@ -9,6 +9,7 @@ public class playerAttack : MonoBehaviour {
 	public PlayerStamina playerStamina;
 	public int currentStamina;
 	public GameObject SlashEffect;
+	public float startDelay = 0.5f;
 
 	void Awake ()
 	{
@@ -41,6 +42,7 @@ public class playerAttack : MonoBehaviour {
 	void attack ()
 	{
 		anim.SetTrigger ("isAttack");
+		SlashEffect.GetComponent<ParticleSystem> ().startDelay = startDelay;
 		SlashEffect.GetComponent<ParticleSystem> ().Play ();
 	}
 }
