@@ -19,7 +19,7 @@ public class Torchelight : MonoBehaviour {
 		BaseFlame.GetComponent<ParticleSystem>().emissionRate=IntensityLight*15f;	
 		Etincelles.GetComponent<ParticleSystem>().emissionRate=IntensityLight*7f;
 		Fumee.GetComponent<ParticleSystem>().emissionRate=IntensityLight*12f;
-		gameTime = GameObject.Find ("_GameTime").GetComponent<GameTime>();
+		gameTime = GameObject.Find ("env_GameTime").GetComponent<GameTime>();
 	}
 	
 
