@@ -96,7 +96,9 @@ public class newCamera : MonoBehaviour {
 		
 		//wallCollision (charOffset, ref targetPosition);
 		smoothPosition(this.transform.position, targetPosition);
+
 		transform.LookAt (new Vector3 (follow.position.x, follow.position.y + viewAngle, follow.position.z));
+			
 	}
 	void DistanceUpdate(){
 		targetPosition = follow.position + (camera.transform.position - follow.position).normalized * distanceAway;

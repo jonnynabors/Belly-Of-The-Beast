@@ -2884,7 +2884,7 @@ GameObject:
   - 33: {fileID: 56003936}
   - 23: {fileID: 56003935}
   - 64: {fileID: 56003934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4017,6 +4017,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 122837401}
   m_Mesh: {fileID: 4300050, guid: fd374229f2322fd4ba091608068218b2, type: 3}
+--- !u!137 &127524290 stripped
+SkinnedMeshRenderer:
+  m_PrefabParentObject: {fileID: 13774408, guid: 4bba4d4e2fce2494e81e042573003c34,
+    type: 2}
+  m_PrefabInternal: {fileID: 840255223}
 --- !u!1001 &129509474
 Prefab:
   m_ObjectHideFlags: 0
@@ -4560,6 +4565,7 @@ GameObject:
   - 114: {fileID: 173261684}
   - 114: {fileID: 173261676}
   - 114: {fileID: 173261685}
+  - 114: {fileID: 173261686}
   m_Layer: 0
   m_Name: camera_main
   m_TagString: Untagged
@@ -4575,7 +4581,7 @@ Transform:
   m_GameObject: {fileID: 173261674}
   m_LocalRotation: {x: 0, y: .680912614, z: 0, w: .732364655}
   m_LocalPosition: {x: -1.72000003, y: 2.13199997, z: -.405999988}
-  m_LocalScale: {x: .0500000007, y: .0500000007, z: .0500000007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -4672,10 +4678,10 @@ MonoBehaviour:
   camera: {fileID: 173261677}
   obstacleLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   groundLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   offset: {x: 0, y: .100000001, z: 0}
   grounded: 0
   groundedDistance: .300000012
@@ -4767,6 +4773,26 @@ MonoBehaviour:
   m_MinZ: .00999999978
   m_SSAOShader: {fileID: 4800000, guid: 43ca18288c424f645aaa1e9e07f04c50, type: 3}
   m_RandomTexture: {fileID: 2800000, guid: a181ca8e3c62f3e4b8f183f6c586b032, type: 3}
+--- !u!114 &173261686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 173261674}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75895f6b960e2cf4d94f92a4dfb594f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 173261677}
+  cameraTarget: {fileID: 173261675}
+  renderer: {fileID: 127524290}
+  shirt: {fileID: 1336160275}
+  pants: {fileID: 1721694423}
+  leye: {fileID: 1697905092}
+  reye: {fileID: 1517341495}
+  fadeDistance: 2
+  hideDistance: .100000001
 --- !u!1 &185627784
 GameObject:
   m_ObjectHideFlags: 0
@@ -5239,7 +5265,7 @@ GameObject:
   - 33: {fileID: 196530784}
   - 23: {fileID: 196530783}
   - 64: {fileID: 196530782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13253,7 +13279,7 @@ GameObject:
   - 33: {fileID: 614310683}
   - 23: {fileID: 614310682}
   - 64: {fileID: 614310681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18671,6 +18697,18 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 91f469da2bb9dc94b8ebd1ab97174d27, type: 2}
+    - target: {fileID: 13700254, guid: 4bba4d4e2fce2494e81e042573003c34, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700794, guid: 4bba4d4e2fce2494e81e042573003c34, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13774408, guid: 4bba4d4e2fce2494e81e042573003c34, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bba4d4e2fce2494e81e042573003c34, type: 2}
   m_IsPrefabParent: 0
@@ -24970,7 +25008,7 @@ GameObject:
   - 23: {fileID: 1104010552}
   - 64: {fileID: 1104010551}
   - 114: {fileID: 1104010550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26327,7 +26365,7 @@ GameObject:
   - 33: {fileID: 1118333806}
   - 23: {fileID: 1118333805}
   - 64: {fileID: 1118333804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28118,7 +28156,7 @@ GameObject:
   - 33: {fileID: 1171153380}
   - 23: {fileID: 1171153379}
   - 64: {fileID: 1171153378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32455,7 +32493,7 @@ GameObject:
   - 64: {fileID: 1281674524}
   - 54: {fileID: 1281674523}
   - 135: {fileID: 1281674522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ball
   m_TagString: Boulder
   m_Icon: {fileID: 0}
@@ -33468,6 +33506,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1330439005}
   m_Mesh: {fileID: 4300116, guid: fd374229f2322fd4ba091608068218b2, type: 3}
+--- !u!137 &1336160275 stripped
+SkinnedMeshRenderer:
+  m_PrefabParentObject: {fileID: 13700794, guid: 4bba4d4e2fce2494e81e042573003c34,
+    type: 2}
+  m_PrefabInternal: {fileID: 840255223}
 --- !u!1 &1337017247
 GameObject:
   m_ObjectHideFlags: 0
@@ -34816,7 +34859,7 @@ GameObject:
   - 23: {fileID: 1347705103}
   - 64: {fileID: 1347705102}
   - 114: {fileID: 1347705101}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37782,6 +37825,11 @@ Transform:
   - {fileID: 1854955206}
   m_Father: {fileID: 10055594}
   m_RootOrder: 0
+--- !u!23 &1517341495 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2329526, guid: 4bba4d4e2fce2494e81e042573003c34,
+    type: 2}
+  m_PrefabInternal: {fileID: 840255223}
 --- !u!1001 &1517989234
 Prefab:
   m_ObjectHideFlags: 0
@@ -43149,6 +43197,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1692843226}
   m_Mesh: {fileID: 4300268, guid: fd374229f2322fd4ba091608068218b2, type: 3}
+--- !u!23 &1697905092 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2399450, guid: 4bba4d4e2fce2494e81e042573003c34,
+    type: 2}
+  m_PrefabInternal: {fileID: 840255223}
 --- !u!1 &1710132254
 GameObject:
   m_ObjectHideFlags: 0
@@ -43323,6 +43376,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1721680961}
   m_Mesh: {fileID: 4300154, guid: fd374229f2322fd4ba091608068218b2, type: 3}
+--- !u!137 &1721694423 stripped
+SkinnedMeshRenderer:
+  m_PrefabParentObject: {fileID: 13700254, guid: 4bba4d4e2fce2494e81e042573003c34,
+    type: 2}
+  m_PrefabInternal: {fileID: 840255223}
 --- !u!1 &1723222942
 GameObject:
   m_ObjectHideFlags: 0
