@@ -29,6 +29,8 @@ public class EnemyAI : MonoBehaviour {
 	bool isAttacking = false;
 	GameObject enemyClawLeft;
 	bool isPlayerDead = false;
+	public AudioSource audio;
+	public AudioClip blockClip;
 
 	//Tom's code
 	public float timeBetweenAttacks = 1.0f;
@@ -47,6 +49,7 @@ public class EnemyAI : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		//nav.autoBraking = false; //For continuous movement
 		playerAnim = playerCharacter.GetComponent<Animator>();
+		audio = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -116,14 +119,15 @@ public class EnemyAI : MonoBehaviour {
 		if (playerHealth.currentHealth > 0)
 		{
 			//check for block
-			if (playerIsBlocking);
+			if (playerIsBlocking){audio.PlayOneShot(blockClip);}
 
 			//if not blocking, take damage
-			else
+			else{
 			//Call damage script
 			playerHealth.TakeDamage (attackDamage);
 			//Play particle effect on damage taken on the enemy
 			gameObject.GetComponent<ParticleSystem>().Play ();
+			}
 		}
 		else if (playerHealth.currentHealth <= 0)
 		{

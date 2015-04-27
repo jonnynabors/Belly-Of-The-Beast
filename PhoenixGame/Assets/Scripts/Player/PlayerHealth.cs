@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour {
 	public bool isDead;
 	public AudioClip deathSound;
 	public AudioClip hitSound;
+	public AudioClip deathClip;
 	//reference to player control script
 	Animator playerController;
 	public GameObject playerCharacter;
@@ -73,6 +74,7 @@ public class PlayerHealth : MonoBehaviour {
 		isDead = true;
 		audio.PlayOneShot (deathSound);
 		playerController.SetBool ("isDead", isDead);
+		audio.PlayOneShot (deathClip);
 		//Destroy(playerCharacter);
 	}
 }

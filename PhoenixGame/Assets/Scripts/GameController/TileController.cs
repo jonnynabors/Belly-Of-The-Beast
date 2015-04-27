@@ -5,6 +5,8 @@ public class TileController : MonoBehaviour {
 
 	public GameObject tile;
 	public bool lowered;
+	public AudioSource audio;
+	public AudioClip tileClip;
 	
 	//script reference
 	public PuzzleController puzzleController;
@@ -23,6 +25,7 @@ public class TileController : MonoBehaviour {
 			if(!lowered){
 				tile.transform.localScale += new Vector3 (0f, -0.009f, 0f);	//raises the tile
 				lowered = true;
+				audio.PlayOneShot(tileClip);
 			}
 		}
 	}

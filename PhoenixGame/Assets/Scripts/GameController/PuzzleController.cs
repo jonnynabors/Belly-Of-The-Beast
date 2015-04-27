@@ -6,7 +6,9 @@ public class PuzzleController : MonoBehaviour {
 	private GameObject tile1;
 	private GameObject tile2;
 	private GameObject tile3;
-
+	public AudioSource audio;
+	public AudioClip boulderClip;
+	private bool moved = false;
 	//references to each tile's script
 	private TileController tileScript1;
 	private TileController tileScript2;
@@ -34,8 +36,11 @@ public class PuzzleController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		//if all tiles are lowered, release boulder
-		if (tileScript1.lowered && tileScript2.lowered && tileScript3.lowered)
+				//if all tiles are lowered, release boulder
+		if (tileScript1.lowered && tileScript2.lowered && tileScript3.lowered && !moved){
 			boulderBody.isKinematic = false;
+			moved = true;
+			audio.PlayOneShot (boulderClip);
+		}
 	}
 }

@@ -8,6 +8,12 @@ public class swordCollision : MonoBehaviour {
 	public Collider player;
 	public PlayerStamina playerStamina;
 	public bool isInBody;
+	public AudioClip waterSlashSound;
+	public AudioClip woodSlashSound;
+	public AudioClip grassSlashSound;
+	public AudioClip humaniodSlashSound;
+	public AudioClip stoneSlashSound;
+	public AudioSource audio;
 	// Use this forinitialization
 	void Start () {
 		anim = GetComponentInParent<Animator>();
@@ -30,12 +36,43 @@ public class swordCollision : MonoBehaviour {
 			{
 				isInBody = true;
 				enemyHealth.EnemyTakeDamage (attackDamage);
+				humanoidSound ();
 			}
+		}
+		if(collision.gameObject.tag == "Ladder"&& anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+			woodSound ();
+		}
+		if(collision.gameObject.tag == "Boulder"&& anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+			stoneSound ();
+		}
+		if(collision.gameObject.tag == "Stone"&& anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+			stoneSound ();
+		}
+		if(collision.gameObject.tag == "Grass"&& anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+			grassSound ();
+		}
+		if(collision.gameObject.tag == "Water"&& anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+			waterSound ();
 		}
 	}
 
 	void OnCollisionExit(Collision collision)
 	{
 		isInBody = false;
+	}
+	void stoneSound(){
+		audio.PlayOneShot(stoneSlashSound);		
+	}
+	void woodSound(){
+			audio.PlayOneShot(woodSlashSound);		
+	}
+	void waterSound(){
+		audio.PlayOneShot(waterSlashSound);		
+	}
+	void grassSound(){
+		audio.PlayOneShot(grassSlashSound);		
+	}
+	void humanoidSound(){
+		audio.PlayOneShot(humaniodSlashSound);		
 	}
 }

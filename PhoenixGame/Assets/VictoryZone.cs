@@ -5,6 +5,8 @@ public class VictoryZone : MonoBehaviour {
 
 	public GameObject victoryMenuObject;
 	public VictoryMenu victoryMenu;
+	public AudioClip winClip;
+	public AudioSource audio;
 
 	void Start()
 	{
@@ -17,6 +19,7 @@ public class VictoryZone : MonoBehaviour {
 		if(other.CompareTag("Player"))
 		{
 			victoryMenu.callVictoryMenu();
+			audio.PlayOneShot(winClip);
 		}
 	}
 

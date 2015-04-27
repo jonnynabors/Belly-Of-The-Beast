@@ -19,6 +19,9 @@ public class playerFootsteps : MonoBehaviour {
 	public AudioSource audio;
 
 	public Animator anim;
+	public bool onLadder = false;
+	public bool onLadderMoving = false;
+	public bool animState = false;
 
 	// Use this for initialization
 	void Start () {
@@ -27,12 +30,13 @@ public class playerFootsteps : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (anim.GetCurrentAnimatorStateInfo (0).IsName ("Locomotion")) {
-			if (anim.GetFloat ("ladderDir") > 0 || anim.GetFloat ("ladderDir") < 0) {
-					if (onWood == true) {
-							woodSound ();
-					}		
-			}
+		onGravel = true;
+//		onLadder = anim.GetBool ("isLatched");
+//		if (anim.GetFloat ("ladderDir") > 0 || anim.GetFloat ("ladderDir") < 0) {
+//						onLadderMoving = true;
+//				} else {onLadderMoving = false;}
+		if (anim.GetCurrentAnimatorStateInfo (0).IsName ("Locomotion") || anim.GetCurrentAnimatorStateInfo (0).IsName ("climbing")) {
+						animState = true;
 			if (anim.GetFloat ("Speed") > 0) {
 					if (inWater == true) {
 							waterSound ();
@@ -84,10 +88,8 @@ public class playerFootsteps : MonoBehaviour {
 			if (waterTimer < 0) {
 					waterTimer = 0;
 			}
-		} 
-		else {
-			//audio.Stop();
-		}
+		} else {animState = false;}
+		
 	}
 
 	void waterSound(){

@@ -42,6 +42,7 @@ TagManager:
   - BottomLadderLandingPadExt
   - BottomLadderLandingPad
   - Dialogue
+  - Stone
   layers:
   - Default
   - TransparentFX

@@ -130,14 +130,14 @@ function LatchLadder (latchedLadder : GameObject, collisionWaypoint : Collider) 
 	climbDirection = currentLadder.ClimbDirection();
 	
 	// let the other scripts know we are on the ladder now
-	gameObject.SendMessage("OnLadder", null, SendMessageOptions.RequireReceiver);
+	//gameObject.SendMessage("OnLadder", null, SendMessageOptions.RequireReceiver);
 }
 
 function UnlatchLadder () {
 	latchedToLadder = false;
 	currentLadder = null;
 	
-	gameObject.SendMessage("OffLadder", ladderMovement, SendMessageOptions.RequireReceiver);
+	//gameObject.SendMessage("OffLadder", ladderMovement, SendMessageOptions.RequireReceiver);
 	
 		
 }
@@ -150,7 +150,9 @@ function Update () {
 	
 
 	verticalMove *= Input.GetAxis("Vertical");
-
+	if(anim.GetBool("isLatched")){
+		charTransform.rotation.y = 180;
+	}
 	anim.SetFloat("ladderDir", Input.GetAxis("Vertical"));
 	// move
 	//ladderMovement = verticalMove + lateralMove;
